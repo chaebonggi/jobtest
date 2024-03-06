@@ -5,28 +5,56 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>일자리플랫폼 잡아바!</title>
 
+	<!-- core CSS -->
 	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/new/import.css">
-	<link type="text/css" rel="stylesheet" href="./css/main/job/mobile.css">
-	<!-- <link type="text/css" rel="stylesheet" href="/resource/css/fullcalendar.css"> -->
-	<!-- <link type="text/css" rel="stylesheet" href="/resource/js/css/jquery_ui.css"> -->
-	<!-- <link type="text/css" rel="stylesheet" href="/resource/bxslider/slick.css"> -->
 	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/swiper.min.css">
-	<!-- <link type="text/css" rel="stylesheet" href="/resource/css/adminDetail.css"> -->
-	<link type="text/css" rel="stylesheet" href="./css/main/job/layout.css">
-	<link type="text/css" rel="stylesheet" href="./css/main/job/style.css">
 	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/main/kgoon.reset.min.css">
-    <link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/new/style.css">     
-    <link type="text/css" rel="stylesheet" href="../etc/css/fonts.css">
-
-	<!-- 추가 css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css" />
-    <link type="text/css" rel="stylesheet" href="./css/new/allnew_ia.css">
-    <link rel="stylesheet" href="./css/main_2024/style.css">
-    
+	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/main2024/etc/css/fonts.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css" />
+	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/bxslider/slick.css">
+	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/main2024/css/main_2024/style.css">
+	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/main2024/css/main_2024/style_ver_02.css">
+	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/new/allnew_ia.css">
+	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/main/layout.css">
+	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/main/style.css">
+	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/new/style.css">
+	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/main/mobile.css">
+	<link type="text/css" rel="stylesheet" href="../etc/css/fonts.css">
+    <!-- 잡아바 js -->
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery-2.2.4.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery-ui-1.11.4.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery.validate-1.14.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/common.js?v=202205240916"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/mobile.common.js?v=20190418"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery.common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/upload/js/upload.common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/main.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/default_menu.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/swiper.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/bxslider/slick.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery.leanModal.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/main/imgLiquid-min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/main/script.js?v=20220629"></script>
+    <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/main/jquery.vticker-min.js"></script>
+    <script src="https://www.jobaba.net/resource/main2024/js/main_2024/top.js"></script>
+    <script src="https://www.jobaba.net/resource/main2024/js/main_2024/main_ver_02.js"></script>
 </head>
 
 <body data-header="edu">
     <style>
+        body[data-header=job]{
+            #job{display:block;}
+            #pol, #edu{display:none;}
+        }
+        body[data-header=pol]{
+            #pol{display:block;}
+            #job, #edu{display:none;}
+        }
+        body[data-header=edu]{
+            #edu{display:block;}
+            #pol, #job{display:none;}
+        }
         h2 {font-size: 20px; text-align: center; margin: 20px 0;}
         hr {border: 1px solid #ddd; margin: 100px 0;}
         .content {min-height: calc(100% - 273px);}
@@ -1074,7 +1102,176 @@
     </header>
 
     <!-- 컨텐츠 -->
-    <div class="content"><h2>컨텐츠</h2></div>
+    <style>
+        .public_job .pbj_tab_btn button {
+            background-color: transparent;
+            border: 1px solid #dbdbdb;
+            border-right: none;
+            border-bottom: none;
+            cursor: pointer;
+        }
+        .public_job .pbj_tab {
+            display: flex;
+        }
+        .public_job .pbj_tab .pbj_tab_btn {
+            display: flex;
+            width: calc(100% - 200px);            
+        }
+        .public_job .pbj_tab .pbj_tab_btn .active button {
+            background: #5c6fa7;
+            color: #fff;
+            border-color: #5c6fa7;
+        }
+        .public_job .pbj_tab .pbj_tab_btn li {
+            flex: 1;
+        }
+        .public_job .pbj_tab .pbj_tab_btn button {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            text-align: left;
+        }
+        .public_job .keyword_wrap {
+
+        }
+        .public_job .keyword_wrap .pbj_keyword {
+            display: block;
+            position: relative;
+            width: 200px;
+            height: 40px;
+            border: 1px solid #dbdbdb;
+            border-bottom: none;
+            box-sizing: border-box;
+        }
+        .public_job .keyword_wrap .pbj_keyword input {
+            padding: 0 40px 0 34px;
+            width: 100%;
+            height: 38px;
+            border: 0;
+            box-sizing: border-box;
+            color: #222;
+            font-size: 13px;
+            line-height: 38px;
+            background: transparent;
+        }
+        .public_job .pbj_tab_content {
+            border: 1px solid #5c6fa7;
+        }
+        .public_job .pbj_tab_content div {
+            display: none;
+        }
+        .public_job .pbj_tab_content div.active {
+            display: block;
+        }
+    </style>
+    <main class="public_job">
+        <article class="pbj_main">
+            <div class="innerSection">
+                <h2>공공일자리 채용정보</h2>
+                <p>공공기관 일자리/근로 채용정보<span>(1234)</span>를 놓치지 마세요</p>
+                <div class="">
+                    <div class="pbj_tab">
+                        <ul class="pbj_tab_btn">
+                            <li class="active"><button>채용분야</button></li>
+                            <li><button>근무지</button></li>
+                            <li><button>고용형태</button></li>
+                            <li><button>채용구분</button></li>
+                        </ul>
+                        <div class="keyword_wrap">
+                            <span class="pbj_keyword">
+                                <label for="area_keyword" class="ir-text">지역명 입력</label>
+                                <input type="text" name="area_keyword" id="area_keyword" placeholder="지역명 입력" autocomplete="off" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pbj_tab_content">
+                        <div class="active">
+                            <ul id="duty_step2_10026_ly" data-value="10026" style="display: block;">
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="duty_step2_1000185" name="duty" value="1000185" data-name="경영·비즈니스기획" data-type="">
+                                    <label class="lb_tag checked" for="duty_step2_1000185">
+                                        <span class="radiWrap">
+                                            <span>경영·비즈니스기획<em class="num">(4,457)</em></span>
+                                            <i class="ico close-ty1 ir">닫기</i>
+                                        </span>
+                                    </label>
+                                </li>
+                            
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="duty_step2_1000186" name="duty" value="1000186" data-name="웹기획" data-type="">
+                                    <label class="lb_tag checked" for="duty_step2_1000186">
+                                        <span class="radiWrap">
+                                            <span>웹기획<em class="num">(2,293)</em></span>
+                                            <i class="ico close-ty1 ir">닫기</i>
+                                        </span>
+                                    </label>
+                                </li>
+                            
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="duty_step2_1000187" name="duty" value="1000187" data-name="마케팅기획" data-type="">
+                                    <label class="lb_tag checked" for="duty_step2_1000187">
+                                        <span class="radiWrap">
+                                            <span>마케팅기획<em class="num">(3,341)</em></span>
+                                            <i class="ico close-ty1 ir">닫기</i>
+                                        </span>
+                                    </label>
+                                </li>
+                            
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="duty_step2_1000188" name="duty" value="1000188" data-name="PL·PM·PO" data-type="">
+                                    <label class="lb_tag on" for="duty_step2_1000188">
+                                        <span class="radiWrap">
+                                            <span>PL·PM·PO<em class="num">(1,348)</em></span>
+                                            <i class="ico close-ty1 ir">닫기</i>
+                                        </span>
+                                    </label>
+                                </li>
+                            
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="duty_step2_1000189" name="duty" value="1000189" data-name="컨설턴트" data-type="">
+                                    <label class="lb_tag" for="duty_step2_1000189">
+                                        <span class="radiWrap">
+                                            <span>컨설턴트<em class="num">(831)</em></span>
+                                            <i class="ico close-ty1 ir">닫기</i>
+                                        </span>
+                                    </label>
+                                </li>
+                            
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="duty_step2_1000190" name="duty" value="1000190" data-name="CEO·COO·CTO" data-type="">
+                                    <label class="lb_tag" for="duty_step2_1000190">
+                                        <span class="radiWrap">
+                                            <span>CEO·COO·CTO<em class="num">(105)</em></span>
+                                            <i class="ico close-ty1 ir">닫기</i>
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>tab2</div>
+                        <div>tab3</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script>
+        $(document).ready(function() {
+            
+            const tabButton = $(".pbj_tab_btn li");
+            const tabContent = $(".pbj_tab_content div");
+            tabButton.on("click", function(){
+                let tabIdx = $(this).index();
+                tabButton.removeClass("active");
+                $(this).addClass("active");
+                tabContent.removeClass("active");
+                tabContent.eq(tabIdx).addClass("active");
+            });
+
+
+        });
+        
+    </script>
 
     <!-- 푸터 -->
     <footer id="renewFooter">
@@ -1265,28 +1462,7 @@
 
     
 
-<!-- 잡아바 js -->
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery-2.2.4.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery-ui-1.11.4.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery.validate-1.14.0.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/common.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/mobile.common.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery.common.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/upload/js/upload.common.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/main.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/default_menu.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/swiper.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/bxslider/slick.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/bootstrap.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery.leanModal.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/main/script.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/main/imgLiquid-min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.js"></script>
 
-<!-- 추가 js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.js"></script>
-<script src="./js/main_2024/top.js"></script>
-<script src="./js/main_2024/main.js"></script>
 
 <script>
     $(document).ready(function() {
