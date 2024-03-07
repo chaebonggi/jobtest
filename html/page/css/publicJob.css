@@ -149,16 +149,22 @@
  .public_job .pbj_list .job_menu { margin: 0; padding: 20px 10px; position: sticky; top: 0; background: #f8f8f8; box-shadow: 0px 10px 10px 0px rgba(34, 31, 31, 0.05); text-align: center; z-index: 200; } 
  .public_job .pbj_list .job_menu li { width: calc(100% / 3); } 
  .public_job .pbj_list .job_menu li + li { margin-left: 0; } 
- .public_job .pbj_list .job_menu button { font-size: 12px; } 
+ .public_job .pbj_list .job_menu button { font-size: 14px; } 
  .public_job .pbj_list .job_menu .job_btn { padding-left: 16px; } 
  .public_job .pbj_list .job_menu .hot_btn { padding-left: 12px; } 
- .public_job .pbj_list .job_menu .new_btn { padding-left: 22px} 
+ .public_job .pbj_list .job_menu .new_btn { padding-left: 22px } 
  .public_job .pbj_list .job_menu .job_btn::before { width: 12px; height: 9px; background-size: contain; } 
  .public_job .pbj_list .job_menu .hot_btn::before { width: 8px; height: 11px; background-size: contain; } 
  .public_job .pbj_list .job_menu .new_btn::before { width: 20px; height: 7px; background-size: contain; } 
  .public_job .pbj_list .more_wrap .more_btn { padding: 12px 10px; font-size: 12px; } 
  .public_job .pbj_list .more_wrap .more_btn::before { width: 10px; height: 10px; margin-right: 4px; background-size: contain; } 
- .public_job .pbj_slide .swiper-button-prev, .public_job .pbj_slide .swiper-button-next { display: none; }
- .public_job .pbj_list .more_wrap {margin: 30px 0;}
- 
+ .public_job .pbj_slide .swiper-button-prev, .public_job .pbj_slide .swiper-button-next { display: none; } 
+ .public_job .pbj_list .more_wrap { margin: 30px 0; } 
+ .public_job .pbj_list .job_list .item.nodata { min-height: 100px } 
+.public_job .pbj_list .job_list .item.nodata p { font-size: 14px; } 
+.public_job .job_list .tit { font-size: 14px; } 
+.public_job .job_list .job_area .corp { font-size: 12px; } 
+.public_job .job_list .job_area .area { font-size: 12px; } 
+.public_job .pbj_slide h3 { padding-left: 20px; margin-bottom: 20px; font-size: 18px; } 
+.public_job .pbj_slide h3::before { width: 14px; height: 12px; background-size: contain; } 
  }
