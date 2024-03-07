@@ -20,6 +20,7 @@
 	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/new/style.css">
 	<link type="text/css" rel="stylesheet" href="https://www.jobaba.net/resource/css/main/mobile.css">
 	<link type="text/css" rel="stylesheet" href="../etc/css/fonts.css">
+    <link type="text/css" rel="stylesheet" href="./css/publicJob.css">
     <!-- 잡아바 js -->
     <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery-2.2.4.js"></script>
     <script type="text/javascript" charset="utf-8" src="https://www.jobaba.net/resource/js/jquery-ui-1.11.4.js"></script>
@@ -1101,169 +1102,12 @@
     </header>
 
     <!-- 컨텐츠 -->
-    <style>
-        .public_job .fcBlue { color: #008ae0 !important;}
-        .public_job .fcRed {color: #ff0000 !important;}
-        .public_job .for_mobile {display: none;}
-        .public_job .innerSection {
-            max-width: 1200px;
-            padding: 0;
-        }
-        .public_job .pbj_main {
-            background: #f6f9fc;
-        }
-        .public_job .pbj_main .innerSection {
-            padding: 50px 0;
-        }
-        .public_job .pbj_main h2 {
-            margin-bottom: 26px;
-            color: #000;
-            font-size: 40px;
-            font-weight: 500;
-            text-align: center;
-        }
-        .public_job .pbj_main .main_txt {
-            margin-bottom: 56px;
-            color: #555555;
-            font-size: 20px;
-            font-weight: 400;
-            text-align: center;
-        }
-        .public_job .pbj_main .main_txt span {
-            font-weight: 900;
-        }
-        .public_job .pbj_tab_btn button {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
-        .public_job .pbj_tab {
-            display: flex;
-        }
-        .public_job .pbj_tab .pbj_tab_btn {
-            display: flex;
-            width: 100%;
-            background: #fff;
-        }       
-        .public_job .pbj_tab .pbj_tab_btn li {           
-            position: relative;
-            flex: 1;
-            border: 1px solid #dbdbdb;
-            border-bottom: none;
-            border-right: none;
-        }
-        .public_job .pbj_tab .pbj_tab_btn li:last-child {
-            border-right: 1px solid #dbdbdb;
-        }
-        .public_job .pbj_tab .pbj_tab_btn li.p_btn::after {
-            content: '';
-            display: block;
-            width: 15px;
-            height: 9px;
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            background: url(./resource/images/publicJob/arrow_type01_icon.png) no-repeat;
-        }
-        .public_job .pbj_tab .pbj_tab_btn li.p_btn.active::after {
-            background: url(./resource/images/publicJob/arrow_type01_icon_on.png) no-repeat;
-        }
-        .public_job .pbj_tab .pbj_tab_btn li.active {            
-            border-color: #5c6fa7;
-        }
-        .public_job .pbj_tab .pbj_tab_btn li.active button {
-            background: #5c6fa7;
-            color: #fff;
-        }
-        .public_job .pbj_tab .pbj_tab_btn button {
-            width: 100%;
-            height: 100%;
-            padding: 0 20px;
-            color: #000;
-            font-size: 14px;
-            font-weight: 500;
-            text-align: left;
-        }    
-        .public_job .pbj_tab .pbj_tab_btn .pbj_keyword::before {
-            content: '';
-            display: block;
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            background: url(./resource/images/publicJob/search_icon.png) no-repeat;
-        }
-        .public_job .pbj_tab .pbj_tab_btn .pbj_keyword input {
-            padding: 0 10px 0 34px;
-            width: 100%;
-            height: 40px;
-            border: 0;
-            box-sizing: border-box;
-            color: #222;
-            font-size: 13px;
-            line-height: 40px;
-            background: transparent;
-        }
-        .public_job .pbj_tab_content {    
-            background: #fff;        
-            border: 1px solid #5c6fa7;
-            box-shadow: 0px 0px 10px 0px rgba(34, 31, 31, 0.2);
-        }
-        .public_job .pbj_tab_content .pbj_tab_box {
-            display: none;
-            
-        }
-        .public_job .pbj_tab_content .pbj_tab_box.active {
-            display: block;
-        }
-        .public_job .check_list {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .public_job .check_list .item {
-            display: flex;
-            width: calc(100% / 5);
-            height: 40px;
-            background: #fff;
-            border: 1px solid #e2e7ed;
-            border-left: none;
-            border-top: none;
-            text-align: center;
-            box-sizing: border-box;
-            align-items: center;
-            justify-content: center;
-        }
-        .public_job .check_list .item.none_data {
-            background: #f3f3f3;
-        }
-        .public_job .check_list .item:nth-child(5n) {
-            border-right: none;
-        }
-        .public_job .check_list .item .lb_tag {
-            color: #000;
-            font-size: 14px;
-            font-weight: 300;
-        }
-        .public_job .check_list .inp_chk:checked + .lb_tag {
-            color: #008ae0;
-        }
-        .public_job .scrollbar-outer { max-height:120px; overflow-y:scroll; }
-        .public_job .scrollbar-outer > .scroll-content.scroll-scrolly_visible {margin: 0; left: 0;}
-        .public_job .scrollbar-outer > .scroll-element .scroll-element_track { background: transparent; }
-        .public_job .scrollbar-outer > .scroll-element .scroll-bar { background:#ccd1db; }
-        .public_job .scrollbar-outer > .scroll-element.scroll-y { width: 6px; background: #eeeeee;}
-        .public_job .scrollbar-outer > .scroll-element .scroll-element_outer, .public_job .scrollbar-outer > .scroll-element .scroll-element_track, .public_job .scrollbar-outer > .scroll-element .scroll-bar { border-radius:0; }
-        .public_job .scrollbar-outer > .scroll-element.scroll-y .scroll-element_outer { width: 6px; }
-    </style>
     <main class="public_job">
         <article class="pbj_main">
             <div class="innerSection">
                 <h2>공공일자리 채용정보</h2>              
                 <p class="main_txt">공공기관 일자리/근로 채용정보<span class="fcBlue">(1234)</span>를 놓치지 마세요</p>
-                <div class="">
+                <div class="pbj_tab_wrap">
                     <div class="pbj_tab">
                         <ul class="pbj_tab_btn">
                             <li class="p_btn active"><button>근무지역</button></li>
@@ -1491,9 +1335,6 @@
                                         <span>연천군<em class="num">(00)</em></span>
                                     </label>
                                 </li>
-
-                                
-                            
                             </ul>
                         </div>
                         <div class="pbj_tab_box">
@@ -1647,12 +1488,7 @@
                                     <label class="lb_tag" for="checkB25">
                                         <span>연구<em class="num">(00)</em></span>
                                     </label>
-                                </li>
-                                
-                                
-
-                                
-                            
+                                </li>                            
                             </ul>
                         </div>
                         <div class="pbj_tab_box">
@@ -1724,137 +1560,32 @@
                             </ul>
                         </div>
                     </div>
-                    <style>
-                        .public_job .pbj_result {
-                            display: flex;
-                            padding: 40px 30px;
-                            background: #fff;
-                            border: 1px solid #e2e7ed;
-                            border-top: none;
-                        }
-                        .public_job .pbj_result .btn_search {
-                            display: flex;
-                            width: 178px;
-                            height: 64px;
-                            background: #008ae0;
-                            color: #fff;
-                            font-size: 15px;
-                            box-shadow: 4.243px 4.243px 6px 0px rgba(34, 31, 31, 0.15);
-                            align-items: center;
-                            justify-content: center;
-                        }
-                        .public_job .pbj_result .keyword_wrap {
-                            width: calc(100% - 400px);
-                            margin-left: auto;
-                            font-size: 0;
-                            height: 52px;
-                            overflow: hidden;
-                        }
-                        .public_job .pbj_result .keyword_wrap .selected_keyword {
-                            display: inline-flex;
-                            margin: 4px 10px 0 0;
-                            height: 20px;
-                            color: #6e6e6e;
-                            font-size: 14px;
-                            align-items: center;
-                            box-sizing: border-box;
-                        }
-                        .public_job .pbj_result .keyword_wrap .selected_keyword .btn_del {
-                            width: 8px;
-                            height: 8px;
-                            margin-left: 4px;
-                            background: url(./resource/images/publicJob/close_type01_icon.png) no-repeat;
-                            border: none;                           
-                        }
-                        .public_job .pbj_result .keyword_wrap .reset_txt {
-                            color: #6e6e6e;
-                            font-size: 14px;
-                            font-weight: 300;
-                            text-align: center;
-                        }
-                        .public_job .pbj_result .area_btn {
-                            display: flex;
-                            margin-left: 30px;
-                            align-items: center;
-                        }
-                        .public_job .pbj_result .area_btn button {
-                            position: relative;
-                            color: #6e6e6e;
-                            font-size: 13px;
-                            font-weight: 500;
-                            border: none;;
-                        }
-                        .public_job .pbj_result .area_btn .btn_reset {
-                            padding-left: 18px;
-                        }
-                        .public_job .pbj_result .area_btn .btn_reset::before {
-                            content: '';
-                            width: 13px;
-                            height: 13px;
-                            position: absolute;
-                            top: 50%;
-                            left: 0;
-                            transform: translateY(-50%);
-                            background: url(./resource/images/publicJob/reset_icon.png) no-repeat;
-                        }
-                        .public_job .pbj_result .area_btn .btn_expand {
-                            margin-left: 20px;
-                            padding-right: 15px;
-                        }
-                        .public_job .pbj_result .area_btn .btn_expand::after {
-                            content: '';
-                            width: 11px;
-                            height: 7px;
-                            position: absolute;
-                            top: 50%;
-                            right: 0;
-                            transform: translateY(-50%);
-                            background: url(./resource/images/publicJob/arrow_type02_icon.png) no-repeat;
-                        }
-                        .public_job .pbj_result .area_btn .btn_expand.on::after {
-                            transform: translateY(-50%) rotate(180deg) ;
-                        }
-                    </style>
                     <div class="pbj_result">
                         <button type="button" class="btn_search">
-                            <span>선태된 조건 검색하기</span>
+                            <span>선택된 조건 검색하기</span>
                         </button>                        
                         <div class="area_btn">
                             <button type="button" class="btn_reset">선택초기화</button>
                             <button type="button" class="btn_expand">펼쳐보기</button>                            
                         </div>
-                        <div class="keyword_wrap">
+                        <div class="keywords_wrap">
                             <div class="keywords">
                                 <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">채용문의&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
                                 <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
                                 <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
                                 <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
                                 <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
                                 <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
                                 <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                           
                             </div>
                             <!-- 
                             <p class="reset_txt">검색조건을 설정해 주세요.</p>
@@ -1864,47 +1595,7 @@
                 </div>
             </div>
         </article>
-        <style>
-        .public_job .pbj_calendar .calendar_wrap {
-            margin: 50px 0;
-            background: url(./resource/images/publicJob/calendar_bg.png) right 68px bottom #edf5ff no-repeat;
-            border: 1px solid #d7e1f1;
-            border-radius: 15px;
-        }
-        .public_job .pbj_calendar .calendar_wrap a {
-            display: block;
-            padding: 16px 0 16px 178px;
-            position: relative;
-        }
-        .public_job .pbj_calendar .calendar_wrap a::before {
-            content: '';
-            width: 69px;
-            height: 63px;
-            position: absolute;
-            top: 50%;
-            left: 66px;
-            transform: translateY(-50%);
-            background: url(./resource/images/publicJob/calendar_icon.png) no-repeat;
-        }
-        .public_job .pbj_calendar .calendar_wrap a p {
-            color: #5c6fa6;
-            font-size: 30px;
-            font-weight: 900;
-        }
-        .public_job .pbj_calendar .calendar_wrap a span {
-            color: #839ab7;
-            font-size: 16px;
-        }
-        .public_job .pbj_calendar .calendar_wrap a span::after {
-            content: '';
-            display: inline-block;
-            width: 46px;
-            height: 19px;
-            margin-left: 16px;
-            background: url(./resource/images/publicJob/arrow_type03_icon.png) no-repeat;
-            vertical-align: middle;
-        }
-        </style>
+
         <article class="pbj_calendar">
             <div class="innerSection">
                 <div class="calendar_wrap">
@@ -1916,182 +1607,511 @@
             </div>
         </article>
         <article class="pbj_list">
+            <div class="leftMenu">
+                <div class="tit">
+                    <p>잡아바 맞춤공고</p>
+                    <span>558 건</span>
+                </div>
+				<ul class="menuList">
+					<li><button>근무지역</button></li>
+					<li><button>채용분야</button></li>
+                    <li><button>고용형태</button></li>
+                    <li><button>채용구분</button></li>
+				</ul>
+				<a href="#none" class="scroll-top">
+					<p>▲ TOP</p>							
+				</a>
+                 <!-- left 팝업  -->
+                <div class="popup_tab">
+                    <div class="pbj_tab">
+                        <ul class="pbj_tab_btn">
+                            <li class="p_btn active"><button>근무지역</button></li>
+                            <li class="p_btn"><button>채용분야</button></li>
+                            <li class="p_btn"><button>고용형태</button></li>
+                            <li class="p_btn"><button>채용구분</button></li>
+                            <li class="keyword_wrap">
+                                <span class="pbj_keyword">
+                                    <label for="search_keyword" class="ir-text">검색어 입력</label>
+                                    <input type="text" name="search_keyword" id="search_keyword" placeholder="검색어 입력" autocomplete="off" />
+                                </span>
+                            </li>
+                        </ul>                        
+                    </div>
+                    <div class="pbj_tab_content scrollbar-outer">
+                        <div class="pbj_tab_box active">
+                            <ul class="check_list">
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA1" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA1">
+                                        <span>경기전체<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA2" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA2">
+                                        <span>서울<em class="num">(4,457)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA3" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA3">
+                                        <span>인천<em class="num">(4,457)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item none_data">
+                                    
+                                </li>
+                                <li class="item none_data">
+                                    
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA4" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA4">
+                                        <span>수원시<em class="num">(4,457)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA5" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA5">
+                                        <span>용인시<em class="num">(4,457)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA6" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA6">
+                                        <span>고양시<em class="num">(4,457)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA7" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA7">
+                                        <span>화성시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA8" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA8">
+                                        <span>성남시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA9" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA9">
+                                        <span>부천시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA10" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA10">
+                                        <span>남양주시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA11" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA11">
+                                        <span>안산시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA12" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA12">
+                                        <span>평택시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA13" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA13">
+                                        <span>안양시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA14" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA14">
+                                        <span>시흥시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA15" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA15">
+                                        <span>파주시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA16" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA16">
+                                        <span>김포시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA17" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA17">
+                                        <span>의정부시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA18" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA18">
+                                        <span>광주시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA19" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA19">
+                                        <span>하남시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA20" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA20">
+                                        <span>광명시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA21" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA21">
+                                        <span>군포시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA22" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA22">
+                                        <span>양주시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA23" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA23">
+                                        <span>오산시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA24" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA24">
+                                        <span>이천시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA25" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA25">
+                                        <span>안성시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA26" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA26">
+                                        <span>구리시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA27" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA27">
+                                        <span>의왕시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA28" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA28">
+                                        <span>포천시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA29" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA29">
+                                        <span>양평군<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA30" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA30">
+                                        <span>여주시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA31" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA31">
+                                        <span>동두천시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA32" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA32">
+                                        <span>과천시<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA33" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA33">
+                                        <span>가평군<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckA34" name="pcheckA" value="">
+                                    <label class="lb_tag" for="pcheckA34">
+                                        <span>연천군<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pbj_tab_box">
+                            <ul class="check_list">
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB1" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB1">
+                                        <span>사업관리<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB2" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB2">
+                                        <span>경영·회계·사무<em class="num">(4,457)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB3" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB3">
+                                        <span>금융·보험<em class="num">(4,457)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB4" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB4">
+                                        <span>교육·자연·사회과학<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB5" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB5">
+                                        <span>법률·경찰·소방·교도·국방<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB6" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB6">
+                                        <span>보건·의료<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB7" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB7">
+                                        <span>사회복지·종교<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB8" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB8">
+                                        <span>문화·예술·디자인·방송<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB9" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB9">
+                                        <span>운전·운송<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB10" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB10">
+                                        <span>영업판매<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB11" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB11">
+                                        <span>경비·청소<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB12" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB12">
+                                        <span>이용·숙박·여행·오락·스포<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB13" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB13">
+                                        <span>음식서비스<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB14" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB14">
+                                        <span>건설<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB15" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB15">
+                                        <span>기계<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB16" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB16">
+                                        <span>재료<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB17" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB17">
+                                        <span>화학<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB18" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB18">
+                                        <span>섬유·의복<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB19" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB19">
+                                        <span>전기·전자<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB20" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB20">
+                                        <span>정보통신<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB21" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB21">
+                                        <span>식품가공<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB22" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB22">
+                                        <span>인쇄·목재·가구·공예<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB23" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB23">
+                                        <span>환경·에너지·안전<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB24" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB24">
+                                        <span>농림어업<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckB25" name="pcheckB" value="">
+                                    <label class="lb_tag" for="pcheckB25">
+                                        <span>연구<em class="num">(00)</em></span>
+                                    </label>
+                                </li>                            
+                            </ul>
+                        </div>
+                        <div class="pbj_tab_box">
+                            <ul class="check_list">
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckC1" name="pcheckC" value="">
+                                    <label class="lb_tag" for="pcheckC1">
+                                        <span>정규직<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckC2" name="pcheckC" value="">
+                                    <label class="lb_tag" for="pcheckC2">
+                                        <span>비정규직<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckC3" name="pcheckC" value="">
+                                    <label class="lb_tag" for="pcheckC3">
+                                        <span>비정규직(대체인력)<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckC4" name="pcheckC" value="">
+                                    <label class="lb_tag" for="pcheckC4">
+                                        <span>공무직<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckC5" name="pcheckC" value="">
+                                    <label class="lb_tag" for="pcheckC5">
+                                        <span>청년인턴(체험형)<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckC6" name="pcheckC" value="">
+                                    <label class="lb_tag" for="pcheckC6">
+                                        <span>청년인턴(채용형)<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pbj_tab_box">
+                            <ul class="check_list">
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckD1" name="pcheckD" value="">
+                                    <label class="lb_tag" for="pcheckD1">
+                                        <span>신입<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckD2" name="pcheckD" value="">
+                                    <label class="lb_tag" for="pcheckD2">
+                                        <span>경력<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckD3" name="pcheckD" value="">
+                                    <label class="lb_tag" for="pcheckD3">
+                                        <span>신입+경력<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                                <li class="item">
+                                    <input type="checkbox" class="inp_chk" id="pcheckD4" name="pcheckD" value="">
+                                    <label class="lb_tag" for="pcheckD4">
+                                        <span>외국인 전형<em class="num">(00)</em></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pbj_result">
+                        <button type="button" class="btn_search">
+                            <span>선택된 조건 검색하기</span>
+                        </button>                        
+                        <div class="area_btn">
+                            <button type="button" class="btn_reset">선택초기화</button>
+                            <button type="button" class="btn_expand">펼쳐보기</button>                            
+                        </div>
+                        <div class="keywords_wrap">
+                            <div class="keywords">
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">채용문의&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
+                        
+                            </div>
+                            <!-- 
+                            <p class="reset_txt">검색조건을 설정해 주세요.</p>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //left 팝업  -->              
+			</div>
+           
             <div class="innerSection">
-                <style>
-                    .public_job .pbj_list h3 {
-                        color: #000;
-                        font-size: 24px;
-                        font-weight: 500;
-                    }
-                    .public_job .pbj_list h3 em {
-                        font-weight: 300;
-                    }
-                    .public_job .pbj_list .job_menu {
-                        display: flex;
-                        margin: 30px 0 20px;
-                    }
-                    .public_job .pbj_list .job_menu li + li {
-                        margin-left: 40px;
-                    }
-                    .public_job .pbj_list .job_menu button {
-                        position: relative;
-                        color: #999999;
-                        font-size: 22px;
-                        font-weight: 500;
-                        border: none;
-                    }
-                    .public_job .pbj_list .job_menu button:focus {
-                        outline: none;
-                        border: none;
-                    }
-                    .public_job .pbj_list .job_menu button::before {
-                        content: '';
-                        position: absolute;
-                        top: 50%;
-                        left: 0;
-                        transform: translateY(-50%);
-                    }
-                    .public_job .pbj_list .job_menu .job_btn::before {                        
-                        width: 18px;
-                        height: 14px;                        
-                        background: url(./resource/images/publicJob/job_icon.png) no-repeat;
-                    }                   
-                    .public_job .pbj_list .job_menu .hot_btn::before {                        
-                        width: 13px;
-                        height: 19px;                        
-                        background: url(./resource/images/publicJob/hot_icon.png) no-repeat;
-                    }
-                    .public_job .pbj_list .job_menu .new_btn::before {                        
-                        width: 31px;
-                        height: 11px;                        
-                        background: url(./resource/images/publicJob/new_icon.png) no-repeat;
-                    }
-                    .public_job .pbj_list .job_menu .job_btn {
-                        padding-left: 28px;
-                    }
-                    .public_job .pbj_list .job_menu .hot_btn {
-                        padding-left: 20px;
-                    }
-                    .public_job .pbj_list .job_menu .new_btn {
-                        padding-left: 40px;
-                    }
-
-                    .public_job .pbj_list .job_menu li.active button {
-                        color: #000;
-                        font-weight: 900;
-                    }
-                    .public_job .pbj_list .job_content .job_box {
-                        display: none;
-                    }
-                    .public_job .pbj_list .job_content .job_box.active {
-                        display: block;
-                    }
-                    .public_job .pbj_list .job_list {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 20px;
-                    }
-                    .public_job .pbj_list .job_list .item {
-                        width: calc(100% / 4 - 15px);
-                    }
-                    .public_job .pbj_list .job_list .item.nodata {
-                        display: flex;
-                        width: 100%;
-                        min-height: 200px;
-                        align-items: center;
-                        justify-content: center;
-                    }
-                    .public_job .pbj_list .job_list .item.nodata p {
-                        color: #5c5c5c;
-                        font-size: 22px;
-                        font-weight: 300;
-                    }
-                    .public_job .pbj_list .job_list a {
-                        display: block;
-                        background: #fff;
-                        border: 1px solid #dfdfdf;
-                        border-radius: 10px;
-                    }
-                    .public_job .pbj_list .job_list a:hover {
-                        border-color: #008ae0;
-                        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2)
-                    }
-                    .public_job .pbj_list .job_list .list_top {
-                        padding: 20px 20px 14px;
-                    }
-                    .public_job .pbj_list .job_list .job_area .area {
-                        padding-left: 20px;
-                        margin-bottom: 10px;
-                        position: relative;
-                        color: #000;
-                        font-size: 13px;
-                        font-weight: 300;
-                    }
-                    .public_job .pbj_list .job_list .job_area .area::before {
-                        content: '';
-                        width: 13px;
-                        height: 17px;
-                        position: absolute;
-                        top: 50%;
-                        left: 0;
-                        transform: translateY(-50%);
-                        background: url(./resource/images/publicJob/area_icon.png) no-repeat;
-                    }
-                    .public_job .pbj_list .job_list .job_area .corp {
-                        color: #008ae0;
-                        font-size: 13px;
-                        font-weight: 300;
-                    }
-                    .public_job .pbj_list .job_list .tit {
-                        margin-bottom: 15px;
-                        color: #000;
-                        font-size: 16px;
-                        font-weight: 300;
-                        display: -webkit-box;
-                        white-space: normal;
-                        -webkit-line-clamp: 2;
-                        -webkit-box-orient: vertical;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-                    .public_job .pbj_list .job_list .job_desc {
-                        display: flex;
-                        align-items: center;
-                    }
-                    .public_job .pbj_list .job_list .date_wrap {
-                        margin-left: auto;
-                    }
-                    .public_job .pbj_list .job_list .job_desc .logo {
-                        display: block;
-                        width: 100px;
-                        height: 34px;
-                    }
-                    .public_job .pbj_list .job_list .job_desc .logo img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: scale-down;
-                        object-position: left;
-                    }
-                    .public_job .pbj_list .job_list .date_wrap .date {
-                        color: #777777;
-                        font-size: 12px;
-                    }
-                    .public_job .pbj_list .job_list .date_wrap .day {
-                        margin-left: 12px;
-                        color: #000;
-                        font-size: 12px;
-                    }
-
-                    .public_job .pbj_list .job_list .list_bottom {
-                        padding: 6px 20px 10px;
-                        border-top: 1px solid #dfdfdf;
-                    }
-                    .public_job .pbj_list .job_list .list_bottom .etc {
-                        color: #777777;
-                        font-size: 12px;
-                    }
-
-                </style>
                 <h3><span>나</span><em>를 위한<br class="for_mobile"></em> 공공일자리 맞춤공고 <span class="fcBlue">1,173건</span></h3>
                 <!-- 로그인시 
                 <h3><span>홍길동</span>님<em>을 위한</em><br class="for_mobile"> 공공일자리 맞춤공고 <span class="fcBlue">1,173건</span></h3>
@@ -2280,32 +2300,6 @@
                                 </a>
                             </li>                           
                         </ul>
-                        <style>
-                            .public_job .pbj_list .more_wrap {
-                                margin: 50px 0;
-                                text-align: center;
-                            }
-                            .public_job .pbj_list .more_wrap .more_btn {
-                                padding: 24px 26px;
-                                position: relative;
-                                color: #585858;
-                                font-size: 20px;
-                                font-weight: 500;
-                                border: 1px solid #dfdfdf;
-                            }
-                            .public_job .pbj_list .more_wrap .more_btn::before {
-                                content: '';
-                                display: inline-block;
-                                width: 15px;
-                                height: 15px;      
-                                margin-right: 10px;                          
-                                background: url(./resource/images/publicJob/more_icon.png) no-repeat;
-                            }
-                            .public_job .pbj_list .more_wrap .count {
-                                color: #000;
-                                font-weight: 900;
-                            }
-                        </style>
                         <div class="more_wrap">
                             <button type="button" class="more_btn">잡아바 추천 공고 더보기 <span class="count">02</span> / <span class="total">12</span></button>
                         </div>
@@ -2416,67 +2410,136 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article class="pbj_slide">
             <div class="innerSection">
                 <h3>곧! 마감되는 잡아바 추천공고</h3>
-                <div class="swiper-container">
-                    <ul class="swiper-wrapper job_list">
-                        <li class="item swiper-slide">
-                            <a href="">
-                                <div class="list_top">
-                                    <div class="job_area">
-                                        <p class="area">경기 수원시 회</p>
-                                        <span class="corp">용인시청</span>
-                                    </div>                                        
-                                    <p class="tit">2024년도 제1회 경기도 지방공무원 공개
-                                        경쟁임용시험 시행 경쟁임용시험 시행경쟁임용시험 시행</p>
-                                    <div class="job_desc">
-                                        <span class="logo"><img src="./resource/images/publicJob/job_logo.png" alt="잡아바"></span>
-                                        <div class="date_wrap">
-                                            <span class="date">~2024-03-20</span>
-                                            <span class="day">D-20</span>
-                                        </div>
-                                    </div>                                        
-                                </div>
-                                <div class="list_bottom">
-                                    <span class="etc">경영 · 회계 · 사무</span>
-                                </div>                                    
-                            </a>
-                        </li>
-                        <li class="item swiper-slide">
-                            <a href="">
-                                <div class="list_top">
-                                    <div class="job_area">
-                                        <p class="area">경기 수원시 회</p>
-                                        <span class="corp">용인시청</span>
-                                    </div>                                        
-                                    <p class="tit">2024년도 제1회 경기도 지방공무원 공개
-                                        경쟁임용시험 시행 경쟁임용시험 시행경쟁임용시험 시행</p>
-                                    <div class="job_desc">
-                                        <span class="logo"><img src="./resource/images/publicJob/job_logo.png" alt="잡아바"></span>
-                                        <div class="date_wrap">
-                                            <span class="date">~2024-03-20</span>
-                                            <span class="day">D-20</span>
-                                        </div>
-                                    </div>                                        
-                                </div>
-                                <div class="list_bottom">
-                                    <span class="etc">경영 · 회계 · 사무</span>
-                                </div>                                    
-                            </a>
-                        </li>
-                    </ul>
+                <div class="slide_wrap">
+                    <div class="swiper-container job_list">
+                        <ul class="swiper-wrapper">
+                            <li class="item swiper-slide">
+                                <a href="">
+                                    <div class="list_top">
+                                        <div class="job_area">
+                                            <p class="area">경기 수원시 회</p>
+                                            <span class="corp">용인시청</span>
+                                        </div>                                        
+                                        <p class="tit">2024년도 제1회 경기도 지방공무원 공개
+                                            경쟁임용시험 시행 경쟁임용시험 시행경쟁임용시험 시행</p>
+                                        <div class="job_desc">
+                                            <span class="logo"><img src="./resource/images/publicJob/job_logo.png" alt="잡아바"></span>
+                                            <div class="date_wrap">
+                                                <span class="date">~2024-03-20</span>
+                                                <span class="day fcRed">D-day</span>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="list_bottom">
+                                        <span class="etc">경영 · 회계 · 사무</span>
+                                    </div>                                    
+                                </a>
+                            </li>
+                            <li class="item swiper-slide">
+                                <a href="">
+                                    <div class="list_top">
+                                        <div class="job_area">
+                                            <p class="area">경기 수원시 회</p>
+                                            <span class="corp">용인시청</span>
+                                        </div>                                        
+                                        <p class="tit">2024년도 제1회 경기도 지방공무원 공개
+                                            경쟁임용시험 시행 경쟁임용시험 시행경쟁임용시험 시행</p>
+                                        <div class="job_desc">
+                                            <span class="logo"><img src="./resource/images/publicJob/job_logo.png" alt="잡아바"></span>
+                                            <div class="date_wrap">
+                                                <span class="date">~2024-03-20</span>
+                                                <span class="day fcRed">D-day</span>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="list_bottom">
+                                        <span class="etc">경영 · 회계 · 사무</span>
+                                    </div>                                    
+                                </a>
+                            </li>
+                            <li class="item swiper-slide">
+                                <a href="">
+                                    <div class="list_top">
+                                        <div class="job_area">
+                                            <p class="area">경기 수원시 회</p>
+                                            <span class="corp">용인시청</span>
+                                        </div>                                        
+                                        <p class="tit">2024년도 제1회 경기도 지방공무원 공개
+                                            경쟁임용시험 시행 경쟁임용시험 시행경쟁임용시험 시행</p>
+                                        <div class="job_desc">
+                                            <span class="logo"><img src="./resource/images/publicJob/alio_logo.png" alt="알리오"></span>
+                                            <div class="date_wrap">
+                                                <span class="date">~2024-03-20</span>
+                                                <span class="day fcRed">D-day</span>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="list_bottom">
+                                        <span class="etc">경영 · 회계 · 사무</span>
+                                    </div>                                    
+                                </a>
+                            </li>
+                            <li class="item swiper-slide">
+                                <a href="">
+                                    <div class="list_top">
+                                        <div class="job_area">
+                                            <p class="area">경기 수원시 회</p>
+                                            <span class="corp">용인시청</span>
+                                        </div>                                        
+                                        <p class="tit">2024년도 제1회 경기도 지방공무원 공개
+                                            경쟁임용시험 시행 경쟁임용시험 시행경쟁임용시험 시행</p>
+                                        <div class="job_desc">
+                                            <span class="logo"><img src="./resource/images/publicJob/alio_logo.png" alt="알리오"></span>
+                                            <div class="date_wrap">
+                                                <span class="date">~2024-03-20</span>
+                                                <span class="day fcRed">D-day</span>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="list_bottom">
+                                        <span class="etc">경영 · 회계 · 사무</span>
+                                    </div>                                    
+                                </a>
+                            </li>
+                            <li class="item swiper-slide">
+                                <a href="">
+                                    <div class="list_top">
+                                        <div class="job_area">
+                                            <p class="area">경기 수원시 회</p>
+                                            <span class="corp">용인시청</span>
+                                        </div>                                        
+                                        <p class="tit">2024년도 제1회 경기도 지방공무원 공개
+                                            경쟁임용시험 시행 경쟁임용시험 시행경쟁임용시험 시행</p>
+                                        <div class="job_desc">
+                                            <span class="logo"><img src="./resource/images/publicJob/alio_logo.png" alt="알리오"></span>
+                                            <div class="date_wrap">
+                                                <span class="date">~2024-03-20</span>
+                                                <span class="day fcRed">D-day</span>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="list_bottom">
+                                        <span class="etc">경영 · 회계 · 사무</span>
+                                    </div>                                    
+                                </a>
+                            </li>
+                        </ul>                    
+                    </div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
+                
             </div>
         </article>
     </main>
     <script>
         $(document).ready(function() {
             
-            const tabButton = $(".pbj_tab_btn .p_btn");
-            const tabContent = $(".pbj_tab_content .pbj_tab_box");
+            const tabButton = $(".pbj_main .pbj_tab_btn .p_btn");
+            const tabContent = $(".pbj_main .pbj_tab_content .pbj_tab_box");
             tabButton.on("click", function(){
                 let tabIdx = $(this).index();
                 tabButton.removeClass("active");
@@ -2495,10 +2558,109 @@
                 jobContent.eq(tabIdx).addClass("active");
             });
 
+            let swiper = new Swiper(".pbj_slide .job_list", {
+                spaceBetween: 20,
+                slidesPerView: 1,
+                loop: false,
+                navigation: {
+                    nextEl: ".slide_wrap .swiper-button-next",
+                    prevEl: ".slide_wrap .swiper-button-prev",
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 4,
+                    },
+                    860: {
+                        slidesPerView: 3,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                    },
+                }
+            });
+            
+            $('.btn_expand').on("click", function(){                
+                $(this).toggleClass('on');
+                if($(this).hasClass('on')){
+                   $('.keywords_wrap').css('height', 'auto');
+                } else {
+                    $('.keywords_wrap').css('height', '52px');
+                }                
+            });
 
+            let keyLength = $('.pbj_main .keywords').children().length;
+            if(keyLength < 16) {
+                $('.btn_expand').css('display', 'block');
+            } else {
+                $('.btn_expand').css('display', 'none');
+            }
+
+            $('.remove-btn').on("click", function(){
+                keyLength--;
+                if(keyLength < 15){
+                    $('.btn_expand').css('display', 'none');
+                }
+                $(this).parent('.selected_keyword').remove();                 
+            });
+            $('.btn_reset').on("click", function(){
+                $('input[type="checkbox"]').prop("checked",false);                 
+            });
 
             $('.scrollbar-outer').scrollbar();
 
+            const menuOffset =  $('.public_job .pbj_list').offset();
+            const menu = $('.public_job .menuList')
+            const menuHight = menu.outerHeight();
+            console.log(menuOffset);
+            $(document).scroll(function(){
+                const winScroll = $(this).scrollTop();
+
+                if( winScroll > menuOffset.top) {
+                    $('.public_job .leftMenu').addClass('fixed');
+                }else {
+                    $('.public_job .leftMenu').removeClass('fixed');
+                }
+            });
+            $(".scroll-top").on("click",function(){
+                $('html, body').animate({
+                    scrollTop : 0
+                },400)
+                return false;
+            });
+
+
+            const leftMenu = $('.public_job .leftMenu');
+            const leftBtn = leftMenu.find('.menuList li');
+            const popContent = $(".public_job .popup_tab");
+            const popBtn = popContent.find('.pbj_tab_btn .p_btn');
+            const popBox = popContent.find('.pbj_tab_content .pbj_tab_box');
+            leftMenu.on("click", '.menuList li', function(){
+                const clickedButton = $(this);
+                leftMenu.find('.menuList li').not(clickedButton).removeClass('active');
+                clickedButton.toggleClass('active');
+                if(clickedButton.hasClass('active')){
+                    popContent.show();
+                }else {
+                    popContent.hide();
+                }
+                let tabIndex = $(this).index();
+                popBtn.removeClass('active');
+                popBtn.eq(tabIndex).addClass('active');
+                popBox.removeClass('active');
+                popBox.eq(tabIndex).addClass('active');
+            });
+            popBtn.on("click", function(){
+                let tabIndex = $(this).index();
+                popBtn.removeClass("active");
+                $(this).addClass("active");
+                popBox.removeClass('active');
+                popBox.eq(tabIndex).addClass('active');
+                leftBtn.removeClass('active');
+                leftBtn.eq(tabIndex).addClass('active');
+            });
+
+            
+           
         });
         
     </script>

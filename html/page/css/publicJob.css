@@ -1,0 +1,164 @@
+.public_job .fcBlue { color: #008ae0 !important; } 
+ .public_job .fcRed { color: #ff0000 !important; } 
+ .public_job .for_mobile { display: none; } 
+ .public_job .innerSection { max-width: 1200px; padding: 0; } 
+ .public_job .pbj_main { background: #f6f9fc; } 
+ .public_job .pbj_main .innerSection { padding: 50px 0; } 
+ .public_job .pbj_main h2 { margin-bottom: 26px; color: #000; font-size: 40px; font-weight: 500; text-align: center; } 
+ .public_job .pbj_main .main_txt { margin-bottom: 56px; color: #555555; font-size: 20px; font-weight: 400; text-align: center; } 
+ .public_job .pbj_main .main_txt span { font-weight: 900; } 
+ .public_job .pbj_tab_btn button { background-color: transparent; border: none; cursor: pointer; } 
+ .public_job .pbj_tab { display: flex; } 
+ .public_job .pbj_tab .pbj_tab_btn { display: flex; width: 100%; background: #fff; } 
+ .public_job .pbj_tab .pbj_tab_btn li { position: relative; flex: 1; border: 1px solid #dbdbdb; border-bottom: none; border-right: none; } 
+ .public_job .pbj_tab .pbj_tab_btn li:last-child { border-right: 1px solid #dbdbdb; } 
+ .public_job .pbj_tab .pbj_tab_btn li.p_btn::after { content: ''; display: block; width: 15px; height: 9px; position: absolute; top: 50%; right: 20px; transform: translateY(-50%); background: url(../resource/images/publicJob/arrow_type01_icon.png) no-repeat; } 
+ .public_job .pbj_tab .pbj_tab_btn li.p_btn.active::after { background: url(../resource/images/publicJob/arrow_type01_icon_on.png) no-repeat; } 
+ .public_job .pbj_tab .pbj_tab_btn li.active { border-color: #5c6fa7; } 
+ .public_job .pbj_tab .pbj_tab_btn li.active button { background: #5c6fa7; color: #fff; } 
+ .public_job .pbj_tab .pbj_tab_btn button { width: 100%; height: 100%; padding: 0 20px; color: #000; font-size: 14px; font-weight: 500; text-align: left; } 
+ .public_job .pbj_tab .pbj_tab_btn .pbj_keyword::before { content: ''; display: block; width: 16px; height: 16px; position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: url(../resource/images/publicJob/search_icon.png) no-repeat; } 
+ .public_job .pbj_tab .pbj_tab_btn .pbj_keyword input { padding: 0 10px 0 34px; width: 100%; height: 40px; border: 0; box-sizing: border-box; color: #222; font-size: 13px; line-height: 40px; background: transparent; } 
+ .public_job .pbj_tab_content { background: #fff; border: 1px solid #5c6fa7; box-shadow: 0px 0px 10px 0px rgba(34, 31, 31, 0.2); } 
+ .public_job .pbj_tab_content .pbj_tab_box { display: none; } 
+ .public_job .pbj_tab_content .pbj_tab_box.active { display: block; } 
+ .public_job .check_list { display: flex; flex-wrap: wrap; } 
+ .public_job .check_list .item { display: flex; width: calc(100% / 5); height: 40px; background: #fff; border: 1px solid #e2e7ed; border-left: none; border-top: none; text-align: center; box-sizing: border-box; align-items: center; justify-content: center; } 
+ .public_job .check_list .item.none_data { background: #f3f3f3; } 
+ .public_job .check_list .item:nth-child(5n) { border-right: none; } 
+ .public_job .check_list .item .lb_tag { color: #000; font-size: 14px; font-weight: 300; } 
+ .public_job .check_list .inp_chk:checked + .lb_tag { color: #008ae0; } 
+ .public_job .scrollbar-outer { max-height:120px; overflow-y:scroll; } 
+ .public_job .scrollbar-outer > .scroll-content.scroll-scrolly_visible { margin: 0; left: 0; } 
+ .public_job .scrollbar-outer > .scroll-element .scroll-element_track { background: transparent; } 
+ .public_job .scrollbar-outer > .scroll-element .scroll-bar { background:#ccd1db; } 
+ .public_job .scrollbar-outer > .scroll-element.scroll-y { width: 6px; background: #eeeeee; } 
+ .public_job .scrollbar-outer > .scroll-element .scroll-element_outer, .public_job .scrollbar-outer > .scroll-element .scroll-element_track, .public_job .scrollbar-outer > .scroll-element .scroll-bar { border-radius:0; } 
+ .public_job .scrollbar-outer > .scroll-element.scroll-y .scroll-element_outer { width: 6px; } 
+
+ .public_job .pbj_result { display: flex; padding: 40px 30px; background: #fff; border: 1px solid #e2e7ed; border-top: none; align-items: flex-start; } 
+ .public_job .pbj_result .btn_search { display: flex; width: 178px; height: 64px; background: #008ae0; color: #fff; font-size: 15px; box-shadow: 4.243px 4.243px 6px 0px rgba(34, 31, 31, 0.15); align-items: center; justify-content: center; } 
+ .public_job .pbj_result .keywords_wrap { width: calc(100% - 400px); margin-left: auto; font-size: 0; height: 52px; overflow: hidden; } 
+ .public_job .pbj_result .keywords_wrap .selected_keyword { display: inline-flex; margin: 4px 10px 0 0; height: 20px; color: #6e6e6e; font-size: 14px; align-items: center; box-sizing: border-box; } 
+ .public_job .pbj_result .keywords_wrap .selected_keyword .btn_del { width: 8px; height: 8px; margin-left: 4px; background: url(../resource/images/publicJob/close_type01_icon.png) no-repeat; border: none; } 
+ .public_job .pbj_result .keywords_wrap .reset_txt { color: #6e6e6e; font-size: 14px; font-weight: 300; text-align: center; } 
+ .public_job .pbj_result .area_btn { display: flex; margin: 20px 0 0 30px; align-items: center; } 
+ .public_job .pbj_result .area_btn button { position: relative; color: #6e6e6e; font-size: 13px; font-weight: 500; border: none;; } 
+ .public_job .pbj_result .area_btn .btn_reset { padding-left: 18px; } 
+ .public_job .pbj_result .area_btn .btn_reset::before { content: ''; width: 13px; height: 13px; position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: url(../resource/images/publicJob/reset_icon.png) no-repeat; } 
+ .public_job .pbj_result .area_btn .btn_expand { margin-left: 20px; padding-right: 15px; } 
+ .public_job .pbj_result .area_btn .btn_expand::after { content: ''; width: 11px; height: 7px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: url(../resource/images/publicJob/arrow_type02_icon.png) no-repeat; } 
+ .public_job .pbj_result .area_btn .btn_expand.on::after { transform: translateY(-50%) rotate(180deg); } 
+ .public_job .pbj_calendar .calendar_wrap { margin: 50px 0; background: url(../resource/images/publicJob/calendar_bg.png) right 68px bottom #edf5ff no-repeat; border: 1px solid #d7e1f1; border-radius: 15px; } 
+
+ .public_job .pbj_calendar .calendar_wrap a { display: block; padding: 16px 0 16px 178px; position: relative; } 
+.public_job .pbj_calendar .calendar_wrap a::before { content: ''; width: 69px; height: 63px; position: absolute; top: 50%; left: 66px; transform: translateY(-50%); background: url(../resource/images/publicJob/calendar_icon.png) no-repeat; } 
+.public_job .pbj_calendar .calendar_wrap a p { color: #5c6fa6; font-size: 30px; font-weight: 900; } 
+.public_job .pbj_calendar .calendar_wrap a span { color: #839ab7; font-size: 16px; } 
+.public_job .pbj_calendar .calendar_wrap a span::after { content: ''; display: inline-block; width: 46px; height: 19px; margin-left: 16px; background: url(../resource/images/publicJob/arrow_type03_icon.png) no-repeat; vertical-align: middle; } 
+
+.public_job .pbj_list { position: relative; } 
+.public_job .pbj_list h3 { color: #000; font-size: 24px; font-weight: 500; } 
+.public_job .pbj_list h3 em { font-weight: 300; } 
+.public_job .pbj_list .job_menu { display: flex; margin: 30px 0 30px; } 
+.public_job .pbj_list .job_menu li + li { margin-left: 40px; } 
+.public_job .pbj_list .job_menu button { position: relative; color: #999999; font-size: 22px; font-weight: 500; border: none; } 
+.public_job .pbj_list .job_menu button:focus { outline: none; border: none; } 
+.public_job .pbj_list .job_menu button::before { content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); } 
+.public_job .pbj_list .job_menu .job_btn::before { width: 18px; height: 14px; background: url(../resource/images/publicJob/job_icon.png) no-repeat; } 
+.public_job .pbj_list .job_menu .hot_btn::before { width: 13px; height: 19px; background: url(../resource/images/publicJob/hot_icon.png) no-repeat; } 
+.public_job .pbj_list .job_menu .new_btn::before { width: 31px; height: 11px; background: url(../resource/images/publicJob/new_icon.png) no-repeat; } 
+.public_job .pbj_list .job_menu .job_btn { padding-left: 28px; } 
+.public_job .pbj_list .job_menu .hot_btn { padding-left: 20px; } 
+.public_job .pbj_list .job_menu .new_btn { padding-left: 40px; } 
+
+.public_job .pbj_list .job_menu li.active button { color: #000; font-weight: 900; } 
+.public_job .pbj_list .job_content .job_box { display: none; } 
+.public_job .pbj_list .job_content .job_box.active { display: block; } 
+.public_job .pbj_list .job_list { display: flex; flex-wrap: wrap; gap: 20px; } 
+.public_job .pbj_list .job_list .item { width: calc(100% / 4 - 15px); } 
+.public_job .pbj_list .job_list .item.nodata { display: flex; width: 100%; min-height: 200px; align-items: center; justify-content: center; } 
+.public_job .pbj_list .job_list .item.nodata p { color: #5c5c5c; font-size: 22px; font-weight: 300; } 
+.public_job .job_list a { display: block; background: #fff; border: 1px solid #dfdfdf; border-radius: 10px; } 
+.public_job .job_list a:hover { border-color: #008ae0; box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2) } 
+.public_job .job_list .list_top { padding: 20px 20px 14px; } 
+.public_job .job_list .job_area .area { padding-left: 20px; margin-bottom: 10px; position: relative; color: #000; font-size: 13px; font-weight: 300; } 
+.public_job .job_list .job_area .area::before { content: ''; width: 13px; height: 17px; position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: url(../resource/images/publicJob/area_icon.png) no-repeat; } 
+.public_job .job_list .job_area .corp { color: #008ae0; font-size: 13px; font-weight: 300; } 
+.public_job .job_list .tit { margin-bottom: 15px; color: #000; font-size: 16px; font-weight: 300; display: -webkit-box; white-space: normal; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden; } 
+.public_job .job_list .job_desc { display: flex; align-items: center; } 
+.public_job .job_list .date_wrap { margin-left: auto; } 
+.public_job .job_list .job_desc .logo { display: block; width: 100px; height: 34px; } 
+.public_job .job_list .job_desc .logo img { width: 100%; height: 100%; object-fit: scale-down; object-position: left; } 
+.public_job .job_list .date_wrap .date { color: #777777; font-size: 12px; } 
+.public_job .job_list .date_wrap .day { margin-left: 12px; color: #000; font-size: 12px; } 
+
+.public_job .job_list .list_bottom { padding: 6px 20px 10px; border-top: 1px solid #dfdfdf; } 
+.public_job .job_list .list_bottom .etc { color: #777777; font-size: 12px; } 
+
+.public_job .pbj_slide { background: #f7f7f7; } 
+.public_job .pbj_slide .innerSection { padding: 50px 0; } 
+.public_job .pbj_slide h3 { padding-left: 30px; margin-bottom: 30px; position: relative; color: #000; font-size: 22px; font-weight: 500; } 
+.public_job .pbj_slide h3::before { content: ''; width: 21px; height: 18px; position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: url(../resource/images/publicJob/time_icon.png) no-repeat; } 
+.public_job .pbj_slide .slide_wrap { position: relative; } 
+.public_job .pbj_slide .swiper-button-prev, .public_job .pbj_slide .swiper-button-next { width: 41px; height: 41px; margin-top: 0; top: -66px; z-index: 100; } 
+.public_job .pbj_slide .swiper-button-next { right: 0; left: initial !important; background: url(../resource/images/publicJob/arrow_next_icon.png) no-repeat; } 
+
+.public_job .pbj_slide .swiper-button-prev { left: initial; right: 50px; background: url(../resource/images/publicJob/arrow_prev_icon.png) no-repeat; } 
+
+.public_job .pbj_list .more_wrap { margin: 50px 0; text-align: center; } 
+.public_job .pbj_list .more_wrap .more_btn { padding: 24px 26px; position: relative; color: #585858; font-size: 20px; font-weight: 500; border: 1px solid #dfdfdf; } 
+.public_job .pbj_list .more_wrap .more_btn::before { content: ''; display: inline-block; width: 15px; height: 15px; margin-right: 10px; background: url(../resource/images/publicJob/more_icon.png) no-repeat; } 
+.public_job .pbj_list .more_wrap .count { color: #000; font-weight: 900; } 
+
+.public_job .leftMenu { display: none; width: 190px; position: absolute; left: 90px; top: 150px; background: #fff; border: 1px solid #dfdfdf; border-radius: 10px; box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1); z-index: 200; } 
+.public_job .leftMenu.fixed { display: block; position: fixed; top: 150px; } 
+.public_job .leftMenu .tit { padding: 20px 0 15px; text-align: center; border-bottom: 1px solid #dfdfdf; } 
+.public_job .leftMenu .tit p { color: #000; font-size: 16px; font-weight: 500; } 
+.public_job .leftMenu .tit span { color: #008ae0; font-size: 18px; font-weight: 500; } 
+.public_job .leftMenu .menuList li { border-bottom: 1px solid #dfdfdf; } 
+.public_job .leftMenu .menuList li.active button { background: #f3f3f3; color: #000; } 
+.public_job .leftMenu .menuList li.active button::after { transform: translateY(-50%) rotate(90deg); } 
+.public_job .leftMenu .menuList button { display: block; width: 100%; padding: 6px 20px; position: relative; background: #fff; color: #777777; font-size: 14px; border: none; text-align: left; } 
+.public_job .leftMenu .menuList button::after { content: ''; width: 11px; height: 7px; position: absolute; top: 50%; right: 20px; transform: translateY(-50%) rotate(-90deg); background: url(../resource/images/publicJob/arrow_type02_icon.png) no-repeat; } 
+.public_job .leftMenu .scroll-top { display: block; padding: 10px 0; color: #777777; font-size: 12px; text-align: center; } 
+.public_job .popup_tab { width: 1200px; display: none; padding: 20px; position: absolute; top: 0; left: 260px; background: #f3f3f3; border-radius: 20px; box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2); } 
+
+
+@media all and (max-width:1700px){
+ .public_job .leftMenu.fixed { display: none; } 
+ }
+@media all and (max-width:1024px){
+ .public_job .innerSection { width: calc(100% - 20px); } 
+ .public_job .pbj_list .job_list .item { width: calc(100% / 3 - 14px); } 
+ }
+@media all and (max-width: 860px){
+ .public_job .pbj_main { display: none; } 
+ .public_job .pbj_list .job_list .item { width: calc(100% / 2 - 10px); } 
+ .public_job .job_list a:hover { border-color: #dfdfdf; box-shadow: none; } 
+ }
+@media all and (max-width: 640px){
+ .public_job .for_mobile { display: block; } 
+ .public_job .pbj_list h3 { padding: 0 10px; margin-bottom: 20px; font-size: 20px; } 
+ .public_job .pbj_list .innerSection { width: 100%; } 
+ .public_job .pbj_list .job_list .item { width: 100%; } 
+ .public_job .job_list .job_area { display: flex; justify-content: space-between; } 
+ .public_job .job_list .job_area .corp { order: 1; } 
+ .public_job .job_list .job_area .area { order: 2; } 
+ .public_job .pbj_list .job_content { padding: 0 10px; } 
+ .public_job .pbj_list .job_menu { margin: 0; padding: 20px 10px; position: sticky; top: 0; background: #f8f8f8; box-shadow: 0px 10px 10px 0px rgba(34, 31, 31, 0.05); text-align: center; z-index: 200; } 
+ .public_job .pbj_list .job_menu li { width: calc(100% / 3); } 
+ .public_job .pbj_list .job_menu li + li { margin-left: 0; } 
+ .public_job .pbj_list .job_menu button { font-size: 12px; } 
+ .public_job .pbj_list .job_menu .job_btn { padding-left: 16px; } 
+ .public_job .pbj_list .job_menu .hot_btn { padding-left: 12px; } 
+ .public_job .pbj_list .job_menu .new_btn { padding-left: 22px} 
+ .public_job .pbj_list .job_menu .job_btn::before { width: 12px; height: 9px; background-size: contain; } 
+ .public_job .pbj_list .job_menu .hot_btn::before { width: 8px; height: 11px; background-size: contain; } 
+ .public_job .pbj_list .job_menu .new_btn::before { width: 20px; height: 7px; background-size: contain; } 
+ .public_job .pbj_list .more_wrap .more_btn { padding: 12px 10px; font-size: 12px; } 
+ .public_job .pbj_list .more_wrap .more_btn::before { width: 10px; height: 10px; margin-right: 4px; background-size: contain; } 
+ .public_job .pbj_slide .swiper-button-prev, .public_job .pbj_slide .swiper-button-next { display: none; }
+ .public_job .pbj_list .more_wrap {margin: 30px 0;}
+ 
+ }
