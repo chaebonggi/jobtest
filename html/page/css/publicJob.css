@@ -221,4 +221,7 @@
 .public_job .pbj_calendar .calendar_wrap a span { display: block; margin-top: 4px; font-size: 0; } 
 .public_job .pbj_calendar .calendar_wrap a span::after { width: 25px; height: 10px; margin-left: 0; background: url(../resource/images/publicJob/arrow_type04_icon.png) no-repeat; background-size: contain; } 
 
+
+
 }
+
