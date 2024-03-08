@@ -214,5 +214,39 @@
 
 .public_job .pbj_mobile_menu {display: block;}
 
+.public_job .pbj_calendar .calendar_wrap {
+    width: 150px;
+    margin: 20px 0 0 auto;
+    background: #008ae0;
+}
+.public_job .pbj_calendar .calendar_wrap a::before {
+    width: 35px;
+    height: 32px;
+    left: 20px;
+    background-size: contain;
+}
+.public_job .pbj_calendar .calendar_wrap {
+    
+}
+.public_job .pbj_calendar .calendar_wrap a {
+    padding: 10px 0 10px 65px;
+}
+.public_job .pbj_calendar .calendar_wrap a p {
+    color: #fff;
+    font-size: 12px;
+}
+.public_job .pbj_calendar .calendar_wrap a span {
+    display: block;
+    margin-top: 4px;
+    font-size: 0;
+}
+.public_job .pbj_calendar .calendar_wrap a span::after {
+    width: 25px;
+    height: 10px;
+    margin-left: 0;
+    background: url(../resource/images/publicJob/arrow_type04_icon.png) no-repeat;
+    background-size: contain;
+}
+
 
  }
