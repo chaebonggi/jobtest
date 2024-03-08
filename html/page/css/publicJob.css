@@ -124,7 +124,7 @@
 .public_job .leftMenu .scroll-top { display: block; padding: 10px 0; color: #777777; font-size: 12px; text-align: center; } 
 .public_job .popup_tab { width: 1200px; display: none; padding: 20px; position: absolute; top: 0; left: 260px; background: #f3f3f3; border-radius: 20px; box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2); } 
 
-.public_job .pbj_mobile_menu {display: none; position: relative; } 
+.public_job .pbj_mobile_menu { display: none; position: relative; } 
 .public_job .pbj_mobile_menu.on .pbj_m_top { transform: translateY(0); } 
 .public_job .pbj_mobile_menu.on .dim_shadow { display: block; } 
 .public_job .pbj_m_keyword_wrap { padding: 18px 18px 30px; } 
@@ -178,7 +178,7 @@
  .public_job .pbj_list .job_list .item { width: calc(100% / 2 - 10px); } 
  .public_job .job_list a:hover { border-color: #dfdfdf; box-shadow: none; } 
  
- .public_job .pbj_calendar .calendar_wrap {background: #edf5ff ;}
+ .public_job .pbj_calendar .calendar_wrap { background: #edf5ff; } 
  }
 @media all and (max-width: 640px){
  .public_job .for_mobile { display: block; } 
@@ -212,41 +212,13 @@
 .public_job .pbj_slide h3 { padding-left: 20px; margin-bottom: 20px; font-size: 18px; } 
 .public_job .pbj_slide h3::before { width: 14px; height: 12px; background-size: contain; } 
 
-.public_job .pbj_mobile_menu {display: block;}
+.public_job .pbj_mobile_menu { display: block; } 
 
-.public_job .pbj_calendar .calendar_wrap {
-    width: 150px;
-    margin: 20px 0 0 auto;
-    background: #008ae0;
-}
-.public_job .pbj_calendar .calendar_wrap a::before {
-    width: 35px;
-    height: 32px;
-    left: 20px;
-    background-size: contain;
-}
-.public_job .pbj_calendar .calendar_wrap {
-    
-}
-.public_job .pbj_calendar .calendar_wrap a {
-    padding: 10px 0 10px 65px;
-}
-.public_job .pbj_calendar .calendar_wrap a p {
-    color: #fff;
-    font-size: 12px;
-}
-.public_job .pbj_calendar .calendar_wrap a span {
-    display: block;
-    margin-top: 4px;
-    font-size: 0;
-}
-.public_job .pbj_calendar .calendar_wrap a span::after {
-    width: 25px;
-    height: 10px;
-    margin-left: 0;
-    background: url(../resource/images/publicJob/arrow_type04_icon.png) no-repeat;
-    background-size: contain;
-}
+.public_job .pbj_calendar .calendar_wrap { width: 150px; margin: 20px 0 0 auto; background: #008ae0; } 
+.public_job .pbj_calendar .calendar_wrap a::before { width: 35px; height: 32px; left: 20px; background-size: contain; } 
+.public_job .pbj_calendar .calendar_wrap a { padding: 10px 0 10px 65px; } 
+.public_job .pbj_calendar .calendar_wrap a p { color: #fff; font-size: 12px; } 
+.public_job .pbj_calendar .calendar_wrap a span { display: block; margin-top: 4px; font-size: 0; } 
+.public_job .pbj_calendar .calendar_wrap a span::after { width: 25px; height: 10px; margin-left: 0; background: url(../resource/images/publicJob/arrow_type04_icon.png) no-repeat; background-size: contain; } 
 
-
- }
+}
