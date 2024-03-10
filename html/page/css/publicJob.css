@@ -36,19 +36,23 @@
  .public_job .scrollbar-outer > .scroll-element .scroll-element_outer, .public_job .scrollbar-outer > .scroll-element .scroll-element_track, .public_job .scrollbar-outer > .scroll-element .scroll-bar { border-radius:0; } 
  .public_job .scrollbar-outer > .scroll-element.scroll-y .scroll-element_outer { width: 6px; } 
 
- .public_job .pbj_result { display: flex; padding: 40px 30px; background: #fff; border: 1px solid #e2e7ed; border-top: none; align-items: flex-start; } 
+ .public_job .pbj_result { display: flex; padding: 40px 30px; background: #fff; border: 1px solid #e2e7ed; border-top: none; align-items: center; } 
  .public_job .pbj_result .btn_search { display: flex; width: 178px; height: 64px; background: #008ae0; color: #fff; font-size: 15px; box-shadow: 4.243px 4.243px 6px 0px rgba(34, 31, 31, 0.15); align-items: center; justify-content: center; } 
- .public_job .pbj_result .keywords_wrap { width: calc(100% - 400px); margin-left: auto; font-size: 0; height: 52px; overflow: hidden; } 
- .public_job .pbj_result .keywords_wrap .selected_keyword { display: inline-flex; margin: 4px 10px 0 0; height: 20px; color: #6e6e6e; font-size: 14px; align-items: center; box-sizing: border-box; } 
+ .public_job .pbj_result .keywords_wrap { width: calc(100% - 480px); height: 24px; overflow: hidden; margin-left: 24px; font-size: 0; } 
+ .public_job .pbj_result .keywords_wrap .selected_keyword { display: inline-flex; margin: 4px 10px 0 0; height: 20px; color: #6e6e6e; font-size: 14px; font-weight: 300; align-items: center; box-sizing: border-box; } 
  .public_job .pbj_result .keywords_wrap .selected_keyword .btn_del { width: 8px; height: 8px; margin-left: 4px; background: url(../resource/images/publicJob/close_type01_icon.png) no-repeat; border: none; } 
  .public_job .pbj_result .keywords_wrap .reset_txt { color: #6e6e6e; font-size: 14px; font-weight: 300; text-align: center; } 
- .public_job .pbj_result .area_btn { display: flex; margin: 20px 0 0 30px; align-items: center; } 
- .public_job .pbj_result .area_btn button { position: relative; color: #6e6e6e; font-size: 13px; font-weight: 500; border: none;; } 
+ .public_job .pbj_result .area_btn { display: flex; margin-left: 30px; align-items: center; } 
+ .public_job .pbj_result .area_btn button,
+ .public_job .pbj_result .open_btn button { position: relative; color: #6e6e6e; font-size: 13px; font-weight: 500; border: none; } 
  .public_job .pbj_result .area_btn .btn_reset { padding-left: 18px; } 
  .public_job .pbj_result .area_btn .btn_reset::before { content: ''; width: 13px; height: 13px; position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: url(../resource/images/publicJob/reset_icon.png) no-repeat; } 
- .public_job .pbj_result .area_btn .btn_expand { margin-left: 20px; padding-right: 15px; } 
- .public_job .pbj_result .area_btn .btn_expand::after { content: ''; width: 11px; height: 7px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: url(../resource/images/publicJob/arrow_type02_icon.png) no-repeat; } 
- .public_job .pbj_result .area_btn .btn_expand.on::after { transform: translateY(-50%) rotate(180deg); } 
+
+ .public_job .pbj_result .open_btn {margin-left: auto;}
+ .public_job .pbj_result .open_btn .btn_expand {display: none;  margin-left: 20px; padding-right: 15px; } 
+ .public_job .pbj_result .open_btn .btn_expand::after { content: ''; width: 11px; height: 7px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: url(../resource/images/publicJob/arrow_type02_icon.png) no-repeat; } 
+ .public_job .pbj_result .open_btn .btn_expand.on::after { transform: translateY(-50%) rotate(180deg); }
+
  .public_job .pbj_calendar .calendar_wrap { margin: 50px 0; background: url(../resource/images/publicJob/calendar_bg.png) right 68px bottom #edf5ff no-repeat; border: 1px solid #d7e1f1; border-radius: 15px; } 
 
  .public_job .pbj_calendar .calendar_wrap a { display: block; padding: 16px 0 16px 178px; position: relative; } 
@@ -181,9 +185,12 @@
  .public_job .pbj_calendar .calendar_wrap { background: #edf5ff; } 
  }
 @media all and (max-width: 640px){
+ body[data-chatbot="no"]{
+     #ch-plugin{display: none !important;}
+ }
  .public_job .for_mobile { display: block; } 
  .public_job .pbj_main { display: none; } 
- .public_job .pbj_list h3 { padding: 0 10px; margin-bottom: 20px; font-size: 20px; } 
+ .public_job .pbj_list h3 { padding: 0 10px; margin-bottom: 20px; font-size: 18px; } 
  .public_job .pbj_list .innerSection { width: 100%; } 
  .public_job .pbj_list .job_list .item { width: 100%; } 
  .public_job .job_list .job_area { display: flex; justify-content: space-between; } 
@@ -214,13 +221,12 @@
 
 .public_job .pbj_mobile_menu { display: block; } 
 
-.public_job .pbj_calendar .calendar_wrap { width: 150px; margin: 20px 0 0 auto; background: #008ae0; } 
-.public_job .pbj_calendar .calendar_wrap a::before { width: 35px; height: 32px; left: 20px; background-size: contain; } 
-.public_job .pbj_calendar .calendar_wrap a { padding: 10px 0 10px 65px; } 
-.public_job .pbj_calendar .calendar_wrap a p { color: #fff; font-size: 12px; } 
-.public_job .pbj_calendar .calendar_wrap a span { display: block; margin-top: 4px; font-size: 0; } 
-.public_job .pbj_calendar .calendar_wrap a span::after { width: 25px; height: 10px; margin-left: 0; background: url(../resource/images/publicJob/arrow_type04_icon.png) no-repeat; background-size: contain; } 
-
+.public_job .pbj_calendar .innerSection {width: 100%;}
+.public_job .pbj_calendar .calendar_wrap { width: 70px; margin: 20px 0 -54px auto; background: #008ae0; border-radius: 20px 0 0 20px; } 
+.public_job .pbj_calendar .calendar_wrap a::before {display: block; width: 25px; height: 23px; margin: 0 auto; position: static; transform: none;  background-size: contain; } 
+.public_job .pbj_calendar .calendar_wrap a { padding: 10px 0; text-align: center;} 
+.public_job .pbj_calendar .calendar_wrap a p { color: #fff; font-size: 10px; font-weight: 300; } 
+.public_job .pbj_calendar .calendar_wrap a span { display: none;} 
 
 
 }

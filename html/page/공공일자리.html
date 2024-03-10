@@ -43,7 +43,7 @@
     <script src="https://www.jobaba.net/resource/main2024/js/main_2024/main_ver_02.js"></script>
 </head>
 
-<body data-header="edu" data-c="no">
+<body data-header="edu" data-chatbot="no">
     <style>
         body[data-header=job]{
             #job{display:block;}
@@ -1117,8 +1117,8 @@
                             <li class="p_btn"><button type="button">채용구분</button></li>
                             <li class="keyword_wrap">
                                 <span class="pbj_keyword">
-                                    <label for="search_keyword" class="ir-text">검색어 입력</label>
-                                    <input type="text" name="search_keyword" id="search_keyword" placeholder="검색어 입력" autocomplete="off" />
+                                    <label for="search_keyword" class="ir-text">기관/공고명 입력</label>
+                                    <input type="text" name="search_keyword" id="search_keyword" placeholder="기관/공고명 입력" autocomplete="off" />
                                 </span>
                             </li>
                         </ul>                        
@@ -1127,21 +1127,21 @@
                         <div class="pbj_tab_box active">
                             <ul class="check_list">
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA1" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA1" name="checkA" value="1" data-check-type="all" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA1">
-                                        <span>경기전체<em class="num">(00)</em></span>
+                                        <span class="txt">경기전체</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA2" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA2" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA2">
-                                        <span>서울<em class="num">(4,457)</em></span>
+                                        <span class="txt">서울</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA3" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA3" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA3">
-                                        <span>인천<em class="num">(4,457)</em></span>
+                                        <span class="txt">인천</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item none_data">
@@ -1151,189 +1151,189 @@
                                     
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA4" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA4" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA4">
-                                        <span>수원시<em class="num">(4,457)</em></span>
+                                        <span class="txt">수원시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA5" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA5" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA5">
-                                        <span>용인시<em class="num">(4,457)</em></span>
+                                        <span class="txt">용인시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA6" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA6" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA6">
-                                        <span>고양시<em class="num">(4,457)</em></span>
+                                        <span class="txt">고양시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA7" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA7" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA7">
-                                        <span>화성시<em class="num">(00)</em></span>
+                                        <span class="txt">화성시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA8" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA8" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA8">
-                                        <span>성남시<em class="num">(00)</em></span>
+                                        <span class="txt">성남시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA9" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA9" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA9">
-                                        <span>부천시<em class="num">(00)</em></span>
+                                        <span class="txt">부천시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA10" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA10" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA10">
-                                        <span>남양주시<em class="num">(00)</em></span>
+                                        <span class="txt">남양주시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA11" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA11" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA11">
-                                        <span>안산시<em class="num">(00)</em></span>
+                                        <span class="txt">안산시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA12" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA12" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA12">
-                                        <span>평택시<em class="num">(00)</em></span>
+                                        <span class="txt">평택시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA13" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA13" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA13">
-                                        <span>안양시<em class="num">(00)</em></span>
+                                        <span class="txt">안양시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA14" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA14" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA14">
-                                        <span>시흥시<em class="num">(00)</em></span>
+                                        <span class="txt">시흥시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA15" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA15" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA15">
-                                        <span>파주시<em class="num">(00)</em></span>
+                                        <span class="txt">파주시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA16" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA16" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA16">
-                                        <span>김포시<em class="num">(00)</em></span>
+                                        <span class="txt">김포시</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA17" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA17" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA17">
-                                        <span>의정부시<em class="num">(00)</em></span>
+                                        <span class="txt">의정부시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA18" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA18" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA18">
-                                        <span>광주시<em class="num">(00)</em></span>
+                                        <span class="txt">광주시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA19" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA19" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA19">
-                                        <span>하남시<em class="num">(00)</em></span>
+                                        <span class="txt">하남시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA20" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA20" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA20">
-                                        <span>광명시<em class="num">(00)</em></span>
+                                        <span class="txt">광명시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA21" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA21" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA21">
-                                        <span>군포시<em class="num">(00)</em></span>
+                                        <span class="txt">군포시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA22" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA22" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA22">
-                                        <span>양주시<em class="num">(00)</em></span>
+                                        <span class="txt">양주시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA23" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA23" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA23">
-                                        <span>오산시<em class="num">(00)</em></span>
+                                        <span class="txt">오산시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA24" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA24" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA24">
-                                        <span>이천시<em class="num">(00)</em></span>
+                                        <span class="txt">이천시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA25" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA25" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA25">
-                                        <span>안성시<em class="num">(00)</em></span>
+                                        <span class="txt">안성시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA26" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA26" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA26">
-                                        <span>구리시<em class="num">(00)</em></span>
+                                        <span class="txt">구리시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA27" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA27" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA27">
-                                        <span>의왕시<em class="num">(00)</em></span>
+                                        <span class="txt">의왕시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA28" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA28" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA28">
-                                        <span>포천시<em class="num">(00)</em></span>
+                                        <span class="txt">포천시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA29" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA29" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA29">
-                                        <span>양평군<em class="num">(00)</em></span>
+                                        <span class="txt">양평군</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA30" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA30" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA30">
-                                        <span>여주시<em class="num">(00)</em></span>
+                                        <span class="txt">여주시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA31" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA31" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA31">
-                                        <span>동두천시<em class="num">(00)</em></span>
+                                        <span class="txt">동두천시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA32" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA32" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA32">
-                                        <span>과천시<em class="num">(00)</em></span>
+                                        <span class="txt">과천시</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA33" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA33" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA33">
-                                        <span>가평군<em class="num">(00)</em></span>
+                                        <span class="txt">가평군</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkA34" name="checkA" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkA34" name="checkA" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkA34">
-                                        <span>연천군<em class="num">(00)</em></span>
+                                        <span class="txt">연천군</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                             </ul>
@@ -1341,153 +1341,153 @@
                         <div class="pbj_tab_box">
                             <ul class="check_list">
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB1" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB1" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB1">
-                                        <span>사업관리<em class="num">(00)</em></span>
+                                        <span class="txt">사업관리</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB2" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB2" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB2">
-                                        <span>경영·회계·사무<em class="num">(4,457)</em></span>
+                                        <span class="txt">경영·회계·사무</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB3" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB3" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB3">
-                                        <span>금융·보험<em class="num">(4,457)</em></span>
+                                        <span class="txt">금융·보험</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB4" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB4" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB4">
-                                        <span>교육·자연·사회과학<em class="num">(00)</em></span>
+                                        <span class="txt">교육·자연·사회과학</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB5" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB5" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB5">
-                                        <span>법률·경찰·소방·교도·국방<em class="num">(00)</em></span>
+                                        <span class="txt">법률·경찰·소방·교도·국방</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB6" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB6" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB6">
-                                        <span>보건·의료<em class="num">(00)</em></span>
+                                        <span class="txt">보건·의료</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB7" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB7" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB7">
-                                        <span>사회복지·종교<em class="num">(00)</em></span>
+                                        <span class="txt">사회복지·종교</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB8" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB8" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB8">
-                                        <span>문화·예술·디자인·방송<em class="num">(00)</em></span>
+                                        <span class="txt">문화·예술·디자인·방송</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB9" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB9" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB9">
-                                        <span>운전·운송<em class="num">(00)</em></span>
+                                        <span class="txt">운전·운송</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB10" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB10" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB10">
-                                        <span>영업판매<em class="num">(00)</em></span>
+                                        <span class="txt">영업판매</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB11" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB11" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB11">
-                                        <span>경비·청소<em class="num">(00)</em></span>
+                                        <span class="txt">경비·청소</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB12" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB12" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB12">
-                                        <span>이용·숙박·여행·오락·스포<em class="num">(00)</em></span>
+                                        <span class="txt">이용·숙박·여행·오락·스포</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB13" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB13" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB13">
-                                        <span>음식서비스<em class="num">(00)</em></span>
+                                        <span class="txt">음식서비스</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB14" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB14" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB14">
-                                        <span>건설<em class="num">(00)</em></span>
+                                        <span class="txt">건설</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB15" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB15" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB15">
-                                        <span>기계<em class="num">(00)</em></span>
+                                        <span class="txt">기계</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB16" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB16" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB16">
-                                        <span>재료<em class="num">(00)</em></span>
+                                        <span class="txt">재료</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB17" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB17" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB17">
-                                        <span>화학<em class="num">(00)</em></span>
+                                        <span class="txt">화학</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB18" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB18" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB18">
-                                        <span>섬유·의복<em class="num">(00)</em></span>
+                                        <span class="txt">섬유·의복</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB19" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB19" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB19">
-                                        <span>전기·전자<em class="num">(00)</em></span>
+                                        <span class="txt">전기·전자</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB20" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB20" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB20">
-                                        <span>정보통신<em class="num">(00)</em></span>
+                                        <span class="txt">정보통신</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB21" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB21" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB21">
-                                        <span>식품가공<em class="num">(00)</em></span>
+                                        <span class="txt">식품가공</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB22" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB22" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB22">
-                                        <span>인쇄·목재·가구·공예<em class="num">(00)</em></span>
+                                        <span class="txt">인쇄·목재·가구·공예</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB23" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB23" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB23">
-                                        <span>환경·에너지·안전<em class="num">(00)</em></span>
+                                        <span class="txt">환경·에너지·안전</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB24" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB24" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB24">
-                                        <span>농림어업<em class="num">(00)</em></span>
+                                        <span class="txt">농림어업</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="checkB25" name="checkB" value="">
+                                    <input type="checkbox" class="inp_chk" id="checkB25" name="checkB" value="" onclick="jobAreaCheck(this);">
                                     <label class="lb_tag" for="checkB25">
-                                        <span>연구<em class="num">(00)</em></span>
+                                        <span class="txt">연구</span><span class="num">(00)</span>
                                     </label>
                                 </li>                            
                             </ul>
@@ -1497,37 +1497,37 @@
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="checkC1" name="checkC" value="">
                                     <label class="lb_tag" for="checkC1">
-                                        <span>정규직<em class="num">(00)</em></span>
+                                        <span class="txt">정규직</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="checkC2" name="checkC" value="">
                                     <label class="lb_tag" for="checkC2">
-                                        <span>비정규직<em class="num">(00)</em></span>
+                                        <span class="txt">비정규직</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="checkC3" name="checkC" value="">
                                     <label class="lb_tag" for="checkC3">
-                                        <span>비정규직(대체인력)<em class="num">(00)</em></span>
+                                        <span class="txt">비정규직(대체인력)</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="checkC4" name="checkC" value="">
                                     <label class="lb_tag" for="checkC4">
-                                        <span>공무직<em class="num">(00)</em></span>
+                                        <span class="txt">공무직</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="checkC5" name="checkC" value="">
                                     <label class="lb_tag" for="checkC5">
-                                        <span>청년인턴(체험형)<em class="num">(00)</em></span>
+                                        <span class="txt">청년인턴(체험형)</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="checkC6" name="checkC" value="">
                                     <label class="lb_tag" for="checkC6">
-                                        <span>청년인턴(채용형)<em class="num">(00)</em></span>
+                                        <span class="txt">청년인턴(채용형)</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                             </ul>
@@ -1537,25 +1537,25 @@
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="checkD1" name="checkD" value="">
                                     <label class="lb_tag" for="checkD1">
-                                        <span>신입<em class="num">(00)</em></span>
+                                        <span class="txt">신입</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="checkD2" name="checkD" value="">
                                     <label class="lb_tag" for="checkD2">
-                                        <span>경력<em class="num">(00)</em></span>
+                                        <span class="txt">경력</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="checkD3" name="checkD" value="">
                                     <label class="lb_tag" for="checkD3">
-                                        <span>신입+경력<em class="num">(00)</em></span>
+                                        <span class="txt">신입+경력</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="checkD4" name="checkD" value="">
                                     <label class="lb_tag" for="checkD4">
-                                        <span>외국인 전형<em class="num">(00)</em></span>
+                                        <span class="txt">외국인 전형</span><span class="num">(00)</span>
                                     </label>
                                 </li>
                             </ul>
@@ -1566,31 +1566,16 @@
                             <span>선택된 조건 검색하기</span>
                         </button>                        
                         <div class="area_btn">
-                            <button type="button" class="btn_reset">선택초기화</button>
-                            <button type="button" class="btn_expand">펼쳐보기</button>                            
+                            <button type="button" class="btn_reset" onclick="srchInit()">선택초기화</button>
+                            <button type="button" class="btn_save">선택저장</button>                           
                         </div>
                         <div class="keywords_wrap">
                             <div class="keywords">
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">채용문의&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                           
+                                <!-- <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span> -->
                             </div>
-                            <!-- 
-                            <p class="reset_txt">검색조건을 설정해 주세요.</p>
-                             -->
+                        </div>
+                        <div class="open_btn">
+                            <button type="button" class="btn_expand">펼쳐보기</button> 
                         </div>
                     </div>
                 </div>
@@ -1622,496 +1607,7 @@
 				<a href="#none" class="scroll-top">
 					<p>▲ TOP</p>							
 				</a>
-                 <!-- left 팝업  -->
-                <div class="popup_tab">
-                    <div class="pbj_tab">
-                        <ul class="pbj_tab_btn">
-                            <li class="p_btn active"><button type="button">근무지역</button></li>
-                            <li class="p_btn"><button type="button">채용분야</button></li>
-                            <li class="p_btn"><button type="button">고용형태</button></li>
-                            <li class="p_btn"><button type="button">채용구분</button></li>
-                            <li class="keyword_wrap">
-                                <span class="pbj_keyword">
-                                    <label for="search_keyword" class="ir-text">검색어 입력</label>
-                                    <input type="text" name="search_keyword" id="search_keyword" placeholder="검색어 입력" autocomplete="off" />
-                                </span>
-                            </li>
-                        </ul>                        
-                    </div>
-                    <div class="pbj_tab_content scrollbar-outer">
-                        <div class="pbj_tab_box active">
-                            <ul class="check_list">
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA1" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA1">
-                                        <span>경기전체<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA2" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA2">
-                                        <span>서울<em class="num">(4,457)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA3" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA3">
-                                        <span>인천<em class="num">(4,457)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item none_data">
-                                    
-                                </li>
-                                <li class="item none_data">
-                                    
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA4" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA4">
-                                        <span>수원시<em class="num">(4,457)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA5" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA5">
-                                        <span>용인시<em class="num">(4,457)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA6" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA6">
-                                        <span>고양시<em class="num">(4,457)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA7" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA7">
-                                        <span>화성시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA8" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA8">
-                                        <span>성남시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA9" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA9">
-                                        <span>부천시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA10" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA10">
-                                        <span>남양주시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA11" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA11">
-                                        <span>안산시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA12" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA12">
-                                        <span>평택시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA13" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA13">
-                                        <span>안양시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA14" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA14">
-                                        <span>시흥시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA15" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA15">
-                                        <span>파주시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA16" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA16">
-                                        <span>김포시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA17" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA17">
-                                        <span>의정부시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA18" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA18">
-                                        <span>광주시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA19" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA19">
-                                        <span>하남시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA20" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA20">
-                                        <span>광명시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA21" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA21">
-                                        <span>군포시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA22" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA22">
-                                        <span>양주시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA23" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA23">
-                                        <span>오산시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA24" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA24">
-                                        <span>이천시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA25" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA25">
-                                        <span>안성시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA26" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA26">
-                                        <span>구리시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA27" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA27">
-                                        <span>의왕시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA28" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA28">
-                                        <span>포천시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA29" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA29">
-                                        <span>양평군<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA30" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA30">
-                                        <span>여주시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA31" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA31">
-                                        <span>동두천시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA32" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA32">
-                                        <span>과천시<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA33" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA33">
-                                        <span>가평군<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckA34" name="pcheckA" value="">
-                                    <label class="lb_tag" for="pcheckA34">
-                                        <span>연천군<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pbj_tab_box">
-                            <ul class="check_list">
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB1" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB1">
-                                        <span>사업관리<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB2" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB2">
-                                        <span>경영·회계·사무<em class="num">(4,457)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB3" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB3">
-                                        <span>금융·보험<em class="num">(4,457)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB4" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB4">
-                                        <span>교육·자연·사회과학<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB5" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB5">
-                                        <span>법률·경찰·소방·교도·국방<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB6" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB6">
-                                        <span>보건·의료<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB7" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB7">
-                                        <span>사회복지·종교<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB8" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB8">
-                                        <span>문화·예술·디자인·방송<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB9" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB9">
-                                        <span>운전·운송<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB10" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB10">
-                                        <span>영업판매<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB11" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB11">
-                                        <span>경비·청소<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB12" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB12">
-                                        <span>이용·숙박·여행·오락·스포<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB13" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB13">
-                                        <span>음식서비스<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB14" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB14">
-                                        <span>건설<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB15" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB15">
-                                        <span>기계<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB16" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB16">
-                                        <span>재료<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB17" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB17">
-                                        <span>화학<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB18" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB18">
-                                        <span>섬유·의복<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB19" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB19">
-                                        <span>전기·전자<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB20" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB20">
-                                        <span>정보통신<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB21" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB21">
-                                        <span>식품가공<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB22" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB22">
-                                        <span>인쇄·목재·가구·공예<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB23" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB23">
-                                        <span>환경·에너지·안전<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB24" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB24">
-                                        <span>농림어업<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckB25" name="pcheckB" value="">
-                                    <label class="lb_tag" for="pcheckB25">
-                                        <span>연구<em class="num">(00)</em></span>
-                                    </label>
-                                </li>                            
-                            </ul>
-                        </div>
-                        <div class="pbj_tab_box">
-                            <ul class="check_list">
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckC1" name="pcheckC" value="">
-                                    <label class="lb_tag" for="pcheckC1">
-                                        <span>정규직<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckC2" name="pcheckC" value="">
-                                    <label class="lb_tag" for="pcheckC2">
-                                        <span>비정규직<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckC3" name="pcheckC" value="">
-                                    <label class="lb_tag" for="pcheckC3">
-                                        <span>비정규직(대체인력)<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckC4" name="pcheckC" value="">
-                                    <label class="lb_tag" for="pcheckC4">
-                                        <span>공무직<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckC5" name="pcheckC" value="">
-                                    <label class="lb_tag" for="pcheckC5">
-                                        <span>청년인턴(체험형)<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckC6" name="pcheckC" value="">
-                                    <label class="lb_tag" for="pcheckC6">
-                                        <span>청년인턴(채용형)<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pbj_tab_box">
-                            <ul class="check_list">
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckD1" name="pcheckD" value="">
-                                    <label class="lb_tag" for="pcheckD1">
-                                        <span>신입<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckD2" name="pcheckD" value="">
-                                    <label class="lb_tag" for="pcheckD2">
-                                        <span>경력<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckD3" name="pcheckD" value="">
-                                    <label class="lb_tag" for="pcheckD3">
-                                        <span>신입+경력<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                                <li class="item">
-                                    <input type="checkbox" class="inp_chk" id="pcheckD4" name="pcheckD" value="">
-                                    <label class="lb_tag" for="pcheckD4">
-                                        <span>외국인 전형<em class="num">(00)</em></span>
-                                    </label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pbj_result">
-                        <button type="button" class="btn_search">
-                            <span>선택된 조건 검색하기</span>
-                        </button>                        
-                        <div class="area_btn">
-                            <button type="button" class="btn_reset">선택초기화</button>
-                            <button type="button" class="btn_expand">펼쳐보기</button>                            
-                        </div>
-                        <div class="keywords_wrap">
-                            <div class="keywords">
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">채용문의&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">근무지&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                                <span class="selected_keyword">서울&gt;노원구<button type="button" class="btn_del remove-btn"><span class="ir-text">삭제</span></button></span>
-                        
-                            </div>
-                            <!-- 
-                            <p class="reset_txt">검색조건을 설정해 주세요.</p>
-                            -->
-                        </div>
-                    </div>
-                </div>
-                <!-- //left 팝업  -->              
-			</div>
-           
+            </div>
             <div class="innerSection">
                 <h3><span>나</span><em>를 위한<br class="for_mobile"></em> 공공일자리 맞춤공고 <span class="fcBlue">1,173건</span></h3>
                 <!-- 로그인시 
@@ -2535,8 +2031,6 @@
                 
             </div>
         </article>
-        <style>
-        </style>
         <article class="pbj_mobile_menu">    
             <div class="dim_shadow"></div>        
             <div class="pbj_m_top">
@@ -2554,205 +2048,205 @@
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA1" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA1">
-                                        <span>경기전체<em class="num">(00)</em></span>
+                                        <span>경기전체</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA2" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA2">
-                                        <span>서울<em class="num">(4,457)</em></span>
+                                        <span>서울</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA3" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA3">
-                                        <span>인천<em class="num">(4,457)</em></span>
+                                        <span>인천</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA4" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA4">
-                                        <span>수원시<em class="num">(4,457)</em></span>
+                                        <span>수원시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA5" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA5">
-                                        <span>용인시<em class="num">(4,457)</em></span>
+                                        <span>용인시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA6" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA6">
-                                        <span>고양시<em class="num">(4,457)</em></span>
+                                        <span>고양시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA7" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA7">
-                                        <span>화성시<em class="num">(00)</em></span>
+                                        <span>화성시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA8" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA8">
-                                        <span>성남시<em class="num">(00)</em></span>
+                                        <span>성남시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA9" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA9">
-                                        <span>부천시<em class="num">(00)</em></span>
+                                        <span>부천시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA10" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA10">
-                                        <span>남양주시<em class="num">(00)</em></span>
+                                        <span>남양주시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA11" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA11">
-                                        <span>안산시<em class="num">(00)</em></span>
+                                        <span>안산시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA12" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA12">
-                                        <span>평택시<em class="num">(00)</em></span>
+                                        <span>평택시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA13" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA13">
-                                        <span>안양시<em class="num">(00)</em></span>
+                                        <span>안양시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA14" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA14">
-                                        <span>시흥시<em class="num">(00)</em></span>
+                                        <span>시흥시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA15" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA15">
-                                        <span>파주시<em class="num">(00)</em></span>
+                                        <span>파주시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA16" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA16">
-                                        <span>김포시<em class="num">(00)</em></span>
+                                        <span>김포시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA17" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA17">
-                                        <span>의정부시<em class="num">(00)</em></span>
+                                        <span>의정부시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA18" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA18">
-                                        <span>광주시<em class="num">(00)</em></span>
+                                        <span>광주시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA19" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA19">
-                                        <span>하남시<em class="num">(00)</em></span>
+                                        <span>하남시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA20" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA20">
-                                        <span>광명시<em class="num">(00)</em></span>
+                                        <span>광명시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA21" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA21">
-                                        <span>군포시<em class="num">(00)</em></span>
+                                        <span>군포시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA22" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA22">
-                                        <span>양주시<em class="num">(00)</em></span>
+                                        <span>양주시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA23" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA23">
-                                        <span>오산시<em class="num">(00)</em></span>
+                                        <span>오산시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA24" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA24">
-                                        <span>이천시<em class="num">(00)</em></span>
+                                        <span>이천시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA25" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA25">
-                                        <span>안성시<em class="num">(00)</em></span>
+                                        <span>안성시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA26" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA26">
-                                        <span>구리시<em class="num">(00)</em></span>
+                                        <span>구리시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA27" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA27">
-                                        <span>의왕시<em class="num">(00)</em></span>
+                                        <span>의왕시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA28" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA28">
-                                        <span>포천시<em class="num">(00)</em></span>
+                                        <span>포천시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA29" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA29">
-                                        <span>양평군<em class="num">(00)</em></span>
+                                        <span>양평군</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA30" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA30">
-                                        <span>여주시<em class="num">(00)</em></span>
+                                        <span>여주시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA31" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA31">
-                                        <span>동두천시<em class="num">(00)</em></span>
+                                        <span>동두천시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA32" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA32">
-                                        <span>과천시<em class="num">(00)</em></span>
+                                        <span>과천시</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA33" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA33">
-                                        <span>가평군<em class="num">(00)</em></span>
+                                        <span>가평군</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckA34" name="mcheckA" value="">
                                     <label class="lb_tag" for="mcheckA34">
-                                        <span>연천군<em class="num">(00)</em></span>
+                                        <span>연천군</span>
                                     </label>
                                 </li>
                             </ul>
@@ -2762,151 +2256,151 @@
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB1" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB1">
-                                        <span>사업관리<em class="num">(00)</em></span>
+                                        <span>사업관리</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB2" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB2">
-                                        <span>경영·회계·사무<em class="num">(4,457)</em></span>
+                                        <span>경영·회계·사무</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB3" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB3">
-                                        <span>금융·보험<em class="num">(4,457)</em></span>
+                                        <span>금융·보험</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB4" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB4">
-                                        <span>교육·자연·사회과학<em class="num">(00)</em></span>
+                                        <span>교육·자연·사회과학</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB5" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB5">
-                                        <span>법률·경찰·소방·교도·국방<em class="num">(00)</em></span>
+                                        <span>법률·경찰·소방·교도·국방</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB6" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB6">
-                                        <span>보건·의료<em class="num">(00)</em></span>
+                                        <span>보건·의료</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB7" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB7">
-                                        <span>사회복지·종교<em class="num">(00)</em></span>
+                                        <span>사회복지·종교</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB8" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB8">
-                                        <span>문화·예술·디자인·방송<em class="num">(00)</em></span>
+                                        <span>문화·예술·디자인·방송</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB9" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB9">
-                                        <span>운전·운송<em class="num">(00)</em></span>
+                                        <span>운전·운송</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB10" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB10">
-                                        <span>영업판매<em class="num">(00)</em></span>
+                                        <span>영업판매</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB11" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB11">
-                                        <span>경비·청소<em class="num">(00)</em></span>
+                                        <span>경비·청소</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB12" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB12">
-                                        <span>이용·숙박·여행·오락·스포<em class="num">(00)</em></span>
+                                        <span>이용·숙박·여행·오락·스포</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB13" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB13">
-                                        <span>음식서비스<em class="num">(00)</em></span>
+                                        <span>음식서비스</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB14" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB14">
-                                        <span>건설<em class="num">(00)</em></span>
+                                        <span>건설</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB15" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB15">
-                                        <span>기계<em class="num">(00)</em></span>
+                                        <span>기계</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB16" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB16">
-                                        <span>재료<em class="num">(00)</em></span>
+                                        <span>재료</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB17" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB17">
-                                        <span>화학<em class="num">(00)</em></span>
+                                        <span>화학</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB18" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB18">
-                                        <span>섬유·의복<em class="num">(00)</em></span>
+                                        <span>섬유·의복</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB19" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB19">
-                                        <span>전기·전자<em class="num">(00)</em></span>
+                                        <span>전기·전자</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB20" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB20">
-                                        <span>정보통신<em class="num">(00)</em></span>
+                                        <span>정보통신</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB21" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB21">
-                                        <span>식품가공<em class="num">(00)</em></span>
+                                        <span>식품가공</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB22" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB22">
-                                        <span>인쇄·목재·가구·공예<em class="num">(00)</em></span>
+                                        <span>인쇄·목재·가구·공예</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB23" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB23">
-                                        <span>환경·에너지·안전<em class="num">(00)</em></span>
+                                        <span>환경·에너지·안전</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB24" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB24">
-                                        <span>농림어업<em class="num">(00)</em></span>
+                                        <span>농림어업</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckB25" name="mcheckB" value="">
                                     <label class="lb_tag" for="mcheckB25">
-                                        <span>연구<em class="num">(00)</em></span>
+                                        <span>연구</span>
                                     </label>
                                 </li>                            
                             </ul>
@@ -2916,37 +2410,37 @@
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckC1" name="mcheckC" value="">
                                     <label class="lb_tag" for="mcheckC1">
-                                        <span>정규직<em class="num">(00)</em></span>
+                                        <span>정규직</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckC2" name="mcheckC" value="">
                                     <label class="lb_tag" for="mcheckC2">
-                                        <span>비정규직<em class="num">(00)</em></span>
+                                        <span>비정규직</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckC3" name="mcheckC" value="">
                                     <label class="lb_tag" for="mcheckC3">
-                                        <span>비정규직(대체인력)<em class="num">(00)</em></span>
+                                        <span>비정규직(대체인력)</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckC4" name="mcheckC" value="">
                                     <label class="lb_tag" for="mcheckC4">
-                                        <span>공무직<em class="num">(00)</em></span>
+                                        <span>공무직</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckC5" name="mcheckC" value="">
                                     <label class="lb_tag" for="mcheckC5">
-                                        <span>청년인턴(체험형)<em class="num">(00)</em></span>
+                                        <span>청년인턴(체험형)</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckC6" name="mcheckC" value="">
                                     <label class="lb_tag" for="mcheckC6">
-                                        <span>청년인턴(채용형)<em class="num">(00)</em></span>
+                                        <span>청년인턴(채용형)</span>
                                     </label>
                                 </li>
                             </ul>
@@ -2956,25 +2450,25 @@
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckD1" name="mcheckD" value="">
                                     <label class="lb_tag" for="mcheckD1">
-                                        <span>신입<em class="num">(00)</em></span>
+                                        <span>신입</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckD2" name="mcheckD" value="">
                                     <label class="lb_tag" for="mcheckD2">
-                                        <span>경력<em class="num">(00)</em></span>
+                                        <span>경력</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckD3" name="mcheckD" value="">
                                     <label class="lb_tag" for="mcheckD3">
-                                        <span>신입+경력<em class="num">(00)</em></span>
+                                        <span>신입+경력</span>
                                     </label>
                                 </li>
                                 <li class="item">
                                     <input type="checkbox" class="inp_chk" id="mcheckD4" name="mcheckD" value="">
                                     <label class="lb_tag" for="mcheckD4">
-                                        <span>외국인 전형<em class="num">(00)</em></span>
+                                        <span>외국인 전형</span>
                                     </label>
                                 </li>
                             </ul>
@@ -3015,7 +2509,7 @@
     </main>
     <script>
         $(document).ready(function() {
-            
+            // 공공일자리 체크박스 탭
             const tabButton = $(".pbj_main .pbj_tab_btn .p_btn");
             const tabContent = $(".pbj_main .pbj_tab_content .pbj_tab_box");
             tabButton.on("click", function(){
@@ -3026,6 +2520,7 @@
                 tabContent.eq(tabIdx).addClass("active");
             });
 
+            // 공공일자리 맞춤공고 탭
             const jobButton = $(".pbj_list .job_menu li");
             const jobContent = $(".pbj_list .job_content .job_box");
             jobButton.on("click", function(){
@@ -3062,34 +2557,29 @@
                 if($(this).hasClass('on')){
                    $('.keywords_wrap').css('height', 'auto');
                 } else {
-                    $('.keywords_wrap').css('height', '52px');
+                    $('.keywords_wrap').css('height', '24px');
                 }                
-            });
-
-            let keyLength = $('.pbj_main .keywords').children().length;
-            if(keyLength < 16) {
-                $('.btn_expand').css('display', 'block');
-            } else {
-                $('.btn_expand').css('display', 'none');
-            }
-
-            $('.remove-btn').on("click", function(){
-                keyLength--;
-                if(keyLength < 15){
-                    $('.btn_expand').css('display', 'none');
-                }
-                $(this).parent('.selected_keyword').remove();                 
-            });
-            $('.btn_reset').on("click", function(){
-                $('input[type="checkbox"]').prop("checked",false);                 
             });
 
             $('.scrollbar-outer').scrollbar();
 
+            // left메뉴
+            const leftMenu = $('.public_job .leftMenu');
+            const leftBtn = leftMenu.find('.menuList li');
+            leftMenu.on("click", '.menuList li', function(){
+                let tabIndex = $(this).index();
+                tabButton.removeClass("active");
+                tabButton.eq(tabIndex).addClass("active");
+                tabContent.removeClass("active");
+                tabContent.eq(tabIndex).addClass("active");
+                $('html, body').animate({
+                    scrollTop : 0
+                },400)
+            });
+
             const menuOffset =  $('.public_job .pbj_list').offset();
             const menu = $('.public_job .menuList')
             const menuHight = menu.outerHeight();
-            console.log(menuOffset);
             $(document).scroll(function(){
                 const winScroll = $(this).scrollTop();
 
@@ -3106,37 +2596,7 @@
                 return false;
             });
 
-
-            const leftMenu = $('.public_job .leftMenu');
-            const leftBtn = leftMenu.find('.menuList li');
-            const popContent = $(".public_job .popup_tab");
-            const popBtn = popContent.find('.pbj_tab_btn .p_btn');
-            const popBox = popContent.find('.pbj_tab_content .pbj_tab_box');
-            leftMenu.on("click", '.menuList li', function(){
-                const clickedButton = $(this);
-                leftMenu.find('.menuList li').not(clickedButton).removeClass('active');
-                clickedButton.toggleClass('active');
-                if(clickedButton.hasClass('active')){
-                    popContent.show();
-                }else {
-                    popContent.hide();
-                }
-                let tabIndex = $(this).index();
-                popBtn.removeClass('active');
-                popBtn.eq(tabIndex).addClass('active');
-                popBox.removeClass('active');
-                popBox.eq(tabIndex).addClass('active');
-            });
-            popBtn.on("click", function(){
-                let tabIndex = $(this).index();
-                popBtn.removeClass("active");
-                $(this).addClass("active");
-                popBox.removeClass('active');
-                popBox.eq(tabIndex).addClass('active');
-                leftBtn.removeClass('active');
-                leftBtn.eq(tabIndex).addClass('active');
-            });
-
+            // 모바일 체크박스 탭
             const mtabButton = $(".pbj_mobile_menu .pbj_m_btn li");
             const mtabContent = $(".pbj_mobile_menu .pbj_m_container .pbj_m_box");
             mtabButton.on("click", function(){
@@ -3156,7 +2616,112 @@
             
 
         });
-       
+
+        //공공일자리 체크 조건
+        function jobAreaCheck(obj){        
+            var isCheckType = obj.getAttribute('data-check-type');
+            if(isCheckType == 'all') {
+                $('input:checkbox[name="checkA"]').each(function(){
+                    var checkTarget = this.getAttribute('data-check-type') != 'all';
+                    if(checkTarget) {
+                        this.checked = false;
+                    }
+                });
+            }else if(isCheckType != 'all') {
+                $('input:checkbox[name="checkA"]').each(function(){
+                    var checkTarget = this.getAttribute('data-check-type') != 'all';
+                    if(!checkTarget) {
+                        this.checked = false;
+                    }
+                        
+                });
+            }
+            addJobChk(obj);
+        }
+        
+       //현재 검색조건 추가
+        function addJobChk(obj){
+            var $this = $(obj);
+            var objName = $this.attr('name');            
+            var objId = $this.attr('id');
+            var bChecked = $this.is(':checked');
+            chkText = $this.next().children('.txt').text();
+            var categoryMap = {'checkA': '근무지역','checkB': '채용분야','checkC': '고용형태','checkD': '채용구분'};
+            var cateTxt = categoryMap[objName] || '';
+            var srchChk = true;
+            var keyOpenBtn = $('.open_btn .btn_expand');
+            var keyWord = $('.keywords_wrap .keywords');
+            var keyCount = keyWord.find('.selected_keyword').length;
+            if(keyCount > 9){
+                alert('최대 선택은 10개 입니다');
+                obj.checked = false;
+                return false;
+            }
+            if(srchChk){
+                var isCheckType = obj.getAttribute('data-check-type');
+                if(isCheckType == 'all' && objName == 'checkA') {
+                    $(".area").remove();
+                }else if(isCheckType != 'all' && objName == 'checkA') {
+                    $(".areaAll").remove();
+                }
+                if(bChecked){
+                    if(isCheckType == 'all' && objName == 'checkA') {
+                        $(".keywords_wrap .keywords").append('<span class="selected_keyword areaAll" id="'+objName+'_'+objId+'">'+cateTxt+'&gt;'+chkText+ '<button type="button" class="btn_del" onclick="delChk(this)"><span class="ir-text">삭제</span></button></span>');
+                    }else if(isCheckType != 'all' && objName == 'checkA') {
+                        $(".keywords_wrap .keywords").append('<span class="selected_keyword area" id="'+objName+'_'+objId+'">'+cateTxt+'&gt;'+chkText+ '<button type="button" class="btn_del" onclick="delChk(this)"><span class="ir-text">삭제</span></button></span>');
+                    }else {
+                        $(".keywords_wrap .keywords").append('<span class="selected_keyword" id="'+objName+'_'+objId+'">'+cateTxt+'&gt;'+chkText+ '<button type="button" class="btn_del" onclick="delChk(this)"><span class="ir-text">삭제</span></button></span>');
+                    }
+                }else {
+                    $('#'+objName+'_'+objId).remove();
+                }
+            }
+            if(keyWord.height() > 24){
+                keyOpenBtn.css('display', 'block');
+            }else {
+                keyOpenBtn.css('display', 'none');
+            }
+            
+        }
+        //현재 검색조건 삭제
+        function delChk(delId){
+            var $this = $(delId);
+            var chkInfo = $this.parent().attr('id');
+            var chkId = chkInfo.split('_')[1];
+            var keyOpenBtn = $('.open_btn .btn_expand');
+            var keyWord = $('.keywords_wrap .keywords');
+            $("#"+chkId).prop("checked", false);
+            $this.parent().remove();
+            if(keyWord.height() > 24){
+                keyOpenBtn.css('display', 'block');
+            }else {
+                keyOpenBtn.css('display', 'none');
+            }
+        }
+        //검색조건 초기화
+        function srchInit() {
+            var keyWord = $('.keywords_wrap .keywords');
+            var keyOpenBtn = $('.open_btn .btn_expand');
+            keyWord.children().remove();
+            console.log(keyWord.children.length);
+            $("input[name='checkA']").each(function(idx){
+                $(this).prop("checked", false);
+            });
+            $("input[name='checkB']").each(function(idx){
+                $(this).prop("checked", false);
+            });
+            $("input[name='checkC']").each(function(idx){
+                $(this).prop("checked", false);
+            });
+            $("input[name='checkD']").each(function(idx){
+                $(this).prop("checked", false);
+            });
+            if(keyWord.height() > 24){
+                keyOpenBtn.css('display', 'block');
+            }else {
+                keyOpenBtn.css('display', 'none');
+            }            
+        }
             
         
     </script>
@@ -3366,7 +2931,10 @@
             $('.search_menu').show();
             $('.search_menu input[type="text"]').focus();
         });
-        
+        $('.h_mobile_close').click(function(){
+            $('.h_mobile').removeClass('show');
+            $('.h_menu').removeClass('active');
+        });
     });
 </script>
 
