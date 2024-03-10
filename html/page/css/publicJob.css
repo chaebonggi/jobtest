@@ -149,7 +149,8 @@
 .public_job .pbj_mobile_menu .pbj_m_content .pbj_m_container .pbj_m_box { display: none; } 
 .public_job .pbj_mobile_menu .pbj_m_content .pbj_m_container .pbj_m_box.active { display: block; } 
 .public_job .pbj_mobile_menu .pbj_m_content .m_check_list .item { display: block; width: 100%; height: 35px; padding-left: 10px; background: #fff; border-bottom: 1px solid #e2e7ed; box-sizing: border-box; } 
-.public_job .pbj_mobile_menu .pbj_m_content .m_check_list .item .lb_tag { color: #000; font-size: 13px; font-weight: 300; } 
+.public_job .pbj_mobile_menu .pbj_m_content .m_check_list .item:last-child {border-bottom: none;}
+.public_job .pbj_mobile_menu .pbj_m_content .m_check_list .item .lb_tag { color: #000; font-size: 13px; font-weight: 300; line-height: 35px; } 
 .public_job .pbj_mobile_menu .pbj_m_content .m_check_list .inp_chk:checked + .lb_tag { color: #008ae0; } 
 
 .public_job .pbj_mobile_menu .pbj_m_bottom { width: 100%; height: 50px; position: fixed; bottom: 0; z-index: 200; } 
