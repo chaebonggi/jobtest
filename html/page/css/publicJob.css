@@ -276,7 +276,7 @@
 /* 캘린더 */
 .pop_calendar_top { position: fixed; width: 100%; top: 0; z-index: 1200; box-shadow: 0px 0px 20px 0px rgba(34, 37, 75, 0.2); } 
 .pop_calender .cal_list_wrap {display: block;}
-.pop_calendar_wrap { padding-top: 138px; } 
+.pop_calendar_wrap { padding: 138px 0 200px; } 
 .pop_calender { position: absolute; left: 0; top: 0; transform: none; border-radius: 0; } 
 .pop_calendar_top .pop_tit { padding: 8px 12px; background: #f4f4f4; border-top: 2px solid #008ae0; } 
 .pop_calendar_top .pop_tit .p_tit { padding-left: 0; color: #000; font-size: 14px; } 
