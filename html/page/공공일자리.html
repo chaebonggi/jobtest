@@ -1105,1121 +1105,7 @@
    
     <!-- 컨텐츠 -->
     <main class="public_job">    
-        <!-- S:캘린더 팝업 -->
-        <div class="pop_shadow"></div>
-        <div class="pop_calender">
-            <div class="pop_calendar_top">
-                <div class="pop_tit">                    
-                    <p class="p_tit">공공일자리 캘린더</p>
-                    <button type="button" class="pop_close"><span class="ir-text">닫기</span></button>
-                </div>
-                <div class="pop_calendar_control">
-                    <div class="calendar_btn_wrap">
-                        <div class="calendar_day">
-                            <span>2024.</span>
-                            <span>01</span>
-                        </div>
-                        <div class="calendar_btn">
-                            <button type="button" class="prev_btn"><span class="ir-text">이전 달</span></button>
-                            <button type="button" class="next_btn"><span class="ir-text">다음 달</span></button>
-                        </div>
-                    </div>
-                    <style>
-                        .calendar_list li {
-                            width: 46px;
-                            height: 42px;
-                            opacity: 0.4;
-                            float: left;
-                            text-align: center;
-                            margin: 4px 2.5px 4px;
-                            box-sizing: border-box;
-                            opacity: 1;
-                            position: relative;
-                        }
-                        .calendar_list li a {
-                            display: block;
-                            width: 100%;
-                            height: 100%;
-                            box-sizing: border-box;
-                            padding: 6px 0 4px;
-                            cursor: pointer;
-                            border-radius: 3px;
-                            -moz-border-radius: 3px;
-                            -webkit-border-radius: 3px;
-                        }
-                    </style>
-                    <div class="calDate">
-                        <div class="swiper-container calendar_list">
-                            <ul class="swiper-wrapper">
-                                <li class="swiper-slide">
-                                    <a href="#111">
-                                        <span>월</span>
-                                        <span>1</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#222">
-                                        <span>화</span>
-                                        <span>2</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#333">
-                                        <span>수</span>
-                                        <span>3</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#444">
-                                        <span>목</span>
-                                        <span>4</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>금</span>
-                                        <span>5</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>토</span>
-                                        <span>6</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>7</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>8</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>9</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>10</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>11</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>12</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>13</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>14</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>15</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>16</span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#none">
-                                        <span>일</span>
-                                        <span>17</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="pop_calendar_wrap">
-                
-                <div class="calendar_content">
-                    <table class="calendar">
-                        <caption class="">캘린더</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">일</th>
-                                <th scope="col">월</th>
-                                <th scope="col">화</th>
-                                <th scope="col">수</th>
-                                <th scope="col">목</th>
-                                <th scope="col">금</th>
-                                <th scope="col">토</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="c_sunday disable">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">31</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                        
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day" id="111">
-                                            <span class="c_day">1</span>
-                                            <span class="mc_day">1월 1일 월요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item nodata">
-                                                <p>공공일자리가 없습니다</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day" id="222">
-                                            <span class="c_day">2</span>
-                                            <span class="mc_day">1월 2일 화요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day" id="333">
-                                            <span class="c_day">3</span>
-                                            <span class="mc_day">1월 3일 수요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day" id="444">
-                                            <span class="c_day">4</span>
-                                            <span class="mc_day">1월 4일 목요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">5</span>
-                                            <span class="mc_day">1월 5일 금요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="c_saturday">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">6</span>
-                                            <span class="mc_day">1월 6일 토요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="c_sunday">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">7</span>
-                                            <span class="mc_day">1월 7일 일요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item nodata">
-                                                <p>공공일자리가 없습니다</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">8</span>
-                                            <span class="mc_day">1월 8일 월요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">경기도청경기도청경기도청경기도청경기도청경기도청경기도청경기도청</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">경기도청</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">9</span>
-                                            <span class="mc_day">1월 9일 화요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">10</span>
-                                            <span class="mc_day">1월 10일 수요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">1</span>
-                                            <span class="mc_day">1월 1일 목요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">12</span>
-                                            <span class="mc_day">1월 12일 금요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="c_saturday">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">13</span>
-                                            <span class="mc_day">1월 13일 토요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="c_sunday">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">14</span>
-                                            <span class="mc_day">1월 14일 일요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item nodata">
-                                                <p>공공일자리가 없습니다</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">15</span>
-                                            <span class="mc_day">1월 15일 월요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">경기도청경기도청경기도청경기도청경기도청경기도청경기도청경기도청</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">경기도청</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">16</span>
-                                            <span class="mc_day">1월 16일 화요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">17</span>
-                                            <span class="mc_day">1월 17일 수요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">18</span>
-                                            <span class="mc_day">1월 18일 목요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">19</span>
-                                            <span class="mc_day">1월 19일 금요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="c_saturday">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">20</span>
-                                            <span class="mc_day">1월 20일 토요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="c_sunday">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">21</span>
-                                            <span class="mc_day">1월 21일 일요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item nodata">
-                                                <p>공공일자리가 없습니다</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">22</span>
-                                            <span class="mc_day">1월 22일 월요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">경기도청경기도청경기도청경기도청경기도청경기도청경기도청경기도청</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">경기도청</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">23</span>
-                                            <span class="mc_day">1월 23일 화요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">24</span>
-                                            <span class="mc_day">1월 24일 수요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">25</span>
-                                            <span class="mc_day">1월 25일 목요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">26</span>
-                                            <span class="mc_day">1월 26일 금요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="c_saturday">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">27</span>
-                                            <span class="mc_day">1월 27일 토요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="c_sunday">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">28</span>
-                                            <span class="mc_day">1월 28일 일요일</span>                                        
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item nodata">
-                                                <p>공공일자리가 없습니다</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">29</span>
-                                            <span class="mc_day">1월 29일 월요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">경기도청경기도청경기도청경기도청경기도청경기도청경기도청경기도청</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">경기도청</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">30</span>
-                                            <span class="mc_day">1월 31일 화요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">31</span>
-                                            <span class="mc_day">1월 31일 수요일</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_start c_tit">시작</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">대한무역투자진흥공사</span>
-                                                </a>
-                                            </div>
-                                            <div class="link_item">
-                                                <a href="#">
-                                                    <span class="c_end c_tit">마감</span>
-                                                    <span class="c_txt">(재)우체국물류지원단</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="disable">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">1</span>
-                                        </div>
-                                        <div class="cal_schedule">
-
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="disable">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">2</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                            
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="c_saturday disable">
-                                    <div class="cal_wrap scrollbar-outer">
-                                        <div class="cal_day">
-                                            <span class="c_day">3</span>
-                                        </div>
-                                        <div class="cal_schedule">
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <!-- E:캘린더 팝업  -->    
+            
         <article class="pbj_main">
             <div class="innerSection">
                 <h2>공공일자리 채용정보</h2>              
@@ -3601,6 +2487,1133 @@
             </div>                
             </div>
         </article>
+        <!-- S:캘린더 팝업 -->
+        <div class="pop_shadow"></div>
+        <div class="pop_calender">
+            <div class="pop_calendar_top">
+                <div class="pop_tit">                    
+                    <p class="p_tit">공공일자리 캘린더</p>
+                    <button type="button" class="pop_close"><span class="ir-text">닫기</span></button>
+                </div>
+                <div class="pop_calendar_control">
+                    <div class="calendar_btn_wrap">
+                        <div class="calendar_day">
+                            <span>2024.</span>
+                            <span>01</span>
+                        </div>
+                        <div class="calendar_btn">
+                            <button type="button" class="prev_btn"><span class="ir-text">이전 달</span></button>
+                            <button type="button" class="next_btn"><span class="ir-text">다음 달</span></button>
+                        </div>
+                    </div>
+                    <style>
+                        .calendar_list li {
+                            width: 45px;
+                            height: 45px;
+                            opacity: 0.4;
+                            float: left;
+                            text-align: center;
+                            margin: 4px 2.5px 4px;
+                            box-sizing: border-box;
+                            opacity: 1;
+                            position: relative;
+                           
+                        }
+                        .calendar_list li.swiper-slide-active a {
+                            background: #008ae0;
+                            color: #fff;
+                            
+                        }
+                        .calendar_list li a {
+                            display: flex;
+                            width: 100%;
+                            height: 100%;
+                            background: #fff;
+                            color: #afafaf;
+                            font-size: 13px;
+                            box-sizing: border-box;
+                            cursor: pointer;
+                            border-radius: 3px;
+                            -moz-border-radius: 3px;
+                            -webkit-border-radius: 3px;
+                            border-radius: 50%;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    </style>
+                    <div class="calDate">
+                        <div class="swiper-container calendar_list">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#20240101">
+                                        <span>월</span>
+                                        <span>1</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#20240102">
+                                        <span>화</span>
+                                        <span>2</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#20240103">
+                                        <span>수</span>
+                                        <span>3</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#20240104">
+                                        <span>목</span>
+                                        <span>4</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#20240105">
+                                        <span>금</span>
+                                        <span>5</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#20240106">
+                                        <span>토</span>
+                                        <span>6</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#20240107">
+                                        <span>일</span>
+                                        <span>7</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span>일</span>
+                                        <span>8</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span>일</span>
+                                        <span>9</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span>일</span>
+                                        <span>10</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span>일</span>
+                                        <span>11</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span>일</span>
+                                        <span>12</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span>일</span>
+                                        <span>13</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span>일</span>
+                                        <span>14</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span>일</span>
+                                        <span>15</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span>일</span>
+                                        <span>16</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#none">
+                                        <span>일</span>
+                                        <span>17</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="pop_calendar_wrap">
+                
+                <div class="calendar_content">
+                    <table class="calendar">
+                        <caption class="">캘린더</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">일</th>
+                                <th scope="col">월</th>
+                                <th scope="col">화</th>
+                                <th scope="col">수</th>
+                                <th scope="col">목</th>
+                                <th scope="col">금</th>
+                                <th scope="col">토</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="c_sunday disable">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">31</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                        
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day" id="20240101">
+                                            <span class="c_day">1</span>
+                                            <span class="mc_day">1월 1일 월요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item nodata">
+                                                <p>공공일자리가 없습니다</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day" id="20240102">
+                                            <span class="c_day">2</span>
+                                            <span class="mc_day">1월 2일 화요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day" id="20240103">
+                                            <span class="c_day">3</span>
+                                            <span class="mc_day">1월 3일 수요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day" id="20240104">
+                                            <span class="c_day">4</span>
+                                            <span class="mc_day">1월 4일 목요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day" id="20240105">
+                                            <span class="c_day">5</span>
+                                            <span class="mc_day">1월 5일 금요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="c_saturday">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day" id="20240106">
+                                            <span class="c_day">6</span>
+                                            <span class="mc_day">1월 6일 토요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c_sunday">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day" id="20240107">
+                                            <span class="c_day">7</span>
+                                            <span class="mc_day">1월 7일 일요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item nodata">
+                                                <p>공공일자리가 없습니다</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">8</span>
+                                            <span class="mc_day">1월 8일 월요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">경기도청경기도청경기도청경기도청경기도청경기도청경기도청경기도청</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">경기도청</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">9</span>
+                                            <span class="mc_day">1월 9일 화요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">10</span>
+                                            <span class="mc_day">1월 10일 수요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">1</span>
+                                            <span class="mc_day">1월 1일 목요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">12</span>
+                                            <span class="mc_day">1월 12일 금요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="c_saturday">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">13</span>
+                                            <span class="mc_day">1월 13일 토요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c_sunday">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">14</span>
+                                            <span class="mc_day">1월 14일 일요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item nodata">
+                                                <p>공공일자리가 없습니다</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">15</span>
+                                            <span class="mc_day">1월 15일 월요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">경기도청경기도청경기도청경기도청경기도청경기도청경기도청경기도청</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">경기도청</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">16</span>
+                                            <span class="mc_day">1월 16일 화요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">17</span>
+                                            <span class="mc_day">1월 17일 수요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">18</span>
+                                            <span class="mc_day">1월 18일 목요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">19</span>
+                                            <span class="mc_day">1월 19일 금요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="c_saturday">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">20</span>
+                                            <span class="mc_day">1월 20일 토요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c_sunday">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">21</span>
+                                            <span class="mc_day">1월 21일 일요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item nodata">
+                                                <p>공공일자리가 없습니다</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">22</span>
+                                            <span class="mc_day">1월 22일 월요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">경기도청경기도청경기도청경기도청경기도청경기도청경기도청경기도청</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">경기도청</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">23</span>
+                                            <span class="mc_day">1월 23일 화요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">24</span>
+                                            <span class="mc_day">1월 24일 수요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">25</span>
+                                            <span class="mc_day">1월 25일 목요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">26</span>
+                                            <span class="mc_day">1월 26일 금요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="c_saturday">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">27</span>
+                                            <span class="mc_day">1월 27일 토요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="c_sunday">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">28</span>
+                                            <span class="mc_day">1월 28일 일요일</span>                                        
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item nodata">
+                                                <p>공공일자리가 없습니다</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">29</span>
+                                            <span class="mc_day">1월 29일 월요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">경기도청경기도청경기도청경기도청경기도청경기도청경기도청경기도청</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">경기도청</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">30</span>
+                                            <span class="mc_day">1월 31일 화요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">31</span>
+                                            <span class="mc_day">1월 31일 수요일</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_start c_tit">시작</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">대한무역투자진흥공사</span>
+                                                </a>
+                                            </div>
+                                            <div class="link_item">
+                                                <a href="#">
+                                                    <span class="c_end c_tit">마감</span>
+                                                    <span class="c_txt">(재)우체국물류지원단</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="disable">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">1</span>
+                                        </div>
+                                        <div class="cal_schedule">
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="disable">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">2</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                            
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="c_saturday disable">
+                                    <div class="cal_wrap scrollbar-outer">
+                                        <div class="cal_day">
+                                            <span class="c_day">3</span>
+                                        </div>
+                                        <div class="cal_schedule">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- E:캘린더 팝업  -->
         
     </main>
     <script>
@@ -3725,7 +3738,8 @@
                 centeredSlides: true,
                 // slideToClickedSlide: !1,
                 spaceBetween: 0,
-                slidesPerView: 3,
+                slidesPerView: 'auto',
+                
                 // slidesPerView: "auto",
                 // onSlideChangeStart: function(t) {
                 //     var e = $(".calendar_list li").eq(t.activeIndex).attr("id");

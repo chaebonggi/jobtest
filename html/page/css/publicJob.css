@@ -172,7 +172,7 @@
 
 /* 캘린더 */
 .pop_shadow { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000; background-color: rgba(0, 0, 0, 0.7); } 
-.pop_calender { display: block; max-width: 1068px; width: 100%; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #efefef; z-index: 1100; border-radius: 20px; border: 1px solid #95a3cb; overflow: hidden; } 
+.pop_calender { display: none; max-width: 1068px; width: 100%; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #efefef; z-index: 1100; border-radius: 20px; border: 1px solid #95a3cb; overflow: hidden; } 
 .pop_calendar_top .pop_tit { display: flex; padding: 15px 40px; background: #5c6fa6; justify-content: space-between; } 
 .pop_calendar_top .pop_tit .p_tit { padding-left: 40px; position: relative; color: #fff; font-size: 18px; } 
 .pop_calendar_top .pop_tit .p_tit::before { content: ''; width: 30px; height: 27px; position: absolute; left: 0; top: 2px; background: url(../resource/images/publicJob/calendar_icon.png) no-repeat; background-size: contain; } 
