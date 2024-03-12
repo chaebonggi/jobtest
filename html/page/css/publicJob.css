@@ -177,7 +177,7 @@
 .pop_calendar_top .pop_tit .p_tit { padding-left: 40px; position: relative; color: #fff; font-size: 18px; } 
 .pop_calendar_top .pop_tit .p_tit::before { content: ''; width: 30px; height: 27px; position: absolute; left: 0; top: 2px; background: url(../resource/images/publicJob/calendar_icon.png) no-repeat; background-size: contain; } 
 .pop_calendar_top .pop_tit .pop_close { width: 23px; height: 23px; background: url(../resource/images/publicJob/close_type02_icon.png) no-repeat; border: none; } 
-.pop_calender .calDate {display: none;}
+.pop_calender .cal_list_wrap {display: block;}
 .pop_calendar_control { padding: 20px 40px; } 
 .pop_calendar_wrap { max-width: 990px; width: 100%; margin: 0 auto; padding-bottom: 50px; } 
  .calendar_btn_wrap { display: flex; align-items: center; justify-content: space-between; } 
@@ -275,14 +275,15 @@
 
 /* 캘린더 */
 .pop_calendar_top { position: fixed; width: 100%; top: 0; z-index: 1200; box-shadow: 0px 0px 20px 0px rgba(34, 37, 75, 0.2); } 
-.pop_calender .calDate {display: block;}
-.pop_calendar_wrap { padding-top: 134px; } 
+.pop_calender .cal_list_wrap {display: block;}
+.pop_calendar_wrap { padding-top: 138px; } 
 .pop_calender { position: absolute; left: 0; top: 0; transform: none; border-radius: 0; } 
 .pop_calendar_top .pop_tit { padding: 8px 12px; background: #f4f4f4; border-top: 2px solid #008ae0; } 
 .pop_calendar_top .pop_tit .p_tit { padding-left: 0; color: #000; font-size: 14px; } 
 .pop_calendar_top .pop_tit .p_tit::before { content: none; } 
 .pop_calendar_top .pop_tit .pop_close { width: 16px; height: 16px; background: url(../resource/images/publicJob/close_type03_icon.png) no-repeat; background-size: contain; } 
-.pop_calendar_control { padding: 10px 10px; background: #fff; } 
+.pop_calendar_control { padding: 0; background: #fff; } 
+.calendar_btn_wrap {padding: 10px; border-bottom: 1px solid #ddd; margin-bottom: 5px;}
 .calendar_btn_wrap .calendar_day span { font-size: 15px; } 
 .calendar_btn_wrap .calendar_btn button { width: 20px; height: 20px; background-size: contain !important; } 
 
