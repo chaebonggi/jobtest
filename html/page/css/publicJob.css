@@ -1,4 +1,6 @@
-.public_job .fcBlue { color: #008ae0 !important; } 
+ 
+ body, input, select, textarea, button, input.button, input.check, input.radio { font-family: "Noto Sans KR", "Sans-serif"; } 
+ .public_job .fcBlue { color: #008ae0 !important; } 
  .public_job .fcRed { color: #ff0000 !important; } 
  .public_job .for_mobile { display: none; } 
  .public_job .innerSection { max-width: 1200px; padding: 0; } 
@@ -38,7 +40,7 @@
 
  .public_job .pbj_result { display: flex; padding: 40px 30px; background: #fff; border: 1px solid #e2e7ed; border-top: none; align-items: center; } 
  .public_job .pbj_result .btn_search { display: flex; width: 178px; height: 64px; background: #008ae0; color: #fff; font-size: 15px; box-shadow: 4.243px 4.243px 6px 0px rgba(34, 31, 31, 0.15); align-items: center; justify-content: center; } 
- .public_job .pbj_result .keywords_wrap { width: calc(100% - 480px); height: 24px; overflow: hidden; margin-left: 24px; font-size: 0; } 
+ .public_job .pbj_result .keywords_wrap { width: calc(100% - 480px); height: 48px; overflow: hidden; margin-left: 24px; font-size: 0; } 
  .public_job .pbj_result .keywords_wrap .selected_keyword { display: inline-flex; margin: 4px 10px 0 0; height: 20px; color: #6e6e6e; font-size: 14px; font-weight: 300; align-items: center; box-sizing: border-box; } 
  .public_job .pbj_result .keywords_wrap .selected_keyword .btn_del { width: 8px; height: 8px; margin-left: 4px; background: url(../resource/images/publicJob/close_type01_icon.png) no-repeat; border: none; } 
  .public_job .pbj_result .keywords_wrap .reset_txt { color: #6e6e6e; font-size: 14px; font-weight: 300; text-align: center; } 
@@ -50,7 +52,7 @@
  .public_job .pbj_result .area_btn .btn_save { padding-left: 18px; margin-left: 10px; } 
  .public_job .pbj_result .area_btn .btn_save::before { content: ''; width: 13px; height: 13px; position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: url(../resource/images/publicJob/save_icon.png) no-repeat; } 
  .public_job .pbj_result .area_btn .btn_save .tooltip { display: none; width: 370px; padding: 10px; position: absolute; left: -20px; top: 24px; background: #5c6fa7; border-radius: 10px; } 
- /* .public_job .pbj_result .area_btn .btn_save .tooltip::before { content: ''; width: 10px; height: 10px; position: absolute; right: 14px; top: 14px; background: url(../resource/images/publicJob/close_type02_icon.png) no-repeat; background-size: contain; }  */
+ /* .public_job .pbj_result .area_btn .btn_save .tooltip::before { content: ''; width: 10px; height: 10px; position: absolute; right: 14px; top: 14px; background: url(../resource/images/publicJob/close_type02_icon.png) no-repeat; background-size: contain; } */
  .public_job .pbj_result .area_btn .btn_save .tooltip::after { content: ''; position: absolute; top: -10px; left: 40px; border-top: 6px solid transparent; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 6px solid #5c6fa7; } 
  .public_job .pbj_result .area_btn .btn_save .tooltip span { display: block; color: #fff; font-size: 12px; font-weight: 300; text-align: left; } 
 
@@ -117,8 +119,8 @@
 .public_job .pbj_slide .swiper-button-prev { left: initial; right: 50px; background: url(../resource/images/publicJob/arrow_prev_icon.png) no-repeat; } 
 
 .public_job .pbj_list .more_wrap { margin: 50px 0; text-align: center; } 
-.public_job .pbj_list .more_wrap .more_btn { padding: 24px 26px; position: relative; color: #585858; font-size: 20px; font-weight: 500; border: 1px solid #dfdfdf; } 
-.public_job .pbj_list .more_wrap .more_btn::before { content: ''; display: inline-block; width: 15px; height: 15px; margin-right: 10px; background: url(../resource/images/publicJob/more_icon.png) no-repeat; } 
+.public_job .pbj_list .more_wrap .more_btn { padding: 12px 13px; position: relative; color: #888888; font-size: 12px; font-weight: 500; border: 1px solid #dfdfdf; } 
+.public_job .pbj_list .more_wrap .more_btn::before { content: ''; display: inline-block; width: 10px; height: 10px; margin-right: 4px; background: url(../resource/images/publicJob/more_icon.png) no-repeat; background-size: contain; } 
 .public_job .pbj_list .more_wrap .count { color: #000; font-weight: 900; } 
 
 .public_job .leftMenu { display: none; width: 190px; position: absolute; left: 90px; top: 150px; background: #fff; border: 1px solid #dfdfdf; border-radius: 10px; box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1); z-index: 200; } 
@@ -133,19 +135,29 @@
 .public_job .leftMenu .menuList button::after { content: ''; width: 11px; height: 7px; position: absolute; top: 50%; right: 20px; transform: translateY(-50%) rotate(-90deg); background: url(../resource/images/publicJob/arrow_type02_icon.png) no-repeat; } 
 .public_job .leftMenu .scroll-top { display: block; padding: 10px 0; color: #777777; font-size: 12px; text-align: center; } 
 .public_job .popup_tab { width: 1200px; display: none; padding: 20px; position: absolute; top: 0; left: 260px; background: #f3f3f3; border-radius: 20px; box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2); } 
+.public_job .mobile_top_btn { display: flex; width: 76px; height: 30px; position: fixed; left: 10px; bottom: 100px; font-size: 12px; background: #008ae0; border-radius: 20px; color: #fff; align-items: center; justify-content: center; z-index: 500; } 
 
 .public_job .pbj_mobile_menu { display: none; position: relative; } 
 .public_job .pbj_mobile_menu.on .pbj_m_top { transform: translateY(0); } 
 .public_job .pbj_mobile_menu.on .dim_shadow { display: block; } 
 .public_job .pbj_m_keyword_wrap { padding: 18px 18px 30px; } 
-.public_job .pbj_m_keyword_wrap .keywords { margin-top: 10px; white-space: nowrap; overflow-x: scroll; } 
+.public_job .pbj_m_keyword_wrap .keywords { margin-top: 10px; } 
+.public_job .pbj_m_keyword_wrap .k_tit_wrap { display: flex; } 
+.public_job .pbj_m_keyword_wrap .k_tit_wrap .btn_save::before { content: ''; width: 13px; height: 13px; position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: url(../resource/images/publicJob/save_icon.png) no-repeat; } 
+.public_job .pbj_m_keyword_wrap .k_tit_wrap .btn_save { margin-left: 10px; padding-left: 16px; position: relative; color: #000; font-size: 14px; font-weight: 300; border: none; } 
+.public_job .pbj_m_keyword_wrap .k_tit_wrap .btn_save .tooltip { display: none; width: 150px; padding: 10px; position: absolute; left: -20px; top: -40px; background: #5c6fa7; border-radius: 10px; } 
+.public_job .pbj_m_keyword_wrap .k_tit_wrap .btn_save .tooltip::after { content: ''; position: absolute; bottom: -10px; left: 40px; border-top: 6px solid #5c6fa7; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 6px solid transparent; } 
+.public_job .pbj_m_keyword_wrap .k_tit_wrap .tooltip span { display: block; color: #fff; font-size: 10px; font-weight: 300; text-align: left; } 
+
 .public_job .pbj_m_keyword_wrap .k_tit { color: #000; font-size: 14px; font-weight: 500; } 
 .public_job .pbj_m_keyword_wrap .selected_keyword { display: inline-flex; height: 20px; padding: 2px 10px; margin-right: 4px; color: #6e6e6e; font-size: 10px; align-items: center; box-sizing: border-box; border: 1px solid #dfdfdf; border-radius: 30px; } 
 .public_job .pbj_m_keyword_wrap .selected_keyword .btn_del { width: 8px; height: 8px; margin-left: 4px; background: url(../resource/images/publicJob/close_type01_icon.png) no-repeat; border: none; } 
 
 .public_job .pbj_mobile_menu { position: relative; z-index: 600; } 
 .public_job .pbj_mobile_menu .pbj_m_top { width: 100%; padding-bottom: 50px; position: fixed; bottom: 0; background: #fff; border-radius: 25px 25px 0 0; transform: translateY(100%); transition: transform 0.3s ease-in-out; z-index: 200; } 
-.public_job .pbj_mobile_menu .pbj_m_top .tit { display: block; padding: 22px 18px; color: #000; font-size: 14px; font-weight: 500; border-bottom: 1px solid #dfdfdf; } 
+.public_job .pbj_mobile_menu .pbj_m_top .tit_wrap { display: flex; justify-content: space-between; padding: 22px 18px; border-bottom: 1px solid #dfdfdf; } 
+.public_job .pbj_mobile_menu .pbj_m_top .tit_wrap .bnt_mobile_close { width: 18px; height: 18px; background: url(../resource/images/publicJob/close_type03_icon.png); border: none; } 
+.public_job .pbj_mobile_menu .pbj_m_top .tit { display: block; color: #000; font-size: 14px; font-weight: 500; } 
 .public_job .pbj_mobile_menu .pbj_m_content { display: flex; } 
 .public_job .pbj_mobile_menu .pbj_m_content .pbj_m_btn li { width: 90px; height: 35px; border-bottom: 1px solid #dfdfdf; } 
 .public_job .pbj_mobile_menu .pbj_m_content .pbj_m_btn li.active button { background: #fff; } 
@@ -166,18 +178,22 @@
 .public_job .pbj_mobile_menu .pbj_m_bottom ul button { display: block; width: 100%; height: 100%; border: none; } 
 
 .public_job .pbj_mobile_menu .pbj_m_bottom .btn_reset { background: url(../resource/images/publicJob/reset__type02_icon.png) #fff center no-repeat; background-size: 28px; } 
-.public_job .pbj_mobile_menu .pbj_m_bottom .btn_search { background: #008ae0; color: #fff; font-size: 14px; font-weight: 500; } 
+.public_job .pbj_mobile_menu .pbj_m_bottom .btn_search { display: none; background: #008ae0; color: #fff; font-size: 14px; font-weight: 500; } 
+.public_job .pbj_mobile_menu .pbj_m_bottom .btn_pop_open { background: #008ae0; color: #fff; font-size: 14px; font-weight: 500; } 
 
 .dim_shadow { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 100; background-color: rgba(0, 0, 0, 0.7); } 
 
 /* 캘린더 */
 .pop_shadow { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000; background-color: rgba(0, 0, 0, 0.7); } 
+.calendar_list li { width: 45px; height: 45px; opacity: 0.4; float: left; text-align: center; margin: 4px 2.5px 4px; box-sizing: border-box; opacity: 1; position: relative; } 
+.calendar_list li.swiper-slide-active a { background: #008ae0; color: #fff; } 
+.calendar_list li a { display: flex; width: 100%; height: 100%; background: #fff; color: #afafaf; font-size: 13px; box-sizing: border-box; cursor: pointer; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 50%; flex-direction: column; align-items: center; justify-content: center; } 
 .pop_calender { display: none; max-width: 1068px; width: 100%; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #efefef; z-index: 1100; border-radius: 20px; border: 1px solid #95a3cb; overflow: hidden; } 
 .pop_calendar_top .pop_tit { display: flex; padding: 15px 40px; background: #5c6fa6; justify-content: space-between; } 
 .pop_calendar_top .pop_tit .p_tit { padding-left: 40px; position: relative; color: #fff; font-size: 18px; } 
 .pop_calendar_top .pop_tit .p_tit::before { content: ''; width: 30px; height: 27px; position: absolute; left: 0; top: 2px; background: url(../resource/images/publicJob/calendar_icon.png) no-repeat; background-size: contain; } 
 .pop_calendar_top .pop_tit .pop_close { width: 23px; height: 23px; background: url(../resource/images/publicJob/close_type02_icon.png) no-repeat; border: none; } 
-.pop_calender .cal_list_wrap {display: none;}
+.pop_calender .cal_list_wrap { display: none; } 
 .pop_calendar_control { padding: 20px 40px; } 
 .pop_calendar_wrap { max-width: 990px; width: 100%; margin: 0 auto; padding-bottom: 50px; } 
  .calendar_btn_wrap { display: flex; align-items: center; justify-content: space-between; } 
@@ -231,7 +247,9 @@
  
  .public_job .pbj_calendar .calendar_wrap { background: #edf5ff; } 
  }
-@media all and (max-width: 640px) { body[data-chatbot="no"] { #ch-plugin { display: none !important; } 
+@media all and (max-width: 640px) { 
+    body[data-chatbot="no"] { 
+        #ch-plugin { display: none !important; } 
  }
  .public_job .for_mobile { display: block; } 
  .public_job .pbj_main { display: none; } 
@@ -242,7 +260,8 @@
  .public_job .job_list .job_area .corp { order: 1; } 
  .public_job .job_list .job_area .area { order: 2; } 
  .public_job .pbj_list .job_content { padding: 0 10px; } 
- .public_job .pbj_list .job_menu { margin: 0; padding: 20px 10px; position: sticky; top: 0; background: #f8f8f8; box-shadow: 0px 10px 10px 0px rgba(34, 31, 31, 0.05); text-align: center; z-index: 200; } 
+ .public_job .pbj_list .job_menu.fixed {position: sticky; box-shadow: 0px 10px 10px 0px rgba(34, 31, 31, 0.15);}
+ .public_job .pbj_list .job_menu { margin-bottom: 20px; padding: 20px 10px; top: 0; background: #f8f8f8; text-align: center; z-index: 200; } 
  .public_job .pbj_list .job_menu li { width: calc(100% / 3); } 
  .public_job .pbj_list .job_menu li + li { margin-left: 0; } 
  .public_job .pbj_list .job_menu button { font-size: 14px; } 
@@ -275,7 +294,7 @@
 
 /* 캘린더 */
 .pop_calendar_top { position: fixed; width: 100%; top: 0; z-index: 1200; box-shadow: 0px 0px 20px 0px rgba(34, 37, 75, 0.2); } 
-.pop_calender .cal_list_wrap {display: block;}
+.pop_calender .cal_list_wrap { display: block; } 
 .pop_calendar_wrap { padding: 138px 0 200px; } 
 .pop_calender { position: absolute; left: 0; top: 0; transform: none; border-radius: 0; } 
 .pop_calendar_top .pop_tit { padding: 8px 12px; background: #f4f4f4; border-top: 2px solid #008ae0; } 
@@ -283,7 +302,7 @@
 .pop_calendar_top .pop_tit .p_tit::before { content: none; } 
 .pop_calendar_top .pop_tit .pop_close { width: 16px; height: 16px; background: url(../resource/images/publicJob/close_type03_icon.png) no-repeat; background-size: contain; } 
 .pop_calendar_control { padding: 0; background: #fff; } 
-.calendar_btn_wrap {padding: 10px; border-bottom: 1px solid #ddd; margin-bottom: 5px;}
+.calendar_btn_wrap { padding: 10px; border-bottom: 1px solid #ddd; margin-bottom: 5px; } 
 .calendar_btn_wrap .calendar_day span { font-size: 15px; } 
 .calendar_btn_wrap .calendar_btn button { width: 20px; height: 20px; background-size: contain !important; } 
 
@@ -304,6 +323,4 @@
 .calendar .cal_schedule .link_item { border-bottom: 1px solid #f0f0f0; } 
 .calendar .cal_schedule .link_item a { padding: 10px; } 
 .calendar tbody tr td.disable { display: none; } 
-
-
-}
+ }
