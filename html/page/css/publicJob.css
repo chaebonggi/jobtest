@@ -46,7 +46,7 @@
  .public_job .pbj_result .keywords_wrap .reset_txt { color: #6e6e6e; font-size: 14px; font-weight: 300; text-align: center; } 
  .public_job .pbj_result .area_btn { display: flex; margin-left: 30px; align-items: center; } 
  .public_job .pbj_result .area_btn button,
- .public_job .pbj_result .open_btn button { position: relative; color: #6e6e6e; font-size: 13px; font-weight: 500; border: none; flex-shrink: 0; } 
+ .public_job .pbj_result .open_btn button { position: relative; color: #6e6e6e; font-size: 13px; font-weight: 300; border: none; flex-shrink: 0; } 
  .public_job .pbj_result .area_btn .btn_reset { padding-left: 18px; } 
  .public_job .pbj_result .area_btn .btn_reset::before { content: ''; width: 13px; height: 13px; position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: url(../resource/images/publicJob/reset_icon.png) no-repeat; } 
  .public_job .pbj_result .area_btn .btn_save { padding-left: 18px; margin-left: 10px; } 
@@ -119,7 +119,7 @@
 .public_job .pbj_slide .swiper-button-prev { left: initial; right: 50px; background: url(../resource/images/publicJob/arrow_prev_icon.png) no-repeat; } 
 
 .public_job .pbj_list .more_wrap { margin: 50px 0; text-align: center; } 
-.public_job .pbj_list .more_wrap .more_btn { padding: 12px 13px; position: relative; color: #888888; font-size: 12px; font-weight: 500; border: 1px solid #dfdfdf; } 
+.public_job .pbj_list .more_wrap .more_btn { padding: 12px 13px; position: relative; color: #888888; font-size: 12px; font-weight: 300; border: 1px solid #dfdfdf; } 
 .public_job .pbj_list .more_wrap .more_btn::before { content: ''; display: inline-block; width: 10px; height: 10px; margin-right: 4px; background: url(../resource/images/publicJob/more_icon.png) no-repeat; background-size: contain; } 
 .public_job .pbj_list .more_wrap .count { color: #000; font-weight: 900; } 
 
@@ -129,7 +129,7 @@
 .public_job .leftMenu .tit p { color: #000; font-size: 16px; font-weight: 500; } 
 .public_job .leftMenu .tit span { color: #008ae0; font-size: 18px; font-weight: 500; } 
 .public_job .leftMenu .menuList li { border-bottom: 1px solid #dfdfdf; } 
-.public_job .leftMenu .menuList li.active button { background: #f3f3f3; color: #000; } 
+.public_job .leftMenu .menuList li:hover button { background: #f3f3f3; color: #000; } 
 .public_job .leftMenu .menuList li.active button::after { transform: translateY(-50%) rotate(90deg); } 
 .public_job .leftMenu .menuList button { display: block; width: 100%; padding: 6px 20px; position: relative; background: #fff; color: #777777; font-size: 14px; border: none; text-align: left; } 
 .public_job .leftMenu .menuList button::after { content: ''; width: 11px; height: 7px; position: absolute; top: 50%; right: 20px; transform: translateY(-50%) rotate(-90deg); background: url(../resource/images/publicJob/arrow_type02_icon.png) no-repeat; } 
