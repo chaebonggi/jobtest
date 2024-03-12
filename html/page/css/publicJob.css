@@ -177,7 +177,7 @@
 .pop_calendar_top .pop_tit .p_tit { padding-left: 40px; position: relative; color: #fff; font-size: 18px; } 
 .pop_calendar_top .pop_tit .p_tit::before { content: ''; width: 30px; height: 27px; position: absolute; left: 0; top: 2px; background: url(../resource/images/publicJob/calendar_icon.png) no-repeat; background-size: contain; } 
 .pop_calendar_top .pop_tit .pop_close { width: 23px; height: 23px; background: url(../resource/images/publicJob/close_type02_icon.png) no-repeat; border: none; } 
-.pop_calender .cal_list_wrap {display: block;}
+.pop_calender .cal_list_wrap {display: none;}
 .pop_calendar_control { padding: 20px 40px; } 
 .pop_calendar_wrap { max-width: 990px; width: 100%; margin: 0 auto; padding-bottom: 50px; } 
  .calendar_btn_wrap { display: flex; align-items: center; justify-content: space-between; } 
