@@ -40,7 +40,8 @@
 
  .public_job .pbj_result { display: flex; padding: 40px 30px; background: #fff; border: 1px solid #e2e7ed; border-top: none; align-items: center; } 
  .public_job .pbj_result .btn_search { display: flex; width: 178px; height: 64px; background: #008ae0; color: #fff; font-size: 15px; box-shadow: 4.243px 4.243px 6px 0px rgba(34, 31, 31, 0.15); align-items: center; justify-content: center; } 
- .public_job .pbj_result .keywords_wrap { width: calc(100% - 480px); height: auto; max-height: 48px; overflow: hidden; margin-left: 24px; font-size: 0; } 
+ .public_job .pbj_result .keywords_wrap { width: calc(100% - 480px); height: auto; max-height: 48px; overflow: hidden; margin-left: 24px; font-size: 0; border: 1px solid red;} 
+
  .public_job .pbj_result .keywords_wrap .selected_keyword { display: inline-flex; margin: 4px 10px 0 0; height: 20px; color: #6e6e6e; font-size: 14px; font-weight: 300; align-items: center; box-sizing: border-box; } 
  .public_job .pbj_result .keywords_wrap .selected_keyword .btn_del { width: 8px; height: 8px; margin-left: 4px; background: url(../resource/images/publicJob/close_type01_icon.png) no-repeat; border: none; } 
  .public_job .pbj_result .keywords_wrap .reset_txt { color: #6e6e6e; font-size: 14px; font-weight: 300; text-align: center; } 
