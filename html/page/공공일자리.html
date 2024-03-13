@@ -4050,9 +4050,9 @@
             $('.btn_expand').on("click", function(){                
                 $(this).toggleClass('on');
                 if($(this).hasClass('on')){
-                   $('.keywords_wrap').css('height', 'auto');
+                   $('.keywords_wrap').css('max-height', 'initial');
                 } else {
-                    $('.keywords_wrap').css('height', '48px');
+                    $('.keywords_wrap').css('max-height', '48px');
                 }                
             });
 
