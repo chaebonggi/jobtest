@@ -2833,8 +2833,7 @@
                 <div class="pop_calendar_control">
                     <div class="calendar_btn_wrap">
                         <div class="calendar_day">
-                            <span>2024.</span>
-                            <span>03</span>
+                            <span></span>
                         </div>
                         <div class="calendar_btn">
                             <button type="button" class="prev_btn"><span class="ir-text">이전 달</span></button>
@@ -3037,7 +3036,7 @@
             </div>           
             <div class="pop_calendar_wrap">                
                 <div class="calendar_content">
-                    <table class="calendar">
+                     <table class="calendar">
                         <caption class="">캘린더</caption>
                         <thead>
                             <tr>
@@ -3051,6 +3050,9 @@
                             </tr>
                         </thead>
                         <tbody>
+
+                        </tbody>
+                        <!-- <tbody>
                             <tr>
                                 <td class="c_sunday disable">
                                     <div class="cal_wrap scrollbar-outer">
@@ -3989,7 +3991,7 @@
                                     </div>
                                 </td>
                             </tr>
-                        </tbody>
+                        </tbody> -->
                     </table>
                 </div>
             </div>
@@ -4438,6 +4440,103 @@
             $("[name^='check']").prop("checked", false);
             $("[name^='mcheck']").prop("checked", false);        
         }
+        function fullDays(date) {
+            var target = new Date(date);
+            var year = target.getFullYear();
+            var month = target.getMonth();
+
+            var firstWeekDay = new Date(year, month, 1).getDay();
+            var thisDays = new Date(year, month + 1, 0).getDate();
+
+            // 월 표시 달력이 가지는 셀 갯수는 3가지 가운데 하나이다.
+            // var cell = [28, 35, 42].filter(n => n >= (firstWeekDay + thisDays)).shift();
+            var cell = [28, 35, 42].filter(function (n) {
+                    return n >= (firstWeekDay + thisDays);
+                }).shift();
+
+            // 셀 초기화, IE에서 Array.fill()을 지원하지 않아서 변경
+            // var days = new Array(cell).fill({date: '', dayNum: '', today: false});
+            var days = []
+            for (var i = 0; i < cell; i++) {
+                days[i] = {
+                    date: '',
+                    dayNum: '',
+                    today: false
+                };
+            }
+            
+            var now = new Date();
+            var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            var inDate;
+            for (var index = firstWeekDay, i = 1; i <= thisDays; index++, i++) {
+                inDate = new Date(year, month, i);
+                days[index] = {
+                    date: i,
+                    dayNum: inDate.getDay(),
+                    today: (inDate.getTime() === today.getTime())
+                };
+            }
+
+            return days;
+        }
+        function getDayOfWeekString(dayOfWeek) {
+            const daysOfWeek = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+            return daysOfWeek[dayOfWeek];
+        }
+        function drawMonth(date) {
+            $('.calendar_day span').text(date.substring(0, 7).replace('-', '.'));
+            $('.calendar tbody').empty();
+
+            var td = '<td class="__REST__"><div class="cal_day"><span class="c_day">__DATE__</span><span class="mc_day">__DAY__</span></div><div class="cal_schedule"></div></td>';
+            // var href = '/depart/schedule?date=' + date.substring(0, 8);
+            var hasEvent;
+            var tdClass;
+            var week = null;
+            var days = fullDays(date);
+
+            for (var i = 0, length = days.length; i < length; i += 7) {
+                // 전체 셀을 주단위로 잘라서 사용
+                week = days.slice(i, i + 7);
+                
+                var $tr = $('<tr></tr>');
+                week.forEach(function (obj, index) {
+                    // 매주 수요일에 이벤트가 있다고 가정
+                    hasEvent = (index === 3);
+                    tdClass = (index === 0)? 'c_sunday': '';
+                    tdClass = (index === 6)? 'c_saturday': tdClass;
+                    var dayOfWeek = getDayOfWeekString(obj.dayNum);
+                    var monthString = (obj.date) ? (parseInt(date.substring(5, 7)) + '월') : '';
+                    var dateString = (obj.date) ? (parseInt(obj.date) + '일') : '';
+                    var dayContent = monthString + ' ' + dateString + ' ' + dayOfWeek;
+                    console.log(dayContent)
+                    if (!obj.date) {
+                        tdClass += ' disable';
+                    }
+                    // $tr.append(td.replace('__REST__', tdClass)
+                                // .replace('__TODAY__', (obj['today'])? 'today': '')
+                                // .replace('__HREF__', (hasEvent)? 'href="'+ href + ('0' + obj['date']).slice(-2) +'"': '')
+                                // .replace('__DATE__', obj['date'])
+                                // );
+                    var cellContent = td.replace('__DATE__', obj.date || '').replace('__DAY__', dayContent).replace('__REST__', tdClass);
+                    $tr.append(cellContent);
+                });
+                $('.calendar tbody').append($tr);
+            }
+        }
+        $(function () {
+            var date = (new Date()).toISOString().substring(0, 10);
+            drawMonth(date);
+            
+        
+            // $('.month-move').on('click', function (e) {
+            //     e.preventDefault();
+        
+            //     drawMonth($(this).data('ym'));
+            // });
+        });
+
+        // $('.scrollbar-outer').scrollbar();
+
             
         
     </script>
@@ -4541,6 +4640,7 @@
             $('.search_menu input[type="text"]').focus();
         });        
     });
+
 </script>
 
 </body>
