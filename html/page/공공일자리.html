@@ -2810,8 +2810,7 @@
                 <div class="pop_calendar_control">
                     <div class="calendar_btn_wrap">
                         <div class="calendar_day">
-                            <span>2024.</span>
-                            <span>03</span>
+                            <span></span>
                         </div>                        
                         <div class="calendar_btn">
                             <button type="button" class="today_btn">오늘</button>
@@ -3029,6 +3028,9 @@
                             </tr>
                         </thead>
                         <tbody>
+
+                        </tbody>
+                        <!-- <tbody>
                             <tr>
                                 <td class="c_sunday disable">
                                     <div class="cal_wrap scrollbar-outer">
@@ -3967,7 +3969,7 @@
                                     </div>
                                 </td>
                             </tr>
-                        </tbody>
+                        </tbody> -->
                     </table>
                 </div>
             </div>
@@ -4433,6 +4435,99 @@
             $("[name^='check']").prop("checked", false);
             $("[name^='mcheck']").prop("checked", false);        
         }
+
+        // 캘린더
+        function fullDays(date) {
+            var target = new Date(date);
+            var year = target.getFullYear();
+            var month = target.getMonth();
+
+            var firstWeekDay = new Date(year, month, 1).getDay();
+            var thisDays = new Date(year, month + 1, 0).getDate();
+
+            var cell = [28, 35, 42].filter(function (n) {
+                    return n >= (firstWeekDay + thisDays);
+                }).shift();
+
+            var days = []
+            for (var i = 0; i < cell; i++) {
+                days[i] = {
+                    date: '',
+                    dayNum: '',
+                    today: false
+                };
+            }
+            
+            var now = new Date();
+            var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            var inDate;
+            for (var index = firstWeekDay, i = 1; i <= thisDays; index++, i++) {
+                inDate = new Date(year, month, i);
+                days[index] = {
+                    date: i,
+                    dayNum: inDate.getDay(),
+                    today: (inDate.getTime() === today.getTime())
+                };
+            }
+
+            return days;
+        }
+        function getDayOfWeekString(dayOfWeek) {
+            const daysOfWeek = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+            return daysOfWeek[dayOfWeek];
+        }
+        function drawMonth(date) {
+            $('.calendar_day span').text(date.substring(0, 7).replace('-', '.'));
+            $('.calendar tbody').empty();
+
+            var td = '<td class="__REST__"><div class="cal_wrap scrollbar-outer"><div class="cal_day"><span class="c_day">__DATE__</span><span class="mc_day">__DAY__</span></div><div class="cal_schedule"></div></div></td>';
+            var tdClass;
+            var week = null;
+            var days = fullDays(date);
+
+            for (var i = 0, length = days.length; i < length; i += 7) {
+                // 전체 셀을 주단위로 잘라서 사용
+                week = days.slice(i, i + 7);
+                
+                var $tr = $('<tr></tr>');
+                week.forEach(function (obj, index) {
+                    tdClass = (index === 0)? 'c_sunday': '';
+                    tdClass = (index === 6)? 'c_saturday': tdClass;
+                    var dayOfWeek = getDayOfWeekString(obj.dayNum);
+                    var monthString = (obj.date) ? (parseInt(date.substring(5, 7)) + '월') : '';
+                    var dateString = (obj.date) ? (parseInt(obj.date) + '일') : '';
+                    var dayContent = monthString + ' ' + dateString + ' ' + dayOfWeek;
+                    var dayId = (obj.date) ? date.substring(0, 4) + date.substring(5, 7) + ('0' + obj.date).slice(-2) : '';
+
+                    if (!obj.date) {
+                        tdClass += ' disable';
+                    }
+                    
+                    var $cellContent = $(td.replace('__DATE__', obj.date || '').replace('__DAY__', dayContent).replace('__REST__', tdClass));
+                    var $calSchedule = $cellContent.find('.cal_schedule');
+                    if ($calSchedule.children().length === 0) {
+                        $calSchedule.append('<div class="link_item nodata"><p>공공일자리가 없습니다</p></div>');
+                    }
+
+                    $cellContent.find('.cal_wrap').attr('id', dayId);
+                    $tr.append($cellContent);
+                });
+                $('.calendar tbody').append($tr);
+            }
+        }
+        $(function () {
+            var date = (new Date()).toISOString().substring(0, 10);
+            drawMonth(date);
+            
+        
+            // $('.month-move').on('click', function (e) {
+            //     e.preventDefault();
+        
+            //     drawMonth($(this).data('ym'));
+            // });
+            $('.scrollbar-outer').scrollbar();
+        });
+
             
         
     </script>

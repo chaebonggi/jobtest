@@ -221,6 +221,7 @@
  .calendar tbody tr td.disable .cal_day { color: #adadad; } 
  .calendar tbody tr td .cal_day { padding: 4px 10px; color: #000; font-size: 14px; } 
  .calendar tbody tr td .cal_day .mc_day { display: none; } 
+ .calendar tbody tr td.disable .cal_wrap {display: none;}
  .calendar .cal_wrap { height: 120px; } 
  .calendar .cal_schedule { padding: 0 10px; margin-bottom: 10px; } 
  .calendar .cal_schedule .link_item + .link_item { margin-top: 4px; } 
