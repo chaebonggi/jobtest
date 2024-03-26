@@ -83,8 +83,7 @@
 .newIntro .newIntroWrap .txtWrap { margin: 20px 0 40px; } 
 .newIntro .newIntroWrap .txtWrap p { font-size: 22px; } 
 .newIntro .newIntroWrap .txtWrap span { font-size: 16px; } 
-
-.newIntro .newIntroWrap .introList { gap: 0 10px; } 
+.newIntro .newIntroWrap .introList { margin-bottom: 20px; gap: 0 10px; } 
 .newIntro .newIntroWrap .introList li { border-radius: 15px; } 
 .newIntro .newIntroWrap .introList li a { padding: 30px 0; } 
 .newIntro .newIntroWrap .introList .circle { width: 70px; height: 70px; background-size: 50%; } 
@@ -93,11 +92,11 @@
 .newIntro .newIntroWrap .introList li:nth-child(3)::before { width: 32px; height: 38px; top: 12px; right: -2px; } 
 .newIntro .newIntroWrap .introList li:hover:nth-child(2)::before { top: -29px; } 
 .newIntro .newIntroWrap .introList .tit { font-size: 14px; } 
-.newIntro .newIntroWrap .introBtn .leftBox { margin-bottom: 20px; } 
+.newIntro .newIntroWrap .introBtn .leftBox { margin-bottom: 10px; } 
 .newIntro .newIntroWrap .introBtn .leftBox a { padding: 20px 10px; } 
-.newIntro .newIntroWrap .introBtn .leftBox .titWrap { padding-left: 60px; margin: 0 auto; } 
+.newIntro .newIntroWrap .introBtn .leftBox .titWrap { padding-left: 70px; margin: 0 auto; } 
 .newIntro .newIntroWrap .introBtn .leftBox a::after { content: none; } 
-.newIntro .newIntroWrap .introBtn .leftBox .titWrap::before { width: 48px; height: 28px; position: absolute; background-size: contain; } 
+.newIntro .newIntroWrap .introBtn .leftBox .titWrap::before { width: 55px; height: 32px; position: absolute; background-size: contain; } 
 .newIntro .newIntroWrap .introBtn .leftBox .titWrap span { font-size: 14px; } 
 .newIntro .newIntroWrap .introBtn .leftBox .titWrap p { font-size: 18px; } 
 .newIntro .newIntroWrap .introBtn .leftBox .titWrap p::after { content: ''; display: inline-block; width: 24px; height: 16px; margin-left: 10px; background: url(../../images/main_2024/intro/new_intro_arrow03.png) no-repeat; background-size: contain; vertical-align: middle; } 
