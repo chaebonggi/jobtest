@@ -347,7 +347,7 @@ body.sumoStopScroll { overflow: visible; }
 .newMentoring .new_ctain_wrap2 .link_wrap a:nth-child(2) { background-image: linear-gradient(#6ab5fb, #858aec); } 
 .newMentoring .new_ctain_wrap2 .link_wrap a:nth-child(3) { background-image: linear-gradient(#77d5e6, #52b0ec); } 
 .newMentoring .new_ctain_wrap2 .link_wrap a:nth-child(3) span { padding-left: 36px; } 
-.newMentoring .new_ctain_wrap2 .link_wrap a:nth-child(3) span::before { content: ''; width: 32px; height: 32px; position: absolute; top: 6px; left: 0; background: url(/resource/images/mento/mento_search_icon01.png) no-repeat; background-size: contain; } 
+.newMentoring .new_ctain_wrap2 .link_wrap a:nth-child(3) span::before { content: ''; width: 32px; height: 32px; position: absolute; top: 6px; left: 0; background: url(../../resource/images/mento/mento_search_icon01.png) no-repeat; background-size: contain; } 
 .newMentoring .new_ctain_wrap2 .link_wrap a .tooltip { width: 48px; height: 48px; position: absolute; top: -24px; right: 34px; } 
 .newMentoring .new_ctain_wrap2 .link_wrap a .tooltip span { display: flex; width: 48px; height: 48px; position: absolute; top: 0; right: 0; background-image: linear-gradient(#95a9ff, #a971ee); color: #fff; font-size: 25px; font-family: 'jalNan'; border: 3px solid #fff; border-radius: 50%; align-items: center; justify-content: center; } 
 .newMentoring .new_ctain_wrap2 .link_wrap a:nth-child(2) .tooltip span { background-image: linear-gradient(#858aec, #6ab5fb); } 
@@ -355,12 +355,12 @@ body.sumoStopScroll { overflow: visible; }
 .newMentoring .new_ctain_wrap2 .link_wrap a .tooltip .tip_txt::before { content: ''; width: 20px; background-color: #FFFF; height: 20px; position: absolute; left: 50%; bottom: -8px; border-radius: 4px; box-shadow:-2px 2px rgb(178 178 178 / 0.3); transform: translateX(-50%) rotate(-45deg); z-index: 2; } 
 .newMentoring .new_ctain_wrap2 .link_wrap a .tooltip .tip_txt p { color: #000; font-size: 18px; font-weight: 300; white-space: nowrap; } 
 .newMentoring .new_ctain_wrap2 .link_wrap a .tooltip span:hover + .tip_txt { display: block; } 
-.newMentoring .mento_banner { background: url(/resource/images/mento/mento_banner_bg.png) #e4eef9 center no-repeat; } 
-.newMentoring .mento_banner .ctain { display: flex; padding: 56px 0; background: url(/resource/images/mento/mento_banner_item01.png) no-repeat; background-position: right 320px bottom -2px; align-items: center; justify-content: space-between; } 
+.newMentoring .mento_banner { background: url(../../resource/images/mento/mento_banner_bg.png) #e4eef9 center no-repeat; } 
+.newMentoring .mento_banner .ctain { display: flex; padding: 56px 0; background: url(../../resource/images/mento/mento_banner_item01.png) no-repeat; background-position: right 320px bottom -2px; align-items: center; justify-content: space-between; } 
 .newMentoring .mento_banner .txt_wrap p { color: #000000; font-size: 30px; letter-spacing: -1px; } 
 .newMentoring .mento_banner .txt_wrap p span { color: #4267bf; font-size: 40px; font-weight: 900; } 
 .newMentoring .mento_banner .link_btn { display: inline-flex; padding: 20px 40px; background: #4267bf; color: #fff; font-size: 26px; font-weight: 900; align-items: center; border-radius: 20px; } 
-.newMentoring .mento_banner .link_btn::after { content: ''; display: block; width: 67px; height: 44px; margin-left: 20px; background: url(/resource/images/mento/mento_arrow_icon01.png) no-repeat; } 
+.newMentoring .mento_banner .link_btn::after { content: ''; display: block; width: 67px; height: 44px; margin-left: 20px; background: url(../../resource/images/mento/mento_arrow_icon01.png) no-repeat; } 
 .newMentoring .mento_qna .containerNew { padding: 100px 0; } 
 
 .newMentoring .mento_qna .none_data p { padding: 20px 0; text-align: center; font-size: 16px; } 
@@ -383,7 +383,7 @@ body.sumoStopScroll { overflow: visible; }
 .newMentoring .mento_qna .qna_top .qna_box02 { display: flex; margin-left: 30px; } 
 .newMentoring .mento_qna .qna_top .qna_box02 .select_wrap .SumoSelect { width: 220px; height: 40px; border: 1px solid #c8c8c8; color: #666666; font-size: 16px; font-family: 'Noto Sans KR'; } 
 .newMentoring .mento_qna .qna_top .qna_box02 .select_wrap .SumoSelect > .CaptionCont { height: 100%; border: 0; } 
-.newMentoring .mento_qna .qna_top .qna_box02 .select_wrap .SumoSelect > .CaptionCont > label > i { background: url(/resource/images/mento/select_arrow.png) center no-repeat; } 
+.newMentoring .mento_qna .qna_top .qna_box02 .select_wrap .SumoSelect > .CaptionCont > label > i { background: url(../../resource/images/mento/select_arrow.png) center no-repeat; } 
 .newMentoring .mento_qna .qna_top .qna_box02 .select_wrap .SumoSelect > .optWrapper > .options li.opt { font-size: 14px; border-bottom: 1px solid #f5f5f5; } 
 .newMentoring .mento_qna .qna_top .qna_box02 .select_wrap .SumoSelect > .optWrapper.multiple > .options li.opt.selected span i { background-color: #00a5cb; } 
 
@@ -392,13 +392,13 @@ body.sumoStopScroll { overflow: visible; }
 .newMentoring .mento_qna .qna_top .qna_box03 { display: flex; margin-left: auto; } 
 .newMentoring .mento_qna .qna_top .qna_box03 a { display: flex; padding: 0 30px; margin-right: 16px; background: #00a5cb; color: #fff; font-size: 16px; font-weight: 900; border-radius: 5px; align-items: center; } 
 .newMentoring .mento_qna .qna_top .qna_box03 .comm_select { height: 40px; } 
-.newMentoring .mento_qna .qna_top .qna_box03 select.comm_select { background: url(/resource/images/mento/select_arrow.png) center right 10px no-repeat; } 
+.newMentoring .mento_qna .qna_top .qna_box03 select.comm_select { background: url(../../resource/images/mento/select_arrow.png) center right 10px no-repeat; } 
 .newMentoring .mento_qna .mento_qna_wrap { margin-bottom: 60px; } 
 .mento_qna_wrap .tit { margin-bottom: 40px; color: #000000; font-size: 24px; text-align: center; } 
 .mento_qna_wrap .tit span { display: block; margin-top: 14px; color: #003280; font-size: 60px; font-family: 'BMHANNA11yrsold'; } 
 .mento_qna_wrap .txt_wrap { max-width: 640px; padding: 20px 0; margin: 0 auto; position: relative; background: #fff; border: 1px solid #003280; outline: 10px solid #c4e4ee; border-radius: 50px; text-align: center; } 
-.mento_qna_wrap .txt_wrap::before { content: ''; width: 109px; height: 140px; position: absolute; left: 50px; top: -141px; background: url(/resource/images/mento/mento_item02.png) no-repeat; background-size: contain; } 
-.mento_qna_wrap .txt_wrap::after { content: ''; width: 104px; height: 132px; position: absolute; right: 50px; top: -133px; background: url(/resource/images/mento/mento_item03.png) no-repeat; background-size: contain; } 
+.mento_qna_wrap .txt_wrap::before { content: ''; width: 109px; height: 140px; position: absolute; left: 50px; top: -141px; background: url(../../resource/images/mento/mento_item02.png) no-repeat; background-size: contain; } 
+.mento_qna_wrap .txt_wrap::after { content: ''; width: 104px; height: 132px; position: absolute; right: 50px; top: -133px; background: url(../../resource/images/mento/mento_item03.png) no-repeat; background-size: contain; } 
 .mento_qna_wrap .txt_wrap p { color: #0042aa; font-size: 18px; font-weight: 300; } 
 /* //2024.03.29 css 추가 */
 
