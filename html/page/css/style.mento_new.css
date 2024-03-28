@@ -710,11 +710,11 @@ textarea { width:100%; padding:10px 0; }
 .newMentoring .qna_write .item .cont textarea { height: 140px; } 
 .newMentoring .qna_write .item.file_up { margin: 10px 0 30px; } 
 .newMentoring .mento_qna_detail .file_btn_wrap { display: flex; gap: 0 4px; } 
-.newMentoring .mento_qna_detail .btn_type01 { height: 30px; font-size: 14px; } 
+.newMentoring .mento_qna_detail .btn_type01 {width: 100%; height: 30px; font-size: 14px; } 
 .newMentoring .mento_qna_detail .file_add::before { width: 12px; height: 12px; vertical-align: initial; background-size: contain; } 
 .newMentoring .mento_qna_detail .file_del::before { width: 12px; height: 12px; vertical-align: initial; background-size: contain; } 
 .newMentoring .mento_qna_detail .mento_btn_wrap { display: flex; } 
-.newMentoring .mento_qna_detail .btn_type02 { height: 40px; font-size: 18px; } 
+.newMentoring .mento_qna_detail .btn_type02 { width: 100%; height: 40px; font-size: 18px; } 
 .newMentoring .mento_qna_detail .mento_btn_wrap button + button { margin-left: 10px; } 
 /* //2024.03.29 css 추가 */ }
 
