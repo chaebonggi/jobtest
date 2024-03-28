@@ -1129,7 +1129,7 @@
         <div class="new_ctain_wrap2 section">
             <div class="ctain">
                 <div class="link_wrap">
-                    <a href="">
+                    <a href="#mento01">
                         <span>멘토링 신청</span>
                         <div class="tooltip">
                             <span>?</span>
@@ -1139,7 +1139,7 @@
                             </div>                            
                         </div>
                     </a>
-                    <a href="">
+                    <a href="#mento02">
                         <span>궁금해요 Q&A</span>
                         <div class="tooltip">
                             <span>?</span>
@@ -1149,7 +1149,7 @@
                             </div>                            
                         </div>
                     </a>
-                    <a href=""><span>멘토링 결과 확인</span></a>
+                    <a href="https://www.jobaba.net/mber/login/chkLogin.do?rtnPath=/mber/myPage/mentoring/list.do" target="_blank"><span>멘토링 결과 확인</span></a>
                 </div>
                 <h3 class="mt_tit">
                     이런 분들이라면 멘토링 신청하세요!
@@ -1210,7 +1210,7 @@
         <form name="frm" id="frm" method="post" action="/mentoring/mainList.do">
             <input type="hidden" id="currentPageNo" name="currentPageNo" value="1" />
             <input type="hidden" id="recordCountPerPage" name="recordCountPerPage" value="10" />
-        <div class="new_ctain_wrap3 section_pd">
+        <div class="new_ctain_wrap3 section_pd" id="mento01">
             <div class="containerNew">
                 <div class="searchSet">
                     <select id="jssfcLclasCd" name="jssfcLclasCd" title="직종 선택" class="comm_input jssfcGrpCd">	<option value="" selected>직종 선택</option>	<option value="0">경영ㆍ사무ㆍ금융ㆍ보험직</option>	<option value="1">연구직 및 공학 기술직</option>	<option value="2">교육ㆍ법률ㆍ사회복지ㆍ경찰ㆍ소방직 및 군인</option>	<option value="3">보건ㆍ의료직</option>	<option value="4">예술ㆍ디자인ㆍ방송ㆍ스포츠직</option>	<option value="5">미용ㆍ여행ㆍ숙박ㆍ음식ㆍ경비ㆍ청소직</option>	<option value="6">영업ㆍ판매ㆍ운전ㆍ운송직</option>	<option value="7">건설ㆍ채굴직</option>	<option value="8">설치ㆍ정비ㆍ생산직</option>	<option value="9">농림어업직</option></select>
@@ -1243,7 +1243,7 @@
         </div>
         </form>
 
-        <div class="mento_qna">
+        <div class="mento_qna" id="mento02">
             <div class="containerNew">
                 <div class="mento_qna_wrap">
                     <p class="tit">멘토님 질문있습니다 <span>"궁금해요"</span></p>
@@ -3409,6 +3409,10 @@
                 TriggerChangeCombined: true,
                 forceCustomRendering: true,
                 placeholder: '카테고리',
+            });
+            $('.newMentoring .new_ctain_wrap2 .link_wrap a').click(function(e){
+                $("html, body").animate({ scrollTop: $(this.hash).offset().top }, 500);
+                e.preventDefault();
             });
 
         });
