@@ -463,7 +463,8 @@ body.sumoStopScroll { overflow: visible; }
 .newMentoring .mento_qna_detail .a_mento_wrap .a_user li { display: flex; } 
 .newMentoring .mento_qna_detail .a_mento_wrap .a_user li p.name { margin-bottom: 10px; font-size: 18px; font-weight: 500; flex-shrink: 0; } 
 .newMentoring .mento_qna_detail .a_mento_wrap .a_user li p { margin-right: 4px; color: #000000; font-size: 16px; font-weight: 300; white-space: nowrap; } 
-.newMentoring .mento_qna_detail .a_mento_wrap .a_right_box { width: calc(100% - 540px); min-width: 400px; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_right_box { width: calc(100% - 540px); min-width: 400px; padding-left: 40px; position: relative; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_right_box::before { content: 'A'; display: flex; width: 30px; height: 30px; position: absolute; left: 0; top: 0; background: #008ae0; color: #fff; font-size: 18px; justify-content: center; align-items: center; text-align: center; border-radius: 50%; line-height: 1; } 
 .newMentoring .mento_qna_detail .a_txt_box { min-height: 160px; max-height: 160px; padding: 15px; margin-bottom: 12px; background: #fff; border-radius: 15px; overflow-y: auto; } 
 .newMentoring .mento_qna_detail .a_txt_box p { color: #b4b4b4; font-size: 16px; font-weight: 300; } 
 .newMentoring .mento_qna_detail .star_sel { display: flex; justify-content: flex-end; } 
@@ -803,7 +804,9 @@ textarea { width:100%; padding:10px 0; }
 .newMentoring .mento_qna_detail .a_mento_wrap .a_user li span { font-size: 14px; } .newMentoring .mento_qna_detail .a_txt_box { min-height: 130px; max-height: 130px; padding: 10px; } 
 .newMentoring .mento_qna_detail .a_txt_box p { font-size: 14px; } 
 .newMentoring .mento_qna_detail .star_sel span { width: 20px; height: 20px; } 
-.newMentoring .mento_qna_detail .star_sel span input { height: 20px; margin: 0;} 
+.newMentoring .mento_qna_detail .star_sel span input { height: 20px; margin: 0; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_right_box { padding-left: 24px; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_right_box::before { width: 20px; height: 20px; top: 8px; font-size: 12px; } 
 
 /* //2024.03.29 css 추가 */ } 
 
