@@ -1405,15 +1405,6 @@
     <!-- S : 취업멘토링 script 추가 -->
     <script>
         $(document).ready(function() {
-            $('.qna_category').SumoSelect({
-                TriggerChangeCombined: true,
-                forceCustomRendering: true,
-                placeholder: '카테고리',
-            });
-            $('.newMentoring .new_ctain_wrap2 .link_wrap a').click(function(e){
-                $("html, body").animate({ scrollTop: $(this.hash).offset().top }, 500);
-                e.preventDefault();
-            });
             $('.qna_wrap .answerBtn').on('click', function() {
                 $(this).parent().siblings('.a_write').addClass('on');
             });
