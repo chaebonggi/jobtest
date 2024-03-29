@@ -415,7 +415,7 @@ body.sumoStopScroll { overflow: visible; }
 .newMentoring .qna_write .item .cont .comm_select { width: 390px !important; height: 40px; background: url(../../resource/images/mento/select_arrow.png) center right 10px no-repeat; } 
 .newMentoring .w140 { width: 140px; } 
 .newMentoring .w160 { width: 160px; } 
-.newMentoring .btn_bg_blue { background: #008ae0 !important; } 
+.newMentoring .btn_bg_blue { background: #008ae0 !important; color: #fff !important; } 
 .newMentoring .btn_bg_gray { background: #979797 !important; } 
 .newMentoring .mento_qna_detail .btn_type01 { display: inline-block; height: 40px; position: relative; background: #f9f9f9; color: #000; font-size: 16px; border: 1px solid #c5c5c5; border-radius: 5px; text-align: center; vertical-align: middle; line-height: 40px; } 
 .newMentoring .mento_qna_detail .btn_type02 { display: inline-block; height: 56px; position: relative; color: #fff; font-size: 24px; border: 0; border-radius: 5px; text-align: center; vertical-align: middle; line-height: 56px; } 
@@ -425,7 +425,49 @@ body.sumoStopScroll { overflow: visible; }
 .newMentoring .qna_write .item.file_up { margin: 40px 0; } 
 .newMentoring .qna_write .item.file_up .item_tit { margin-top: 50px; } 
 .newMentoring .mento_qna_detail .qna_write .mento_btn_wrap { text-align: center; } 
-.newMentoring .mento_qna_detail .qna_write .mento_btn_wrap button + button { margin-left: 20px; } 
+.newMentoring .mento_qna_detail .qna_write .mento_btn_wrap button:nth-child(2) { margin-left: 20px; } 
+
+.newMentoring .mento_qna_detail .q_wrap { display: flex; padding: 30px 50px; background: #eaeaea; border: 1px solid #c5c5c5; border-bottom: 0; justify-content: space-between; } 
+.newMentoring .mento_qna_detail .q_wrap .q_tit::before { content: 'Q'; display: flex; width: 30px; height: 30px; position: absolute; left: 0; top: 0; background: #ff7200; color: #fff; font-size: 18px; justify-content: center; align-items: center; text-align: center; border-radius: 50%; line-height: 1; } 
+.newMentoring .mento_qna_detail .q_wrap .q_tit { padding-left: 40px; position: relative; color: #000; font-size: 20px; font-weight: 500; } 
+.newMentoring .mento_qna_detail .q_wrap .q_date { margin-left: 20px; color: #666666; font-size: 18px; font-weight: 300; flex-shrink: 0; } 
+.newMentoring .mento_qna_detail .a_wrap { padding: 40px 50px 60px; border: 1px solid #c5c5c5; border-top: 0; } 
+.newMentoring .mento_qna_detail .a_wrap .a_box { min-height: 220px; max-height: 220px; padding: 30px; margin-bottom: 10px; border: 1px solid #c5c5c5; overflow-y: auto; } 
+.newMentoring .mento_qna_detail .a_wrap .a_box p { color: #b4b4b4; font-size: 18px; font-weight: 300; } 
+.newMentoring .mento_qna_detail .a_wrap .view_down { text-align: right; } 
+.newMentoring .mento_qna_detail .a_wrap .view_down a { display: inline-block; color: #008ae0; font-size: 16px; text-decoration: underline; text-underline-offset: 6px; } 
+.newMentoring .mento_qna_detail .a_wrap .view_down a + a { margin-left: 10px; } 
+.newMentoring .mento_qna_detail .a_wrap .mento_btn_wrap { margin: 20px 0 30px; text-align: right; } 
+.newMentoring .mento_qna_detail .btn_icon01::before { content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 4px; background: url(../../resource/images/mento/btn_icon01.png) no-repeat; background-size: contain; } 
+.newMentoring .mento_qna_detail .btn_icon02::before { content: ''; display: inline-block; width: 15px; height: 14px; margin-right: 4px; background: url(../../resource/images/mento/btn_icon02.png) no-repeat; background-size: contain; } 
+.newMentoring .mento_qna_detail .btn_icon03::before { content: ''; display: inline-block; width: 13px; height: 13px; margin-right: 4px; background: url(../../resource/images/mento/btn_icon03.png) no-repeat; background-size: contain; } 
+.newMentoring .mento_qna_detail .btn_icon04::before { content: ''; display: inline-block; width: 17px; height: 13px; margin-right: 4px; background: url(../../resource/images/mento/btn_icon04.png) no-repeat; background-size: contain; } 
+.newMentoring .a_write {display: none;}
+.newMentoring .a_write.on {display: block;}
+.newMentoring .a_write .item { display: flex; margin-bottom: 20px; } 
+.newMentoring .a_write .item .item_tit { width: 90px; color: #000000; font-size: 18px; font-weight: 500; line-height: 40px; box-sizing: border-box; } 
+.newMentoring .a_write .item .cont { width: calc(100% - 90px); } 
+.newMentoring .a_write .item .cont input[type="text"],
+.newMentoring .a_write .item .cont textarea { width: 100%; padding: 7px 20px; background: #fff; color: #000000; font-size: 18px; font-weight: 300; border: 1px solid #c5c5c5; resize: none; box-sizing: border-box; } 
+.newMentoring .a_write .item .cont input[type="text"]::placeholder,
+.newMentoring .a_write .item .cont textarea::placeholder { color: #cccccc; font-size: 18px; } 
+.newMentoring .a_write .item .cont textarea { height: 240px; } 
+
+.newMentoring .mento_qna_detail .a_mento_wrap .a_item { display: flex; padding: 30px 20px 30px 30px; background: #f1f6f9; border-radius: 10px; justify-content: space-between; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_item + .a_item { margin-top: 20px; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_item .a_tit::before { content: ''; width: 14px; height: 19px; position: absolute; top: 6px; left: 0; background: url(../../resource/images/mento/mento_icon01.png) no-repeat; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_item .a_tit {display: inline-block; padding-left: 20px; margin-bottom: 20px; position: relative; color: #008ae0; font-size: 20px; font-weight: 500; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user { display: flex; padding: 0 20px; align-items: center; flex-wrap: wrap; gap: 20px 0; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user .a_img { width: 100px; height: 100px; margin-right: 40px; border: 1px solid #c5c5c5; border-radius: 50%; flex-shrink: 0; overflow: hidden; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user .a_img img { max-width: 100px; width: 100%; height: 100%; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user li { display: flex; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user li p.name { margin-bottom: 10px; font-size: 18px; font-weight: 500; flex-shrink: 0; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user li p { margin-right: 4px; color: #000000; font-size: 16px; font-weight: 300; white-space: nowrap; } 
+.newMentoring .mento_qna_detail .a_mento_wrap .a_right_box { width: calc(100% - 540px); min-width: 400px; } 
+.newMentoring .mento_qna_detail .a_txt_box { min-height: 160px; max-height: 160px; padding: 15px; margin-bottom: 12px; background: #fff; border-radius: 15px; overflow-y: auto; } 
+.newMentoring .mento_qna_detail .a_txt_box p { color: #b4b4b4; font-size: 16px; font-weight: 300; } 
+.newMentoring .mento_qna_detail .star_sel { display: flex; justify-content: flex-end; } 
+.newMentoring .mento_qna_detail .star_sel span { background: url(../../resource/images/mento/star_bg.png) no-repeat; background-size: contain; } 
 /* //2024.03.29 css 추가 */
 
 @media screen and (max-width: 1260px){
@@ -457,9 +499,17 @@ body.sumoStopScroll { overflow: visible; }
 .newMentoring .mento_qna .qna_top .qna_box02 { margin-left: auto; order: 2; } 
 .newMentoring .mento_qna .qna_top .qna_box03 { width: 100%; margin-bottom: 10px; justify-content: flex-end; } 
 
+/* 멘토링 상세페이지 */
 .newMentoring .mento_qna .table_list table .t_hide { display: none; } 
 .newMentoring .mento_qna .table_list table colgroup col:nth-child(5) { width: 20% !important; } 
 .newMentoring .review_wrap ul li .txt .star_sel span .ico { display: none; } 
+
+.newMentoring .mento_qna_detail .a_mento_wrap .a_item {flex-direction: column; gap: 20px 0;}
+.newMentoring .mento_qna_detail .a_mento_wrap .a_right_box {
+    width: 100%;
+    min-width: 100%;
+}
+
 /* //2024.03.29 css 추가 */ } 
 
 /* 2024.03.29 css 추가 */
@@ -605,7 +655,28 @@ textarea { width:100%; padding:10px 0; }
 .newMentoring .qna_write .item .cont .comm_select { width: 100% !important; } 
 .newMentoring .qna_write .item.file_up .item_tit { margin-top: 0; } 
 
-/* //2024.03.29 css 추가 */ }
+.newMentoring .mento_qna_detail .q_wrap {
+    padding: 20px 30px;
+    flex-direction: column;
+}
+.newMentoring .mento_qna_detail .q_wrap .q_tit {
+    margin-bottom: 10px;
+}
+.newMentoring .mento_qna_detail .q_wrap .q_date {
+    margin-left: auto;
+}
+.newMentoring .mento_qna_detail .a_wrap {
+    padding: 40px 20px 60px;
+}
+.newMentoring .a_write .item {
+    display: block;
+}
+.newMentoring .a_write .item .cont {
+    width: 100%;
+}
+
+
+/* //2024.03.29 css 추가 */ } 
 
 @media all and (max-width:640px){
  .f14 { font-size: 12px } 
@@ -711,15 +782,122 @@ textarea { width:100%; padding:10px 0; }
 .newMentoring .qna_write .item .cont textarea { height: 140px; } 
 .newMentoring .qna_write .item.file_up { margin: 10px 0 30px; } 
 .newMentoring .mento_qna_detail .file_btn_wrap { display: flex; gap: 0 4px; } 
-.newMentoring .mento_qna_detail .btn_type01 {height: 30px; font-size: 14px; line-height: 30px;} 
-.newMentoring .mento_qna_detail .qna_write .mento_btn_wrap .btn_type01 {width: 100%; }
+.newMentoring .mento_qna_detail .btn_type01 { height: 30px; font-size: 14px; line-height: 30px; } 
+.newMentoring .mento_qna_detail .qna_write .btn_type01 { width: 100%; } 
 .newMentoring .mento_qna_detail .file_add::before { width: 12px; height: 12px; vertical-align: initial; background-size: contain; } 
 .newMentoring .mento_qna_detail .file_del::before { width: 12px; height: 12px; vertical-align: initial; background-size: contain; } 
 .newMentoring .mento_qna_detail .qna_write .mento_btn_wrap { display: flex; } 
-.newMentoring .mento_qna_detail .btn_type02 { height: 40px; font-size: 18px; line-height: 40px;} 
-.newMentoring .mento_qna_detail .qna_write .mento_btn_wrap .btn_type02 {width: 100%;}
-.newMentoring .mento_qna_detail .qna_write .mento_btn_wrap button + button { margin-left: 10px; } 
-/* //2024.03.29 css 추가 */ }
+.newMentoring .mento_qna_detail .btn_type02 { height: 40px; font-size: 18px; line-height: 40px; } 
+.newMentoring .mento_qna_detail .qna_write .mento_btn_wrap .btn_type02 { width: 100%; } 
+.newMentoring .mento_qna_detail .qna_write .mento_btn_wrap button:nth-child(2) { margin-left: 10px; } 
+
+.newMentoring .mento_qna_detail .a_wrap .mento_btn_wrap {
+    display: flex;
+    gap: 0 4px;
+}
+.newMentoring .mento_qna_detail .a_wrap .btn_type01 {
+    width: 100%;
+}
+.newMentoring .mento_qna_detail .btn_icon01::before {
+    width: 12px;
+    height: 12px;
+}
+.newMentoring .mento_qna_detail .btn_icon02::before {
+    width: 13px;
+    height: 12px;
+}
+.newMentoring .mento_qna_detail .btn_icon03::before {
+    width: 11px;
+    height: 11px;
+}
+.newMentoring .mento_qna_detail .btn_icon04::before {
+    width: 15px;
+    height: 11px;
+}
+.newMentoring .mento_qna_detail .q_wrap {
+    padding: 10px;
+}
+.newMentoring .mento_qna_detail .q_wrap .q_tit::before {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    font-size: 12px;
+}
+.newMentoring .mento_qna_detail .q_wrap .q_tit {
+    padding-left: 24px;
+    font-size: 16px;
+}
+.newMentoring .mento_qna_detail .q_wrap .q_date {
+    font-size: 12px;
+}
+.newMentoring .mento_qna_detail .a_wrap {
+    padding: 20px 15px 30px;
+}
+.newMentoring .mento_qna_detail .a_wrap .a_box {
+    min-height: 150px;
+    max-height: 150px;
+    padding: 10px;
+}
+.newMentoring .mento_qna_detail .a_wrap .a_box p {
+    font-size: 14px;
+}
+.newMentoring .mento_qna_detail .a_wrap .view_down a {
+    font-size: 12px;
+}
+.newMentoring .a_write .item .item_tit {
+    font-size: 16px;
+}
+.newMentoring .a_write .item .cont textarea {
+    padding: 10px;
+    font-size: 14px;
+    height: 150px;
+}
+.newMentoring .a_write .item .cont textarea::placeholder {
+    font-size: 14px;
+}
+.newMentoring .mento_qna_detail .a_mento_wrap .a_item {
+    padding: 20px 10px;
+}
+.newMentoring .mento_qna_detail .a_mento_wrap .a_item > a {
+    text-align: center;
+}
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user {
+    padding: 0 10px;
+    justify-content: center;
+    gap: 10px 0;
+}
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user .a_img {
+    margin-right: 0;
+}
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user li p.name {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user ul {
+    width: 100%;
+}
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user li {
+    text-align: left;
+}
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user li p {
+    font-size: 14px;
+}
+.newMentoring .mento_qna_detail .a_mento_wrap .a_user li span {
+    font-size: 14px;
+}.newMentoring .mento_qna_detail .a_txt_box {
+    min-height: 130px;
+    max-height: 130px;
+    padding: 10px;
+}
+.newMentoring .mento_qna_detail .a_txt_box p {
+    font-size: 14px;
+}
+.newMentoring .mento_qna_detail .star_sel span {
+    width: 20px;
+    height: 20px;
+}
+
+/* //2024.03.29 css 추가 */ } 
 
 
 @media all and (max-width:480px){
