@@ -803,7 +803,7 @@ textarea { width:100%; padding:10px 0; }
 .newMentoring .mento_qna_detail .a_mento_wrap .a_user li span { font-size: 14px; } .newMentoring .mento_qna_detail .a_txt_box { min-height: 130px; max-height: 130px; padding: 10px; } 
 .newMentoring .mento_qna_detail .a_txt_box p { font-size: 14px; } 
 .newMentoring .mento_qna_detail .star_sel span { width: 20px; height: 20px; } 
-.newMentoring .mento_qna_detail .star_sel span input { height: 20px; } 
+.newMentoring .mento_qna_detail .star_sel span input { height: 20px; margin: 0;} 
 
 /* //2024.03.29 css 추가 */ } 
 
