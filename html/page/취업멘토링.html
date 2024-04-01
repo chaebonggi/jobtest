@@ -1220,10 +1220,41 @@
                 </div>
                 <div id="mentoArea">
                     <div class="mentoList">
-                        
-                        
-                            <div style="width:100%;">등록된 데이터가 없습니다.</div>
-                        
+                        <div>
+                            <!-- <a href="javascript:void(0);" onclick="playUrl('1');"></a> -->
+                            <a href="javascript:void(0);" onclick="mentoModal('mentoPop01');">
+                            <!-- <a href="javascript:mentoModal('mentoPop01')"> -->
+                                <span class="mt_top">Jobaba mento</span>
+                                <span class="company">유앤</span>
+                                <span class="dep"></span>
+                                <span class="img">
+                                    <img src="../resource/images/mento/woman.png" alt="정미정 멘토">
+                                </span>
+                                <div class="textSet">
+                                    <span class="dep">연구직 및 공학 기술직</span>	
+                                    <span class="name"><span>정미정	</span> 멘토</span>		
+                                    <span class="etc">IT직무</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div><span class="button">	
+                            <button type="button" onclick="mentoModal('mentoPop03');">
+                                <img src="../resource/images/mento/bnt_writi.png" alt="수정">
+                            </button></span>
+                            <a href="javascript:void(0);" onclick="mentoModal('mentoPop02');">
+                                <span class="mt_top">Jobaba mento</span>
+                                <span class="company">ㄴㅇㅀㄴㅇㅎ</span>
+                                <span class="dep">ㄴㅇㅀㄴㅇㅎ</span>
+                                <span class="img"><img src="../resource/images/mento/man.png" alt="윤주환 멘토"></span>
+                                <div class="textSet">
+                                    <span class="dep">교육ㆍ법률ㆍ사회복지ㆍ경찰ㆍ소방직 및 군인</span>
+                                    <span class="name"><span>윤주환	</span> 멘토</span>
+                                    <span class="etc">ㄴㅇㅎㄴㅇㅀㄴㅇㅀㄴㅇㅎㄴㅇㅀㄴㅇㅀ</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div style="width:100%;">등록된 데이터가 없습니다.</div>                        
                     </div>
     
     
@@ -3293,6 +3324,390 @@
     
     </div>
     <!-- E : 컨텐츠 // 여기까지 복사해서 사용하세요 -->
+    <!-- s: 멘토링 팝업 -->
+    <!--  -->
+    <style>
+        
+    </style>
+    <!-- <a href="javascript:openModal('modal1')" class="btn_style08 btn_black02">사외교육 등록</a> -->
+    <div class="mento_shadow"></div>
+    <!-- 멘토소개 팝업 -->
+    <div class="mento_popup mentoPop01">
+        <div class="popup_wrap">
+            <div class="popup_header">
+                <h1 class="pop_tit">잡아바 멘토 소개</h2>
+                <button type="button" class="pop_close" onclick="close_pop();"><span class="ir-text">닫기</span></button>
+            </div>
+            <div class="popup_body">
+                <div class="mento_set">
+                    <div class="textSet">
+                        <div class="mento_info">
+                            <span class="img">
+                                <img src="/file/image.do?filePath=HOcqAmQnHGibHAZra8D4LyvtyYKPI+eJeMCHLbbI+yD9VwOEp5N8Lk6lYk1ytpfC" alt="지현식 멘토">
+                            </span>
+                            <span class="dep">연구직 및 공학 기술직</span>
+                            <span class="name"><span>지현식</span> 멘토</span>
+                            <span class="company">인키움</span>
+                            <span class="dep2">개발&nbsp;</span>
+                            <span class="dep2">
+                                질문 20건 / 답변 5건<br>
+                               (답변률 25%)<br>
+                                별점 5.0
+                            </span>                            
+                            <a href="javascript:openModal('modal1')">멘토링 신청</a>
+                        </div>                        
+                    </div>
+                    <div class="mento_con">
+                        <h2>멘토 분야</h2>
+                        <p class="txt1">JAVA 개발, DBA, IT 솔루션</p>
+                        <p class="txt2">JAVA 개발, DBA, IT 솔루션</p>
+        
+                        <h2>멘토 소개</h2>
+                        <div>JAVA 개발, DBA, IT 솔루션 업무를 해왔습니다.</div>
+        
+                        <h2>주요 경력</h2>
+                        <ul>                        
+                            <li>인키움 -  개발자</li>                        
+                        </ul>
+        
+                        <h2>기타 사항</h2>
+                        <p></p>
+                        
+                        <h2>멘토링 후기(1개)</h2>
+                        <div class="review_Set">
+                            <div class="btn_Wrap">
+                                <span><em class="on">1</em> / <em class="total">1</em></span>
+                                <div class="slick-prev slick-arrow"></div>
+                                <div class="slick-next slick-arrow"></div>
+                            </div>
+                            <ul class="reviewList">                            
+                                <li>
+                                    <div class="infoSet">
+                                        <span class="name">이**</span>
+                                        <div class="star">
+                                            <div class="star_sel">
+                                                <div class="dafault_bg">
+                                                    <span class="radio_b_wrap">
+                                                        <input type="radio" name="" checked="" title="별점1">
+                                                        <span class="ico"></span>
+                                                    </span>
+                                                    <span class="radio_b_wrap">
+                                                        <input type="radio" name="" checked="" title="별점2">
+                                                        <span class="ico"></span>
+                                                    </span>
+                                                    <span class="radio_b_wrap">
+                                                        <input type="radio" name="" checked="" title="별점3">
+                                                        <span class="ico"></span>
+                                                    </span>
+                                                    <span class="radio_b_wrap">
+                                                        <input type="radio" name="1" checked="" title="별점4">
+                                                        <span class="ico"></span>
+                                                    </span>
+                                                    <span class="radio_b_wrap">
+                                                        <input type="radio" name="" checked="" title="별점5">
+                                                        <span class="ico"></span>
+                                                    </span>
+                                                    <div class="bar" style="width:100%"></div>                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="date"></span>
+                                    </div>
+                                    <div class="text">답변감사합니다</div>
+                                </li> 
+                            </ul>
+                        </div>                        
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+    <!-- //멘토소개 팝업 -->
+    <!-- 내 정보 멘토소개 팝업 -->
+    <div class="mento_popup mentoPop02">
+        <div class="popup_wrap">
+            <div class="popup_header">
+                <h1 class="pop_tit">잡아바 멘토 소개</h2>
+                <button type="button" class="pop_close" onclick="close_pop();"><span class="ir-text">닫기</span></button>
+            </div>
+            <div class="popup_body">
+                <div class="mento_set">
+                    <div class="textSet">
+                        <div class="mento_info">
+                            <span class="img">
+                                <img src="/file/image.do?filePath=HOcqAmQnHGibHAZra8D4LyvtyYKPI+eJeMCHLbbI+yD9VwOEp5N8Lk6lYk1ytpfC" alt="지현식 멘토">
+                            </span>
+                            <span class="dep">연구직 및 공학 기술직</span>
+                            <span class="name"><span>지현식</span> 멘토</span>
+                            <span class="company">인키움</span>
+                            <span class="dep2">개발&nbsp;</span>
+                            <span class="dep2">
+                                질문 20건 / 답변 5건<br>
+                               (답변률 25%)<br>
+                                별점 5.0
+                            </span>
+                        </div> 
+                        <ul>					
+                            <li><a href="/mentoring/sport/mentoringPopupList.do">답변 관리</a></li>
+                        </ul>
+                        <div class="btn_wrap">
+                            <a href="javascript:void(0);" type="button" class="">멘토활동 증명서</a>
+                        </div>                      
+                    </div>
+                    <div class="mento_con">
+                        <h2>멘토 분야</h2>
+                        <p class="txt1">JAVA 개발, DBA, IT 솔루션</p>
+                        <p class="txt2">JAVA 개발, DBA, IT 솔루션</p>
+        
+                        <h2>멘토 소개</h2>
+                        <div>JAVA 개발, DBA, IT 솔루션 업무를 해왔습니다.</div>
+        
+                        <h2>주요 경력</h2>
+                        <ul>                        
+                            <li>인키움 -  개발자</li>                        
+                        </ul>
+        
+                        <h2>기타 사항</h2>
+                        <p></p>
+                        
+                        <h2>멘토링 후기(1개)</h2>
+                        <div class="review_Set">
+                            <div class="btn_Wrap">
+                                <span><em class="on">1</em> / <em class="total">1</em></span>
+                                <div class="slick-prev slick-arrow"></div>
+                                <div class="slick-next slick-arrow"></div>
+                            </div>
+                            <ul class="reviewList">                            
+                                <li>
+                                    <div class="infoSet">
+                                        <span class="name">이**</span>
+                                        <div class="star">
+                                            <div class="star_sel">
+                                                <div class="dafault_bg">
+                                                    <span class="radio_b_wrap">
+                                                        <input type="radio" name="" checked="" title="별점1">
+                                                        <span class="ico"></span>
+                                                    </span>
+                                                    <span class="radio_b_wrap">
+                                                        <input type="radio" name="" checked="" title="별점2">
+                                                        <span class="ico"></span>
+                                                    </span>
+                                                    <span class="radio_b_wrap">
+                                                        <input type="radio" name="" checked="" title="별점3">
+                                                        <span class="ico"></span>
+                                                    </span>
+                                                    <span class="radio_b_wrap">
+                                                        <input type="radio" name="1" checked="" title="별점4">
+                                                        <span class="ico"></span>
+                                                    </span>
+                                                    <span class="radio_b_wrap">
+                                                        <input type="radio" name="" checked="" title="별점5">
+                                                        <span class="ico"></span>
+                                                    </span>
+                                                    <div class="bar" style="width:100%"></div>                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="date"></span>
+                                    </div>
+                                    <div class="text">답변감사합니다</div>
+                                </li> 
+                            </ul>
+                        </div>                        
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+    <!-- //멘토소개 팝업 -->
+    <!--  -->
+    <div class="mento_popup mentoPop03">
+        <div class="popup_wrap">
+            <div class="popup_header">
+                <h1 class="pop_tit">잡아바 멘토 지원하기</h2>
+                <button type="button" class="pop_close" onclick="close_pop();"><span class="ir-text">닫기</span></button>
+            </div>
+            <div class="popup_body">
+        
+                <div class="box">
+                    <ul>
+                        <li>※ 취업 선배로서 가치있는 경험을 공유해 보세요</li>
+                        <!-- <li>※ 성명, 회사명 등 비공개 처리 시 "O" 처리되어 노출됩니다.</li> -->
+                    </ul>
+                </div>
+                <div class="view mgt20">
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            신청자명
+                        </dt>
+                        <dd>
+                            윤주환(yuenjh13@gmail.com)
+                            <div class="radio radio-inline">
+                                <label for="mentoNmOthbcYn">
+                                    <input type="hidden" value="N" name="mentoNmOthbcYn"  id="mentoNmOthbcYn">
+                                    <!-- <span class="text">비공개</span> -->
+                                </label>
+                            </div>
+                        </dd>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            회사명
+                        </dt>
+                        <dd>
+                            <input type="text" class="comm_input w70p m_wide" name="entNm" value="ㄴㅇㅀㄴㅇㅎ" placeholder="회사명을 입력해주세요.">
+                            <div class="radio radio-inline">
+                                <label for="entOthbcYn">
+                                    <input type="hidden"  name="entOthbcYn" id="entOthbcYn"  value="N">
+                                    <!-- <span class="text">비공개</span> -->
+                                </label>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>부서</dt>
+                        <dd>
+                            <input type="text" class="comm_input w100p" name="entDeptNm"  value="ㄴㅇㅀㄴㅇㅎ"  placeholder="부서를 입력해주세요."/>
+                        </dd>
+                        <dt>직급</dt>
+                        <dd>
+                            <input type="text" class="comm_input w100p" name="jikgubInfo" value="ㄴㅇㅎㄴㅇㅎ"  placeholder="직급을 입력해주세요.">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            연락처
+                        </dt>
+                        <dd>
+                            <input type="text" class="comm_input w100p m_wide" name="telno" value="010-6500-1318">
+                        </dd>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            E-mail
+                        </dt>
+                        <dd>
+                            <input type="text" class="comm_input w100p" name="email" value="yuenjh11@gmail.com" >
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            직무
+                        </dt>
+                        <dd>
+                            <select id="jssfcLclasCd" name="jssfcLclasCd" title="" class="comm_select new_comm_select jssfcGrpCd">
+                                <option value="">직종대분류 선택</option>
+                                <option value="0">경영ㆍ사무ㆍ금융ㆍ보험직</option>
+                                <option value="1">연구직 및 공학 기술직</option>
+                                <option value="2" selected>교육ㆍ법률ㆍ사회복지ㆍ경찰ㆍ소방직 및 군인</option>
+                                <option value="3">보건ㆍ의료직</option>
+                                <option value="4">예술ㆍ디자인ㆍ방송ㆍ스포츠직</option>
+                                <option value="5">미용ㆍ여행ㆍ숙박ㆍ음식ㆍ경비ㆍ청소직</option>
+                                <option value="6">영업ㆍ판매ㆍ운전ㆍ운송직</option>
+                                <option value="7">건설ㆍ채굴직</option>
+                                <option value="8">설치ㆍ정비ㆍ생산직</option>
+                                <option value="9">농림어업직</option></select>
+                        </dd>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            질문수신
+                        </dt>
+                        <dd>
+                            <div class="ele_inline qestnDiv">
+                                <div class="radio radio-inline">
+                                    <label for="qestnRecptnEmailAt">
+                                        <input type="checkbox" name="qestnRecptnEmailAt" value="Y"   id="qestnRecptnEmailAt">
+                                        <span class="text">E-mail 수신</span>
+                                    </label>
+                                </div>
+                                <div class="radio radio-inline">
+                                    <label for="qestnRecptnKakaoAt">
+                                        <input type="checkbox" name="qestnRecptnKakaoAt" value="Y" checked="checked" id="qestnRecptnKakaoAt">
+                                        <span class="text">카카오 알림톡</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            멘토링 분야
+                        </dt>
+                        <dd>
+                            <input type="text" class="comm_input w100p" value="ㄴㅇㅎㄴㅇㅀㄴㅇㅀㄴㅇㅎㄴㅇㅀㄴㅇㅀ" name="mentoringRealm" placeholder="멘토링 분야를 간략하게 입력해주세요. Ex) SW개발, 빅데이터,  IT직무, 중소기업 vs. 대기업">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            사진
+                        </dt>
+                        <dd>
+                            <div style="text-align:right;">
+                                <button type="button" onclick="UPLOAD196_addFile()" class="btn btn-inverse">파일추가</button>
+                                <button type="button" onclick="UPLOAD196_deltFile()" class="btn btn-inverse">파일삭제</button>
+                            </div>
+                            <div style="width:100%; margin: 0 auto;">
+                                파일업로드 위치
+                            </div>
+
+                            <span class="photoSet">
+                                ex)<span class="photo_txt">프로필사진.jpg</span>
+                                <span class="photo"><img src="/resource/images/mento/photo1.png" alt="프로필사진 예제"></span>
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            멘토소개
+                        </dt>
+                        <dd>
+                            <textarea class="comm_textarea w100p" name="mentoIntrcn" id="mentoIntrcn" placeholder="본인을 소개하는 내용을 입력해주세요. Ex) SW개발, 빅데이터, 취업준비, IT직무, 중소기업 vs. 대기업">테스트
+                            </textarea>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            주요경력
+                        </dt>
+                        <dd>
+                            <textarea class="comm_textarea w100p" name="mainCareer" id="mainCareer" placeholder="본인의 주요 경력을 입력해주세요. Ex) 前) 삼성SDS - SW엔지니어 現) 현대카드 - SW엔지니어 + Data엔지니어">테스트
+                            </textarea>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>기타사항</dt>
+                        <dd>
+                            <textarea class="comm_textarea w100p" name="etcMatter" id="etcMatter" placeholder="멘티에게 하고 싶은 말 등기타 사항이 있으면  입력해주세요">ㄴㅇㅎㄴㅇㅎㄴㅇㅎㄴㅇㅀ</textarea>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            키워드
+                        </dt>
+                        <dd>
+                            <input type="text" value="ㄴㅇㅎㄴㅇㅀㄴㅇㅀ" name="keywordNm" class="comm_input w100p" placeholder="검색에 노출하고 싶은 키워드를 입력해주세요. Ex) #직무 #진로 #자소서 #면접 #회사생활">
+                        </dd>
+                    </dl>
+                    
+                </div>     
+            </div>
+            <div class="popup_bottom">
+                <div class="btnSet center">
+                    <input type="button" value="수정" class="btn btn_blue" id="frmSbumitBtn" onclick="fnFrmChk();" />
+                    <button type="button" onclick="close_pop();" class="btn btn_grey">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+   
+    <!-- e: 멘토링 팝업 -->
 
     <!-- 푸터 -->
     <footer id="renewFooter">
@@ -3414,8 +3829,34 @@
                 $("html, body").animate({ scrollTop: $(this.hash).offset().top }, 500);
                 e.preventDefault();
             });
+            
+
+            // function close_pop(flag) {
+            //     // 모달 닫기
+            //     $('.popup').hide();
+            //     $('body').removeClass('not_scroll');
+            //     $('.shadow').hide();
+
+            //     // 이전 스크롤 위치로 이동
+            //     $('body').scrollTop(scrollPosition);
+            // }
+            // $('.mento_popup .pop_close').click(function() {
+            //     $(this).parent().fadeOut(300);
+            // });
 
         });
+        function mentoModal(modalname) {
+            // 모달 열기
+            $("." + modalname).show();
+            $('body').addClass('not_scroll');
+            $('.mento_shadow').show();         
+        }
+        function close_pop() {
+            // 모달 닫기
+            $('.mento_popup').hide();
+            $('body').removeClass('not_scroll');
+            $('.mento_shadow').hide();
+        }
     </script>
 
 
