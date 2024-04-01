@@ -842,6 +842,9 @@ textarea { width:100%; padding:10px 0; }
 .mento_popup .popup_body {
     min-height: calc(100vh - 120px);
 }
+.mento_set .mento_con h2::before {
+    top: 2px;
+}
 
 
 /* //2024.03.29 css 추가 */ } 
