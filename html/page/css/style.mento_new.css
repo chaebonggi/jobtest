@@ -476,22 +476,40 @@ body.sumoStopScroll { overflow: visible; }
 html { overflow: initial; } 
 body.not_scroll { width: 100%; height: 100%; overflow: hidden; } 
 .mento_shadow { display: none; position: fixed; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.2); left: 0; top: 0; z-index: 5; } 
-.mento_popup { display: none; max-width: 1000px; width: calc(100% - 40px); margin: 50px auto 0; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000; } 
+.mento_popup { display: none; max-width: 1060px; width: calc(100% - 40px); margin: 50px auto 0; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000; } 
 .mento_popup .popup_wrap { background: #fff; border-radius: 0 0 10px 10px; } 
 .mento_popup .popup_header { display: flex; padding: 10px 20px; background: #008ae0; align-items: center; justify-content: space-between; } 
 .mento_popup .popup_header .pop_tit { color: #fff; font-size: 20px; font-weight: 500; } 
 .mento_popup .popup_header .pop_close { width: 20px; height: 20px; color: #fff; background: url(../../resource/images/mento/close_btn.png) center no-repeat; font-size: 30px; font-weight: 500; } 
-.mento_popup .popup_body { padding: 20px; max-height: calc(100vh - 300px); overflow-y: auto;} 
+.mento_popup .popup_body { padding: 20px; max-height: calc(100vh - 250px); overflow-y: auto; } 
 .mento_popup .mento_set { overflow: hidden; } 
 .mento_popup .btn_wrap a { display: block; padding: 8px 0; border: 1px solid #888; color: #333; font-size: 16px; border-radius: 6px; } 
 .mento_popup .popup_bottom { padding: 20px 0; } 
-.mento_popup .popup_bottom .btnSet input {
-    width: auto;
-}
+.mento_popup .popup_bottom .btnSet input { width: auto; } 
 .mento_popup .popup_bottom .btnSet { margin-top: 0; } 
 /* 잡아바 멘토 지원하기 */
-.mento_popup.mentoPop03 .comm_select { width: 100% !important; min-width: 100%; } 
+.mento_popup.mentoPop03 .comm_select, .mento_popup.mentoPop06 .comm_select { width: 100% !important; min-width: 100%; } 
 
+/* 멘토링 증명서 팝업 */
+.certiPopup::before { content: ''; position: fixed; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.2); left: 0; top: 0; z-index: -1; } 
+ .certiPopup { display: none; max-width: 1060px; width: calc(100% - 40px); margin: 50px auto 0; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000; } 
+ .certiPopup .popup_wrap { background: #fff; border-radius: 0 0 10px 10px; } 
+ .certiPopup .popup_header { display: flex; padding: 10px 20px; background: #008ae0; align-items: center; justify-content: space-between; } 
+ .certiPopup .popup_header .pop_tit { color: #fff; font-size: 20px; font-weight: 500; } 
+ .certiPopup .popup_header .pop_close { width: 20px; height: 20px; color: #fff; background: url(../../resource/images/mento/close_btn.png) center no-repeat; font-size: 30px; font-weight: 500; } 
+ .certiPopup .popup_body { padding: 40px 40px 0; max-height: calc(100vh - 250px); overflow-y: auto; } 
+ .certiPopup .popup_body .top-logo { text-align: right; } 
+ .certiPopup .popup_body .certi_tit { font-size: 36px; font-weight: 900; text-align: center; margin: 15px 0 40px; } 
+ .certiPopup .popup_body .box2 { border: 1px solid #ccc; background: #f7f7f7; border-radius: 10px; padding: 15px 20px; margin-bottom: 20px; font-size: 15px; color: #666; } 
+ .certiPopup .popup_body .box2 dl { display: table; table-layout: fixed; width: 100%; } 
+ .certiPopup .popup_body .box2 dt { width: 85px; display: table-cell; padding-right: 10px; color: #333; font-weight: 900; } 
+ .certiPopup .popup_body .box2 dd { display: table-cell; color: #666; } 
+ .certiPopup .popup_body .certi_bottom { margin-top: 40px; text-align: center; } 
+ .certiPopup .popup_body .certi_bottom p { color: #000; font-size: 16px; } 
+ .certiPopup .popup_body .certi_bottom .date { padding: 30px 0 40px; font-size: 18px; } 
+ .certiPopup .popup_body .certi_bottom .sign { font-size: 20px; text-align: center; } 
+ .certiPopup .popup_body .certi_bottom .sign img { max-width: 80px; } 
+ .certiPopup .popup_bottom { padding: 20px 0; } 
 
 @media screen and (max-width: 1260px){
  .new_ctain_wrap4 .f28 { font-size:22px; letter-spacing: -0.7px; } 
@@ -645,7 +663,7 @@ textarea { width:100%; padding:10px 0; }
 
  /* 팝업 수정 */
  .mento_set .textSet { float:none; width:100%; } 
-.mento_set .mento_con { width:100%; margin-top:20px; float:none } 
+.mento_set .mento_con { width:100%; margin-top:20px; padding-left: 0; float: none; } 
 .mento_set .img { width:100px; height:100px; } 
 .mento_set .img img { min-width:100px; min-height:100px } 
 .mento_set .textSet .name span,
@@ -656,6 +674,7 @@ textarea { width:100%; padding:10px 0; }
 .mento_set .textSet .mento_info a { font-size:14px; padding:7px 15px } 
 .mento_set .mento_con h2,
 .mento_set .mento_con .txt2 { font-size:14px } 
+.mento_set .mento_con h2::before { top: 2px; } 
 
 .mento_set .mento_con .reviewList .infoSet .name { font-size:14px } 
 .mento_set .mento_con .reviewList .text { font-size:13px } 
@@ -831,20 +850,11 @@ textarea { width:100%; padding:10px 0; }
 .newMentoring .mento_qna_detail .a_mento_wrap .a_right_box::before { width: 20px; height: 20px; top: 8px; font-size: 12px; } 
 
 /* 멘토링 팝업 */
-.mento_popup {
-    width: 100%;
-    margin: 0;
-}
-.mento_popup .popup_wrap {
-    height: 100%;
-    border-radius: 0;
-}
-.mento_popup .popup_body {
-    min-height: calc(100vh - 120px);
-}
-.mento_set .mento_con h2::before {
-    top: 2px;
-}
+.mento_popup { width: 100%; margin: 0; } 
+.mento_popup .popup_wrap { height: 100%; border-radius: 0; } 
+.mento_popup .popup_body { min-height: calc(100vh - 120px); } 
+.mento_popup .mo_paging span { display: inline-block; } 
+
 
 
 /* //2024.03.29 css 추가 */ } 

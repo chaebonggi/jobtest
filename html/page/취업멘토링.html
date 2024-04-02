@@ -1223,9 +1223,7 @@
                 <div id="mentoArea">
                     <div class="mentoList">
                         <div>
-                            <!-- <a href="javascript:void(0);" onclick="playUrl('1');"></a> -->
                             <a href="javascript:void(0);" onclick="mentoModal('mentoPop01');">
-                            <!-- <a href="javascript:mentoModal('mentoPop01')"> -->
                                 <span class="mt_top">Jobaba mento</span>
                                 <span class="company">유앤</span>
                                 <span class="dep"></span>
@@ -3327,17 +3325,12 @@
     </div>
     <!-- E : 컨텐츠 // 여기까지 복사해서 사용하세요 -->
     <!-- s: 멘토링 팝업 -->
-    <!--  -->
-    <style>
-        
-    </style>
-    <!-- <a href="javascript:openModal('modal1')" class="btn_style08 btn_black02">사외교육 등록</a> -->
     <div class="mento_shadow"></div>
     <!-- 멘토소개 팝업 -->
     <div class="mento_popup mentoPop01">
         <div class="popup_wrap">
             <div class="popup_header">
-                <h1 class="pop_tit">잡아바 멘토 소개</h2>
+                <h2 class="pop_tit">잡아바 멘토 소개</h2>
                 <button type="button" class="pop_close" onclick="close_pop();"><span class="ir-text">닫기</span></button>
             </div>
             <div class="popup_body">
@@ -3355,8 +3348,8 @@
                                 질문 20건 / 답변 5건<br>
                                (답변률 25%)<br>
                                 별점 5.0
-                            </span>                            
-                            <a href="javascript:openModal('modal1')">멘토링 신청</a>
+                            </span>
+                            <a href="javascript:void(0);" onclick="mentoModal('mentoPop06');">멘토링 신청</a>
                         </div>                        
                     </div>
                     <div class="mento_con">
@@ -3531,7 +3524,7 @@
     <div class="mento_popup mentoPop02">
         <div class="popup_wrap">
             <div class="popup_header">
-                <h1 class="pop_tit">잡아바 멘토 소개</h2>
+                <h2 class="pop_tit">잡아바 멘토 소개</h2>
                 <button type="button" class="pop_close" onclick="close_pop();"><span class="ir-text">닫기</span></button>
             </div>
             <div class="popup_body">
@@ -3552,10 +3545,10 @@
                             </span>
                         </div> 
                         <ul>					
-                            <li><a href="/mentoring/sport/mentoringPopupList.do">답변 관리</a></li>
+                            <li><a href="javascript:void(0);" onclick="mentoModal('mentoPop05');">답변 관리</a></li>
                         </ul>
                         <div class="btn_wrap">
-                            <a href="javascript:void(0);" type="button" class="">멘토활동 증명서</a>
+                            <a href="javascript:void(0);" onclick="certiPopup();">멘토활동 증명서</a>
                         </div>                      
                     </div>
                     <div class="mento_con">
@@ -3658,11 +3651,12 @@
         </div>
     </div>
     <!-- //멘토소개 팝업 -->
+
     <!-- 내 멘토링 소개 편집 -->
     <div class="mento_popup mentoPop03">
         <div class="popup_wrap">
             <div class="popup_header">                
-                <h1 class="pop_tit">잡아바 멘토 지원하기</h2>
+                <h2 class="pop_tit">잡아바 멘토 지원하기</h2>
                 <button type="button" class="pop_close" onclick="close_pop();"><span class="ir-text">닫기</span></button>
             </div>
             <div class="popup_body">
@@ -3793,7 +3787,7 @@
 
                             <span class="photoSet">
                                 ex)<span class="photo_txt">프로필사진.jpg</span>
-                                <span class="photo"><img src="/resource/images/mento/photo1.png" alt="프로필사진 예제"></span>
+                                <span class="photo"><img src="../resource/images/mento/photo1.png" alt="프로필사진 예제"></span>
                             </span>
                         </dd>
                     </dl>
@@ -3803,7 +3797,7 @@
                             멘토소개
                         </dt>
                         <dd>
-                            <textarea class="comm_textarea w100p" name="mentoIntrcn" id="mentoIntrcn" placeholder="본인을 소개하는 내용을 입력해주세요. Ex) SW개발, 빅데이터, 취업준비, IT직무, 중소기업 vs. 대기업">테스트
+                            <textarea class="comm_textarea w100p" name="mentoIntrcn" id="mentoIntrcn" placeholder="본인을 소개하는 내용을 입력해주세요.">테스트
                             </textarea>
                         </dd>
                     </dl>
@@ -3813,7 +3807,7 @@
                             주요경력
                         </dt>
                         <dd>
-                            <textarea class="comm_textarea w100p" name="mainCareer" id="mainCareer" placeholder="본인의 주요 경력을 입력해주세요. Ex) 前) 삼성SDS - SW엔지니어 現) 현대카드 - SW엔지니어 + Data엔지니어">테스트
+                            <textarea class="comm_textarea w100p" name="mainCareer" id="mainCareer" placeholder="본인의 주요 경력을 입력해주세요.">테스트
                             </textarea>
                         </dd>
                     </dl>
@@ -3829,7 +3823,7 @@
                             키워드
                         </dt>
                         <dd>
-                            <input type="text" value="ㄴㅇㅎㄴㅇㅀㄴㅇㅀ" name="keywordNm" class="comm_input w100p" placeholder="검색에 노출하고 싶은 키워드를 입력해주세요. Ex) #직무 #진로 #자소서 #면접 #회사생활">
+                            <input type="text" value="ㄴㅇㅎㄴㅇㅀㄴㅇㅀ" name="keywordNm" class="comm_input w100p" placeholder="검색에 노출하고 싶은 키워드를 입력해주세요.">
                         </dd>
                     </dl>
                     
@@ -3844,11 +3838,12 @@
         </div>
     </div>
     <!-- //내 멘토링 소개 편집 -->
+
     <!-- 잡아바 멘토 지원하기 -->
     <div class="mento_popup mentoPop04">
         <div class="popup_wrap">
             <div class="popup_header">                
-                <h1 class="pop_tit">잡아바 멘토 지원하기</h2>
+                <h2 class="pop_tit">잡아바 멘토 지원하기</h2>
                 <button type="button" class="pop_close" onclick="close_pop();"><span class="ir-text">닫기</span></button>
             </div>
             <div class="popup_body">    
@@ -3948,7 +3943,7 @@
                             멘토링 분야
                         </dt>
                         <dd>
-                            <input type="text" class="comm_input w100p" value="" name="mentoringRealm" placeholder="멘토링 분야를 간략하게 입력해주세요. Ex) SW개발, 빅데이터,  IT직무, 중소기업 vs. 대기업">
+                            <input type="text" class="comm_input w100p" value="" name="mentoringRealm" placeholder="멘토링 분야를 간략하게 입력해주세요.">
                         </dd>
                     </dl>
                     <dl>
@@ -3967,7 +3962,7 @@
         
                             <span class="photoSet">
                                 ex)  <span class="photo_txt">프로필사진.jpg</span>
-                                <span class="photo"><img src="/resource/images/mento/photo1.png" alt="프로필사진 예제"></span>
+                                <span class="photo"><img src="../resource/images/mento/photo1.png" alt="프로필사진 예제"></span>
                             </span>
                         </dd>
                     </dl>
@@ -3977,8 +3972,7 @@
                             멘토소개
                         </dt>
                         <dd>
-                            <textarea class="comm_textarea w100p" name="mentoIntrcn" id="mentoIntrcn" placeholder="본인을 소개하는 내용을 입력해주세요.
-        Ex) SW개발, 빅데이터, 취업준비, IT직무, 중소기업 vs. 대기업"></textarea>
+                            <textarea class="comm_textarea w100p" name="mentoIntrcn" id="mentoIntrcn" placeholder="본인을 소개하는 내용을 입력해주세요."></textarea>
                         </dd>
                     </dl>
                     <dl>
@@ -3987,10 +3981,7 @@
                             주요경력
                         </dt>
                         <dd>
-                            <textarea class="comm_textarea w100p" name="mainCareer" id="mainCareer" placeholder="본인의 주요 경력을 입력해주세요.
-        Ex)
-        前) 삼성SDS - SW엔지니어
-        現) 현대카드 - SW엔지니어 + Data엔지니어"></textarea>
+                            <textarea class="comm_textarea w100p" name="mainCareer" id="mainCareer" placeholder="본인의 주요 경력을 입력해주세요."></textarea>
                         </dd>
                     </dl>
                     <dl>
@@ -4005,7 +3996,7 @@
                             키워드
                         </dt>
                         <dd>
-                            <input type="text" value="" name="keywordNm" class="comm_input w100p" placeholder="검색에 노출하고 싶은 키워드를 입력해주세요. Ex) #직무 #진로 #자소서 #면접 #회사생활">
+                            <input type="text" value="" name="keywordNm" class="comm_input w100p" placeholder="검색에 노출하고 싶은 키워드를 입력해주세요.">
                         </dd>
                     </dl>
                     
@@ -4034,7 +4025,314 @@
         </div>
     </div>
     <!-- //잡아바 멘토 지원하기 -->
+
+    <!-- 멘토 답변 관리 팝업 -->
+    <div class="mento_popup mentoPop05">
+        <div class="popup_wrap">
+            <div class="popup_header">
+                <h2 class="pop_tit">잡아바 멘토링 답변관리</h2>
+                <button type="button" class="pop_close" onclick="close_pop();"><span class="ir-text">닫기</span></button>
+            </div>
+            <div class="popup_body">
+                <div class="mento_set">
+                    <div class="textSet">
+                        <div class="mento_info">
+                            <span class="img">
+                                <img src="../resource/images/mento/man.png" alt="지현식 멘토">
+                            </span>
+                            <span class="dep">연구직 및 공학 기술직</span>
+                            <span class="name"><span>지현식</span> 멘토</span>
+                            <span class="company">인키움</span>
+                            <span class="dep2">개발&nbsp;</span>
+                            <span class="dep2">
+                                질문 20건 / 답변 5건<br>
+                               (답변률 25%)<br>
+                                별점 5.0
+                            </span>
+                        </div> 
+                        <ul>					
+                            <li><a href="javascript:void(0);" onclick="mentoModal('mentoPop05');">답변 관리</a></li>
+                        </ul>
+                        <div class="btn_wrap">
+                            <a href="javascript:void(0);" onclick="certiPopup();">멘토활동 증명서</a>
+                        </div>                      
+                    </div>
+                    <div class="mento_con">
+                        <h2 class="fl">멘토 답변관리</h2>
+                        <select id="reqstSttusCd" name="reqstSttusCd" title="" class="fr mgt10 comm_select">
+                            <option value="" selected>답변상태 선택</option>
+                            <option value="01">답변대기</option>
+                            <option value="02">임시저장</option>
+                            <option value="03">답변완료</option>
+                            <option value="04">반려</option>
+                            <option value="05">기간종료</option>
+                        </select>
+                        <div class="tbl-type2 m_t_hide">
+                            <table>
+                                <caption>멘토 답변 목록</caption>
+                                <colgroup>
+                                    <col style="width: 15%;">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">등록일</th>
+                                        <th scope="col">제목</th>
+                                    </tr>
+                                </thead>
+                                <tbody>                                
+                                    <tr>
+                                        <td>2024-03-29</td>
+                                        <td class="title">
+                                            <a href="/mentoring/sport/mentoringPopupView.do?mentoringSeq=104">testtest </a>
+                                            <div class="itemList">
+                                                <dl>
+                                                    <dt>멘토</dt>
+                                                    <dd>윤주환</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>멘티</dt>
+                                                    
+                                                    <dd>지현식</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>상태</dt>
+                                                    <dd>답변완료</dd>
+                                                </dl>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="noData">등록된 데이터가 없습니다.</td>
+                                    </tr>                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination_wrap">
+                            <ul class="pagination list-paging">
+                                <li class="paginate_button active list"><a href="#none" onclick="1({1}); return false;">1</a></li>        
+                            </ul>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+    <!-- //멘토 답변 관리 팝업 -->
    
+    <!-- 멘토링 신청 -->    
+    <div class="mento_popup mentoPop06">
+        <div class="popup_wrap">
+            <div class="popup_header">
+                <h2 class="pop_tit">잡아바 멘토링신청하기</h2>
+                <button type="button" class="pop_close" onclick="close_pop();"><span class="ir-text">닫기</span></button>
+            </div>
+            <div class="popup_body">    
+                <div class="box">
+                    <ul>
+                        <li>※ 질문을 남길 때 멘토님에게 함께 전달되는 정보입니다. 자세히 작성할수록 상세한 답변을 받을 수 있습니다. 작성한 정보는 질문을 받은 멘토님만 보실 수 있으며 공개되지 않습니다.</li>
+                    </ul>
+                </div>
+                <div class="view mgt20">
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            작성자
+                        </dt>
+                        <dd>
+                            윤주환(yuenjh13@gmail.com)
+                            <div class="radio radio-inline">
+                                <label for="nmOthbcYn">
+                                    <input type="checkbox" name="nmOthbcYn" id="nmOthbcYn">
+                                    <span class="text">비공개</span>
+                                </label>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            전공
+                        </dt>
+                        <dd>
+                            <input type="text" class="comm_input w100p" name="major" placeholder="전공을 입력해주세요">
+                        </dd>
+                        <dt>
+                            전문분야
+                        </dt>
+                        <dd>
+                            <input type="text" class="comm_input w100p" name="spcltyRealm"  placeholder="전문분야를 입력해주세요">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            직장
+                        </dt>
+                        <dd>
+                            <input type="text" name="wrcNm" class="comm_input w100p" placeholder="직장인 경우 직장명을 입력해주세요">
+                        </dd>
+                        <dt>
+                            담당업무
+                        </dt>
+                        <dd>
+                            <input type="text" class="comm_input w100p" name="chrgJob"  placeholder="직장인 경우 담당중인 업무를 입력해주세요">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            관련직무
+                        </dt>
+                        <dd>
+                            <select id="jssfcLclasCd" name="jssfcLclasCd" title="" class="comm_select new_comm_select jssfcGrpCd">
+                                <option value="" selected>직종 및 직무 분류 선택</option>
+                                <option value="0">경영ㆍ사무ㆍ금융ㆍ보험직</option>
+                                <option value="1">연구직 및 공학 기술직</option>
+                                <option value="2">교육ㆍ법률ㆍ사회복지ㆍ경찰ㆍ소방직 및 군인</option>
+                                <option value="3">보건ㆍ의료직</option>	<option value="4">예술ㆍ디자인ㆍ방송ㆍ스포츠직</option>
+                                <option value="5">미용ㆍ여행ㆍ숙박ㆍ음식ㆍ경비ㆍ청소직</option>
+                                <option value="6">영업ㆍ판매ㆍ운전ㆍ운송직</option>
+                                <option value="7">건설ㆍ채굴직</option>	<option value="8">설치ㆍ정비ㆍ생산직</option>
+                                <option value="9">농림어업직</option>
+                            </select>
+                            <!-- <select name="jssfcSclasCd" title="" class="comm_select mgt5 jssfcGrpSubCd">
+                            <option value="">하위 분류 선택</option>
+                            </select> -->
+                        </dd>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            답변수신
+                        </dt>
+                        <dd>
+                            <div class="ele_inline">
+                                <div class="radio radio-inline">
+                                    <label for="qestnRecptnEmailAt">
+                                        <input type="checkbox" name="qestnRecptnEmailAt" id="qestnRecptnEmailAt">
+                                        <span class="text">E-mail 수신</span>
+                                    </label>
+                                </div>
+                                <div class="radio radio-inline">
+                                    <label for="qestnRecptnKakaoAt">
+                                        <input type="checkbox" name="qestnRecptnKakaoAt" id="qestnRecptnKakaoAt">
+                                        <span class="text">카카오 알림톡</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            멘토 선택
+                        </dt>
+                    
+                        
+                        <dd>서재민 멘토</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            제목
+                        </dt>
+                        <dd>
+                            <input type="text" class="comm_input w100p" name="sj" placeholder="질문 제목을 입력해주세요">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            본인소개
+                        </dt>
+                        <dd>
+                            <textarea class="comm_textarea w100p" name="selfIntrcn" placeholder="멘토 회원이 회원님을 파악하여 멘토링하기 쉽도록 본인 소개, 간략한 스펙 등을 입력해주세요."></textarea>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            내용
+                        </dt>
+                        <dd>
+                            <textarea class="comm_textarea w100p" name="cnts" id="cnts" placeholder="멘토에게 질문하고 싶은 내용을 상세하게 입력해주세요."></textarea>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <span class="f_red" title="필수항목">*</span>
+                            기타사항
+                        </dt>
+                        <dd>
+                            <input type="text" class="comm_input w100p" name="etcMatter" placeholder="멘토에게 하고 싶은 말 등 기타 사항이 있으면  입력해주세요.">
+                        </dd>
+                    </dl>
+                </div>        
+            </div>
+            <div class="popup_bottom">
+                <div class="btnSet center">
+                    <a href="javascript:fnFrmChk();" class="btn btn_blue" id="btnFrm">신청하기</a>
+                    <button type="button" onclick="close_pop();" class="btn btn_grey">닫기</button>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <!-- //멘토링 신청 -->
+
+    <!-- 멘토활동 증명서 -->
+    <div class="certiPopup">
+        <div class="popup_wrap">
+            <div class="popup_header">
+                <h2 class="pop_tit">멘토 활동 증명서</h2>
+                <button type="button" class="pop_close" onclick="close_certiPop();"><span class="ir-text">닫기</span></button>
+            </div>
+            <div class="popup_body">
+                <p class="top-logo">
+                    <img src="../resource/images/mento/logoT.png" alt="경기도일자리재단">
+                </p>
+                <h3 class="certi_tit">멘토 활동 증명서</h3> 
+                <div class="box2">
+                    <ul class="list2">
+                        <li>
+                            <dl>
+                                <dt>성명</dt>
+                                <dd>윤주환</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>멘토링분야</dt>
+                                <dd>ㄴㅇㅎㄴㅇㅀㄴㅇㅀㄴㅇㅎㄴㅇㅀㄴㅇㅀ</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>기간</dt>    
+                                <dd>2024-03-29 ~ 2024-04-02</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="certi_bottom">
+                    <p>윤주환님은 경기도일자리재단의 『일자리 플랫폼 잡아바』에서 진행하는<br>
+                    취업멘토링 서비스에서 위의 기간 동안 멘토 활동을 하였음을 증명합니다.</p>
+                    <p class="date">2024년 04월 02일</p>
+                    <p class="sign">
+                        <span>
+                            경기도일자리재단
+                            <img src="../resource/images/mento/img_sign.png" alt="경기도일자리재단 직인">
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="popup_bottom">
+                <div class="btnSet center">
+                    <a href="https://www.jobaba.net/resource/view/forPrint.jsp" class="btn btn_blue" onclick="window.open(this.href, 'printPage', 'width=950,height=680,scrollbars,toolbar,status');return false;">인쇄하기</a>
+                    <button type="button" onclick="close_certiPop();" class="btn btn_grey">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+           
+    <!-- //멘토활동 증명서 -->
+
     <!-- e: 멘토링 팝업 -->
 
     <!-- 푸터 -->
@@ -4172,6 +4470,12 @@
             $('.mento_popup').hide();
             $('body').removeClass('not_scroll');
             $('.mento_shadow').hide();
+        }
+        function certiPopup() {
+            $('.certiPopup').show();
+        }
+        function close_certiPop() {
+            $('.certiPopup').hide();
         }
         function initBxSlider(containerClass, listClass, revSliderVar) {
             var $reviewList = $('.' + containerClass + ' .' + listClass);            
