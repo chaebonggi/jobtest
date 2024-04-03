@@ -67,7 +67,7 @@ ul,ol,dl { margin:0; list-style:none; padding:0; }
 
 
 /* 멘토링 서비스 2022-04 추가*/
-.new_header { background: url(../../resource/images/mento/header_bg.png) #b0f3ff no-repeat center; } 
+.new_header { background: url(/resource/images/mento/header_bg.png) #b0f3ff no-repeat center; } 
 .new_header .ctain { display: flex; flex-direction: column; align-items: flex-start } 
 .new_header h3 { font-size: 50px; font-weight: bold; color: #003281; } 
 .new_header p.f20 { color: #005db7; font-weight: bold } 
@@ -125,7 +125,7 @@ ul,ol,dl { margin:0; list-style:none; padding:0; }
 .review_wrap ul li .subject { overflow: hidden; display: block; } 
 
 .new_ctain_wrap6 { background: #4267bf } 
-.new_ctain_wrap6 .containerNew { background: url(../../resource/images/mento/wrap7_bg.png) no-repeat right bottom; } 
+.new_ctain_wrap6 .containerNew { background: url(/resource/images/mento/wrap7_bg.png) no-repeat right bottom; } 
 
 .new_ctain_wrap6 .white { color: #ffffff } 
 .new_ctain_wrap6 .purple02 { color: #ffec55; margin: 10px 0 20px 0 } 
@@ -334,6 +334,7 @@ input[type=file] { border: 1px solid #c8c8c8; padding: 4px 0; }
 .photoSet .photo.on { display: block; } 
 .photoSet .photo_txt:hover + .photo { display: block; } 
 
+/* 2024.03.29 css 추가 */
 body.sumoStopScroll { overflow: visible; } 
 .newMentoring .new_ctain_wrap2 .mt_tit { margin-bottom: 40px; color: #000000; font-size: 30px; text-align: center; } 
 .newMentoring .new_ctain_wrap2 .txt { font-size: 18px; font-weight: 300; word-break: keep-all; } 
@@ -468,6 +469,8 @@ body.sumoStopScroll { overflow: visible; }
 .newMentoring .mento_qna_detail .a_txt_box p { color: #b4b4b4; font-size: 16px; font-weight: 300; } 
 .newMentoring .mento_qna_detail .star_sel { display: flex; justify-content: flex-end; } 
 .newMentoring .mento_qna_detail .star_sel span { background: url(../../resource/images/mento/star_bg.png) no-repeat; background-size: 24px; } 
+/* //2024.03.29 css 추가 */
+
 
 /* 멘토링 팝업 */
 html { overflow: initial; } 
@@ -537,6 +540,7 @@ body.not_scroll { width: 100%; height: 100%; overflow: hidden; }
 .mentoList .img img { min-width: 100px; min-height: 100px; } 
 .mentoList > div { padding: 15px } 
 
+/* 2024.03.29 css 추가 */
 .newMentoring .mento_banner .ctain { background-position: right bottom; align-items: flex-start; flex-direction: column; gap: 20px 0; } 
 .newMentoring .mento_banner .link_btn span br { display: none; } 
 .newMentoring .mento_qna .qna_top { flex-wrap: wrap; } 
@@ -552,16 +556,16 @@ body.not_scroll { width: 100%; height: 100%; overflow: hidden; }
 .newMentoring .mento_qna_detail .a_mento_wrap .a_item { flex-direction: column; gap: 20px 0; } 
 .newMentoring .mento_qna_detail .a_mento_wrap .a_right_box { width: 100%; min-width: 100%; } 
 
-} 
+/* //2024.03.29 css 추가 */ } 
 
+/* 2024.03.29 css 추가 */
 @media screen and (max-width: 860px){
  .newMentoring .new_ctain_wrap2 .link_wrap { flex-direction: column; gap: 20px 0; } 
  .newMentoring .new_ctain_wrap2 .link_wrap a { width: 100%; } 
  .newMentoring .new_ctain_wrap2 .link_wrap a .tooltip { display: none; } 
  }
-
-@media screen and (max-width: 768px) { 
-    /* font size */
+/* //2024.03.29 css 추가 */
+@media screen and (max-width: 768px) { /* font size */
 .f14 { font-size: 13px } 
 .f15 { font-size: 14px } 
 .f16 { font-size: 14px } 
@@ -684,6 +688,7 @@ textarea { width:100%; padding:10px 0; }
 .mento_set .mento_con .reviewList .text { font-size:13px } 
 .mento_set span { font-size:13px } 
 
+/* 2024.03.29 css 추가 */
 .new_ctain_wrap2 .flex_wrap { flex-wrap: wrap } 
 .new_ctain_wrap2 .flex_wrap > div { width: calc(50% - 5px); margin-right: 10px; margin-bottom: 20px } 
 .new_ctain_wrap2 .flex_wrap > div:nth-child(2n) { margin-right: 0 } 
@@ -705,7 +710,7 @@ textarea { width:100%; padding:10px 0; }
 .newMentoring .a_write .item .cont { width: 100%; } 
 
 
- } 
+/* //2024.03.29 css 추가 */ } 
 
 @media all and (max-width:640px){
  .f14 { font-size: 12px } 
@@ -751,6 +756,7 @@ textarea { width:100%; padding:10px 0; }
 .mentoList .img img { min-width: 80px; min-height: 80px } 
 .mentoList .textSet .name { margin: 3px 0 } 
 
+/* 2024.03.29 css 추가 */
 .newMentoring .new_ctain_wrap2.section { margin: 30px 0; } 
 .newMentoring .new_ctain_wrap2 .link_wrap { margin-bottom: 30px; gap: 10px 0; } 
 .newMentoring .new_ctain_wrap2 .link_wrap a:nth-child(3) span::before { width: 16px; height: 16px; top: 50%; transform: translateY(-50%); } 
@@ -856,7 +862,10 @@ textarea { width:100%; padding:10px 0; }
 .mento_popup .popup_wrap { height: 100%; border-radius: 0; } 
 .mento_popup .popup_body { min-height: calc(100vh - 120px); } 
 .mento_popup .mo_paging span { display: inline-block; } 
-} 
+
+
+
+/* //2024.03.29 css 추가 */ } 
 
 
 @media all and (max-width:480px){
