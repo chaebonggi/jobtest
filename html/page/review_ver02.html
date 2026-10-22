@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>예비농업인 멘토링 우수사례 공모</title>
 
   <!-- 메타태그 (카카오톡, 문자 링크 공유 시 썸네일 노출) -->
@@ -16,140 +16,141 @@
   <style>
     /* 리셋 및 기본 설정 */
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    body { background-color: #f7f9f7; color: #222222; line-height: 1.6; word-break: keep-all; }
+    html, body { width: 100%; overflow-x: hidden; background-color: #f7f9f7; color: #222222; line-height: 1.6; word-break: keep-all; }
     a { text-decoration: none; color: inherit; }
     button { font-family: inherit; }
 
     /* ========================================================= */
-    /* 1. 상단 히어로 배너 (은은한 블러 배경 & 더 커진 타이틀)     */
+    /* 1. 상단 히어로 배너                                       */
     /* ========================================================= */
-    .hero-wrapper { width: 100%; position: relative; overflow: hidden; background-color: #121614; background-image: radial-gradient(circle at 80% 20%, rgba(0, 222, 90, 0.12), transparent 50%), radial-gradient(circle at 20% 80%, rgba(30, 80, 50, 0.25), transparent 60%); border-bottom: 1px solid #232b25; padding: 80px 24px 75px; display: flex; justify-content: center; }
-    .hero-container { width: 100%; max-width: 1040px; position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 48px; }
+    .hero-wrapper { width: 100%; position: relative; overflow: hidden; background-color: #121614; background-image: radial-gradient(circle at 80% 20%, rgba(0, 222, 90, 0.12), transparent 50%), radial-gradient(circle at 20% 80%, rgba(30, 80, 50, 0.25), transparent 60%); border-bottom: 1px solid #232b25; padding: 70px 24px 65px; display: flex; justify-content: center; }
+    .hero-container { width: 100%; max-width: 1000px; position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
     
-    /* 히어로 좌측: 타이포그래피 (PC에서 큼직하고 시원한 크기) */
-    .hero-text { flex: 1; min-width: 320px; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border: 1.5px solid #00de5a; border-radius: 30px; font-size: 17px; font-weight: 700; color: #00de5a; background-color: rgba(0, 222, 90, 0.12); margin-bottom: 24px; }
-    .hero-badge .dot { width: 9px; height: 9px; background-color: #00de5a; border-radius: 50%; box-shadow: 0 0 10px #00de5a; }
-    .hero-sub { font-size: 34px; font-weight: 700; color: #b4c2b7; margin-bottom: 8px; letter-spacing: -1px; }
-    .hero-title { font-size: 68px; font-weight: 900; color: #ffffff; line-height: 1.15; letter-spacing: -2.5px; }
+    .hero-text { flex: 1; min-width: 0; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; border: 1.5px solid #00de5a; border-radius: 30px; font-size: 16px; font-weight: 700; color: #00de5a; background-color: rgba(0, 222, 90, 0.12); margin-bottom: 20px; }
+    .hero-badge .dot { width: 8px; height: 8px; background-color: #00de5a; border-radius: 50%; box-shadow: 0 0 10px #00de5a; }
+    .hero-sub { font-size: 32px; font-weight: 700; color: #b4c2b7; margin-bottom: 6px; letter-spacing: -1px; }
+    .hero-title { font-size: 62px; font-weight: 900; color: #ffffff; line-height: 1.15; letter-spacing: -2px; }
     .hero-title .accent { color: #00de5a; }
-    .hero-line { width: 64px; height: 5px; background-color: #00de5a; border-radius: 3px; margin: 28px 0; }
-    .hero-desc { font-size: 24px; font-weight: 500; color: #d4e0d7; line-height: 1.55; letter-spacing: -0.5px; }
+    .hero-line { width: 60px; height: 4px; background-color: #00de5a; border-radius: 3px; margin: 24px 0; }
+    .hero-desc { font-size: 22px; font-weight: 500; color: #d4e0d7; line-height: 1.5; letter-spacing: -0.5px; }
     .hero-desc strong { color: #00de5a; font-weight: 800; }
 
-    /* 히어로 우측: 사용자가 제공한 경품 통이미지 (banner.png) */
-    .hero-card-area { flex-shrink: 0; width: 360px; display: flex; justify-content: center; align-items: center; }
-    .banner-img { width: 100%; max-width: 350px; height: auto; display: block; filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.45)); }
+    .hero-card-area { flex-shrink: 0; width: 330px; display: flex; justify-content: center; align-items: center; }
+    .banner-img { width: 100%; max-width: 320px; height: auto; display: block; filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.45)); }
 
     /* ========================================================= */
-    /* 2. 본문 컨테이너 (깔끔한 화이트/그레이 구조)               */
+    /* 2. 본문 컨테이너                                           */
     /* ========================================================= */
-    .main-wrapper { width: 100%; max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; display: flex; flex-direction: column; gap: 32px; }
+    .main-wrapper { width: 100%; max-width: 900px; margin: 0 auto; padding: 36px 20px 70px; display: flex; flex-direction: column; gap: 28px; }
 
-    /* 공통 섹션 박스 */
-    .content-box { background-color: #ffffff; border: 1px solid #e1e7e2; border-radius: 16px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
-    .box-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #f0f3ef; padding-bottom: 16px; margin-bottom: 24px; }
-    .box-title { font-size: 21px; font-weight: 800; color: #18221a; display: flex; align-items: center; gap: 8px; }
+    .content-box { background-color: #ffffff; border: 1px solid #e1e7e2; border-radius: 16px; padding: 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+    .box-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #f0f3ef; padding-bottom: 14px; margin-bottom: 20px; }
+    .box-title { font-size: 20px; font-weight: 800; color: #18221a; display: flex; align-items: center; gap: 8px; }
 
-    /* 2-1. 공모 개요 (알약 태그 리스트) */
-    .overview-list { display: flex; flex-direction: column; gap: 16px; }
-    .overview-row { display: flex; align-items: flex-start; gap: 16px; }
-    .pill-tag { width: 92px; text-align: center; padding: 7px 0; border-radius: 20px; background-color: #1c3d23; color: #ffffff; font-size: 13px; font-weight: 700; flex-shrink: 0; line-height: 1; }
-    .overview-text { font-size: 16px; color: #333333; line-height: 1.6; font-weight: 500; padding-top: 2px; }
+    /* 2-1. 공모 개요 */
+    .overview-list { display: flex; flex-direction: column; gap: 14px; }
+    .overview-row { display: flex; align-items: flex-start; gap: 14px; }
+    .pill-tag { width: 88px; text-align: center; padding: 6px 0; border-radius: 20px; background-color: #1c3d23; color: #ffffff; font-size: 13px; font-weight: 700; flex-shrink: 0; line-height: 1.2; }
+    .overview-text { font-size: 15px; color: #333333; line-height: 1.55; font-weight: 500; flex: 1; padding-top: 1px; }
     .highlight-red { color: #d32f2f; font-weight: 700; }
 
-    /* 2-2. 시상 내역 (4열 깔끔한 카드) */
-    .reward-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .reward-item { background-color: #fafdF8; border: 1px solid #dce8dd; border-radius: 12px; padding: 22px 14px; text-align: center; }
+    /* 2-2. 시상 내역 */
+    .reward-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .reward-item { background-color: #fafdF8; border: 1px solid #dce8dd; border-radius: 12px; padding: 18px 10px; text-align: center; }
     .reward-item.grand { background-color: #f6fcf7; border: 2px solid #00be4d; }
-    .reward-badge { display: inline-block; padding: 5px 14px; border-radius: 6px; font-size: 12px; font-weight: 800; margin-bottom: 10px; }
+    .reward-badge { display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 800; margin-bottom: 8px; }
     .badge-1 { background-color: #00be4d; color: #ffffff; }
     .badge-2 { background-color: #2b7a4b; color: #ffffff; }
     .badge-3 { background-color: #4a6b56; color: #ffffff; }
     .badge-4 { background-color: #e4ebe5; color: #24412c; }
-    .reward-qty { font-size: 14px; color: #666666; font-weight: 600; margin-bottom: 6px; }
-    .reward-price { font-size: 20px; font-weight: 900; color: #00993e; letter-spacing: -0.5px; }
+    .reward-qty { font-size: 13px; color: #666666; font-weight: 600; margin-bottom: 5px; }
+    .reward-price { font-size: 18px; font-weight: 900; color: #00993e; letter-spacing: -0.5px; }
 
-    /* 2-3. 서식 다운로드 (멘토 / 멘티 구분 박스) */
-    .download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .download-card { background-color: #fbfdfb; border: 1px solid #d9e4da; border-radius: 12px; padding: 22px; }
-    .download-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-    .download-target { font-size: 16px; font-weight: 800; color: #1c3d23; }
-    .download-sub { font-size: 12px; color: #777777; font-weight: 500; }
-    .btn-file-row { display: flex; flex-direction: column; gap: 10px; }
-    .btn-file { display: flex; align-items: center; justify-content: space-between; background-color: #ffffff; border: 1.5px solid #234c2c; padding: 14px 16px; border-radius: 8px; font-size: 15px; font-weight: 700; color: #1c3d23; transition: background 0.15s, color 0.15s; }
+    /* 2-3. 서식 다운로드 */
+    .download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .download-card { background-color: #fbfdfb; border: 1px solid #d9e4da; border-radius: 12px; padding: 18px; }
+    .download-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; gap: 6px; }
+    .download-target { font-size: 15px; font-weight: 800; color: #1c3d23; }
+    .download-sub { font-size: 12px; color: #777777; font-weight: 500; flex-shrink: 0; }
+    .btn-file-row { display: flex; flex-direction: column; gap: 9px; }
+    .btn-file { display: flex; align-items: center; justify-content: space-between; background-color: #ffffff; border: 1.5px solid #234c2c; padding: 12px 14px; border-radius: 8px; font-size: 14px; font-weight: 700; color: #1c3d23; transition: all 0.15s ease; }
     .btn-file:hover { background-color: #1c3d23; color: #ffffff; }
-    .file-type-badge { font-size: 11px; padding: 3px 7px; border-radius: 4px; font-weight: 800; }
+    .file-type-badge { font-size: 11px; padding: 3px 6px; border-radius: 4px; font-weight: 800; }
     .type-hwp { background-color: #eaf2ff; color: #1b64da; }
     .type-doc { background-color: #eaf5ff; color: #0f54a8; }
     .btn-file:hover .file-type-badge { background-color: rgba(255, 255, 255, 0.2); color: #ffffff; }
 
     /* 2-4. 접수처 및 문의처 */
-    .submit-area { display: flex; flex-direction: column; gap: 16px; }
-    .email-banner { background-color: #f1f7f2; border: 1px solid #d3e4d6; border-radius: 12px; padding: 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .email-label { font-size: 14px; font-weight: 700; color: #444444; }
-    .email-address { font-size: 19px; font-weight: 900; color: #1c3d23; letter-spacing: -0.3px; }
+    .submit-area { display: flex; flex-direction: column; gap: 14px; }
+    .email-banner { background-color: #f1f7f2; border: 1px solid #d3e4d6; border-radius: 12px; padding: 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .email-label { font-size: 13px; font-weight: 700; color: #555555; margin-bottom: 2px; }
+    .email-address { font-size: 18px; font-weight: 900; color: #1c3d23; letter-spacing: -0.3px; word-break: break-all; }
     .btn-group { display: flex; gap: 8px; }
-    .btn-action { padding: 12px 20px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-primary { background-color: #1c3d23; color: #ffffff; }
-    .btn-primary:hover { background-color: #122a17; }
+    .btn-action { padding: 10px 18px; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; border: none; display: inline-flex; align-items: center; justify-content: center; }
     .btn-secondary { background-color: #ffffff; border: 1.5px solid #aebfaa; color: #333333; }
     .btn-secondary:hover { background-color: #f0f0f0; }
 
-    .inquiry-row { display: flex; gap: 24px; padding: 8px 4px; font-size: 15px; color: #555555; flex-wrap: wrap; }
+    .inquiry-row { display: flex; gap: 20px; padding: 6px 2px; font-size: 14px; color: #555555; flex-wrap: wrap; }
     .inquiry-item strong { color: #222222; }
-    .tel-link { color: #1c3d23; font-weight: 700; text-decoration: underline; margin-left: 4px; }
-
-    /* 2-5. 유의사항 리스트 */
-    .notice-card { background-color: #f7f9f7; border: 1px solid #e1e8e2; border-radius: 12px; padding: 22px 24px; }
-    .notice-card h4 { font-size: 15px; font-weight: 800; color: #3b503e; margin-bottom: 12px; }
-    .notice-card ul { padding-left: 20px; font-size: 14px; color: #5b665d; line-height: 1.7; }
-    .notice-card li { margin-bottom: 5px; }
+    .tel-link { color: #1c3d23; font-weight: 700; text-decoration: underline; margin-left: 2px; }
 
     /* 토스트 팝업 */
-    .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(40px); background: #151816; color: #ffffff; padding: 12px 24px; border-radius: 30px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 14px rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transition: 0.25s ease; z-index: 1000; }
+    .toast { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%) translateY(40px); background: #151816; color: #ffffff; padding: 11px 20px; border-radius: 30px; font-size: 13px; font-weight: 600; box-shadow: 0 4px 14px rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transition: 0.25s ease; z-index: 1000; }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
     /* ========================================================= */
-    /* 모바일 반응형 스타일 (문자 링크 유입 최적화 & 중앙 정렬) */
+    /* 모바일 반응형 (320px ~ 820px 전체 기기 최적화)            */
     /* ========================================================= */
     @media (max-width: 820px) {
-      .hero-wrapper { padding: 48px 18px 44px; text-align: center; }
-      .hero-container { flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+      .hero-wrapper { padding: 36px 16px 32px; text-align: center; }
+      .hero-container { flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
       
-      .hero-text { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; min-width: auto; }
-      .hero-badge { font-size: 14px; padding: 7px 16px; margin-bottom: 16px; }
+      .hero-text { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; min-width: 0; }
+      .hero-badge { font-size: 13px; padding: 6px 14px; margin-bottom: 12px; }
       .hero-badge .dot { width: 7px; height: 7px; }
-      .hero-sub { font-size: 22px; letter-spacing: -0.5px; margin-bottom: 4px; }
-      .hero-title { font-size: 42px; line-height: 1.18; letter-spacing: -1.4px; }
-      .hero-line { width: 44px; height: 4px; margin: 18px auto; }
-      .hero-desc { font-size: 18px; line-height: 1.5; letter-spacing: normal; }
+      .hero-sub { font-size: 20px; letter-spacing: -0.5px; margin-bottom: 2px; }
+      .hero-title { font-size: 38px; line-height: 1.15; letter-spacing: -1.2px; }
+      .hero-line { width: 36px; height: 3px; margin: 14px auto; }
+      .hero-desc { font-size: 16px; line-height: 1.45; letter-spacing: normal; }
 
       .hero-card-area { width: 100%; justify-content: center; }
-      .banner-img { max-width: 280px; }
+      .banner-img { max-width: 250px; width: 80%; }
 
-      .main-wrapper { padding: 24px 16px 60px; gap: 20px; }
-      .content-box { padding: 22px 16px; }
-      .box-title { font-size: 19px; }
+      .main-wrapper { padding: 18px 12px 50px; gap: 16px; }
+      .content-box { padding: 18px 14px; border-radius: 14px; }
+      .box-header { padding-bottom: 10px; margin-bottom: 16px; }
+      .box-title { font-size: 17px; }
       
-      .overview-row { flex-direction: row; align-items: flex-start; gap: 12px; }
-      .pill-tag { width: 78px; font-size: 12px; padding: 6px 0; }
-      .overview-text { font-size: 14px; }
+      /* 2-1 모바일 개요: 좁은 화면에서 뱃지와 텍스트를 위아래로 깔끔하게 배치 */
+      .overview-list { gap: 16px; }
+      .overview-row { flex-direction: column; align-items: flex-start; gap: 5px; }
+      .pill-tag { width: auto; padding: 4px 10px; font-size: 12px; border-radius: 6px; }
+      .overview-text { font-size: 14px; padding-left: 2px; }
 
-      .reward-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .reward-item { padding: 16px 10px; }
-      .reward-price { font-size: 17px; }
+      /* 2-2 모바일 혜택: 2열 그리드 및 폰트 축소로 넘침 방지 */
+      .reward-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .reward-item { padding: 14px 6px; border-radius: 10px; }
+      .reward-badge { font-size: 11px; padding: 3px 8px; margin-bottom: 6px; }
+      .reward-qty { font-size: 12px; margin-bottom: 3px; }
+      .reward-price { font-size: 14px; letter-spacing: -0.5px; font-weight: 800; }
 
-      .download-grid { grid-template-columns: 1fr; gap: 12px; }
-      .download-card { padding: 18px 16px; }
-      .btn-file { padding: 12px 14px; font-size: 14px; }
+      /* 2-3 모바일 서식 다운로드: 1열 배치 및 버튼 압축 */
+      .download-grid { grid-template-columns: 1fr; gap: 10px; }
+      .download-card { padding: 14px 12px; border-radius: 10px; }
+      .download-header { margin-bottom: 10px; }
+      .download-target { font-size: 14px; }
+      .download-sub { font-size: 11px; }
+      .btn-file { padding: 10px 12px; font-size: 13px; }
+      .file-type-badge { font-size: 10px; padding: 2px 5px; }
 
-      .email-banner { flex-direction: column; align-items: stretch; text-align: center; gap: 14px; }
-      .email-address { font-size: 17px; }
+      /* 2-4 모바일 접수 및 문의 */
+      .email-banner { flex-direction: column; align-items: stretch; text-align: center; padding: 14px 12px; gap: 10px; }
+      .email-address { font-size: 16px; }
       .btn-group { width: 100%; }
-      .btn-action { flex: 1; justify-content: center; padding: 12px 10px; font-size: 14px; }
+      .btn-action { width: 100%; padding: 10px; font-size: 13px; }
 
-      .inquiry-row { flex-direction: column; gap: 8px; font-size: 14px; }
+      .inquiry-row { flex-direction: column; gap: 6px; font-size: 13px; }
     }
   </style>
 </head>
@@ -198,7 +199,7 @@
         </div>
         <div class="overview-row">
           <span class="pill-tag">공모 기간</span>
-          <div class="overview-text"><span class="highlight-red">2026. 11. 02(월) ~ 11. 27(금) 18:00까지</span></div>
+          <div class="overview-text"><span class="highlight-red">2026. 10. 23(금) ~ 10. 31(토) 까지</span></div>
         </div>
         <div class="overview-row">
           <span class="pill-tag">공모 주제</span>
@@ -210,7 +211,7 @@
         </div>
         <div class="overview-row">
           <span class="pill-tag">결과 발표</span>
-          <div class="overview-text">2026. 12월 초 개별 문자 안내 및 통보 예정</div>
+          <div class="overview-text">내부 심사 후 개별통보</div>
         </div>
       </div>
     </section>
@@ -224,17 +225,17 @@
         <div class="reward-item grand">
           <span class="reward-badge badge-1">최우수상</span>
           <div class="reward-qty">1명 선정</div>
-          <div class="reward-price">N pay 50만원</div>
+          <div class="reward-price">신세계 상품권 50만원</div>
         </div>
         <div class="reward-item">
           <span class="reward-badge badge-2">우수상</span>
           <div class="reward-qty">3명 선정</div>
-          <div class="reward-price">N pay 30만원</div>
+          <div class="reward-price">신세계 상품권 30만원</div>
         </div>
         <div class="reward-item">
           <span class="reward-badge badge-3">장려상</span>
           <div class="reward-qty">5명 선정</div>
-          <div class="reward-price">N pay 10만원</div>
+          <div class="reward-price">신세계 상품권 10만원</div>
         </div>
         <div class="reward-item">
           <span class="reward-badge badge-4">참여상</span>
@@ -244,7 +245,7 @@
       </div>
     </section>
 
-    <!-- 2-3. 서식 다운로드 (멘토용 2개, 멘티용 2개 총 4개) -->
+    <!-- 2-3. 서식 다운로드 (멘토용 2개, 멘티용 2개 총 4개 직링크) -->
     <section class="content-box">
       <div class="box-header">
         <h2 class="box-title">📥 신청서 서식 다운로드</h2>
@@ -258,12 +259,11 @@
             <span class="download-sub">멘토 참가자 전용</span>
           </div>
           <div class="btn-file-row">
-            <!-- 구글 드라이브 직링크 또는 저장소 상대경로 연결 -->
-            <a href="https://drive.google.com/uc?export=download&id=MENTOR_HWP_ID" class="btn-file" target="_blank">
+            <a href="https://drive.google.com/uc?export=download&id=1TEK1xxB2i45xa-iBXSnHDDSaKppgozdY" class="btn-file" download>
               <span>멘토용 신청서 (.hwp)</span>
               <span class="file-type-badge type-hwp">HWP</span>
             </a>
-            <a href="https://drive.google.com/uc?export=download&id=MENTOR_DOCX_ID" class="btn-file" target="_blank">
+            <a href="https://docs.google.com/document/d/1ZRF0eiW-NjkVE_egl3krjI_aTpIFtn5t/export?format=docx" class="btn-file" download>
               <span>멘토용 신청서 (.docx)</span>
               <span class="file-type-badge type-doc">WORD</span>
             </a>
@@ -277,12 +277,11 @@
             <span class="download-sub">멘티 참가자 전용</span>
           </div>
           <div class="btn-file-row">
-            <!-- 구글 드라이브 직링크 또는 저장소 상대경로 연결 -->
-            <a href="https://drive.google.com/uc?export=download&id=MENTEE_HWP_ID" class="btn-file" target="_blank">
+            <a href="https://drive.google.com/uc?export=download&id=1QtCwAfoP1Msnb86WmFYDbCdtXkVDy7BM" class="btn-file" download>
               <span>멘티용 신청서 (.hwp)</span>
               <span class="file-type-badge type-hwp">HWP</span>
             </a>
-            <a href="https://drive.google.com/uc?export=download&id=MENTEE_DOCX_ID" class="btn-file" target="_blank">
+            <a href="https://docs.google.com/document/d/1Hz6bn2_-rfB5oyNI0sfdXAHsfzpaJINu/export?format=docx" class="btn-file" download>
               <span>멘티용 신청서 (.docx)</span>
               <span class="file-type-badge type-doc">WORD</span>
             </a>
@@ -305,9 +304,6 @@
           </div>
           <div class="btn-group">
             <button type="button" class="btn-action btn-secondary" onclick="copyEmail()">주소 복사</button>
-            <a href="mailto:leeje88@inkium.com?subject=%5B%EC%98%88%EB%B9%84%EB%85%8c%EC%97%85%EC%9D%B8%20%EC%9A%B0%EC%88%98%EC%82%AC%EB%A1%80%20%EA%B3%B5%EB%AA%A8%5D%20%EC%8B%A0%EC%B2%AD%EC%84%9C%20%EC%A0%9C%EC%B6%9C" class="btn-action btn-primary">
-              메일 작성하기
-            </a>
           </div>
         </div>
 
@@ -322,17 +318,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- 2-5. 유의사항 -->
-    <section class="notice-card">
-      <h4>📌 공모 참여 시 유의사항</h4>
-      <ul>
-        <li>제출된 서류는 일체 반환되지 않으며, 향후 우수사례집 및 홍보 자료로 제작·배포될 수 있습니다.</li>
-        <li>모방 또는 표절 등 부정한 방법으로 확인될 경우 수상 취소 및 시상 내역이 환수 조치됩니다.</li>
-        <li>참여 혜택(네이버페이 모바일 쿠폰)은 공모 마감 후 작성해 주신 연락처로 개별 발송됩니다.</li>
-        <li>마감 기한 이후 제출된 서류는 접수 인정되지 않으니 제출 시간을 엄수해 주시기 바랍니다.</li>
-      </ul>
     </section>
 
   </main>
