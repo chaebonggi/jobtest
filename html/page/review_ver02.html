@@ -36,8 +36,14 @@
     .hero-desc { font-size: 22px; font-weight: 500; color: #d4e0d7; line-height: 1.5; letter-spacing: -0.5px; }
     .hero-desc strong { color: #00de5a; font-weight: 800; }
 
+    /* 히어로 우측: 경품 이미지 & 매끄러운 슬로우 플로팅 효과 */
     .hero-card-area { flex-shrink: 0; width: 330px; display: flex; justify-content: center; align-items: center; }
-    .banner-img { width: 100%; max-width: 320px; height: auto; display: block; filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.45)); }
+    .banner-img { width: 100%; max-width: 320px; height: auto; display: block; filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.45)); animation: smoothFloat 3.5s ease-in-out infinite; }
+
+    @keyframes smoothFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
 
     /* ========================================================= */
     /* 2. 본문 컨테이너                                           */
@@ -55,17 +61,46 @@
     .overview-text { font-size: 15px; color: #333333; line-height: 1.55; font-weight: 500; flex: 1; padding-top: 1px; }
     .highlight-red { color: #d32f2f; font-weight: 700; }
 
-    /* 2-2. 시상 내역 */
-    .reward-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-    .reward-item { background-color: #fafdF8; border: 1px solid #dce8dd; border-radius: 12px; padding: 18px 10px; text-align: center; }
-    .reward-item.grand { background-color: #f6fcf7; border: 2px solid #00be4d; }
-    .reward-badge { display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 800; margin-bottom: 8px; }
+    /* ========================================================= */
+    /* 2-2. 참여 혜택 (각 상격의 개성과 금액 임팩트 극대화)         */
+    /* ========================================================= */
+    .reward-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .reward-item { background-color: #ffffff; border-radius: 14px; padding: 22px 10px 20px; text-align: center; transition: all 0.2s ease; border: 1.5px solid #e1e7e2; }
+
+    /* 상단 배지 */
+    .reward-badge { display: inline-block; padding: 4px 13px; border-radius: 6px; font-size: 12px; font-weight: 800; margin-bottom: 8px; }
     .badge-1 { background-color: #00be4d; color: #ffffff; }
-    .badge-2 { background-color: #2b7a4b; color: #ffffff; }
-    .badge-3 { background-color: #4a6b56; color: #ffffff; }
-    .badge-4 { background-color: #e4ebe5; color: #24412c; }
-    .reward-qty { font-size: 13px; color: #666666; font-weight: 600; margin-bottom: 5px; }
-    .reward-price { font-size: 18px; font-weight: 900; color: #00993e; letter-spacing: -0.5px; }
+    .badge-2 { background-color: #c92a2a; color: #ffffff; }
+    .badge-3 { background-color: #1971c2; color: #ffffff; }
+    .badge-4 { background-color: #03c75a; color: #ffffff; }
+
+    /* 카드별 테두리 및 은은한 배경 틴트 */
+    .item-grand { border-color: #00be4d; background-color: #f7fdf9; box-shadow: 0 4px 14px rgba(0, 190, 77, 0.08); }
+    .item-second { border-color: #ffd8d8; background-color: #fffafb; }
+    .item-third { border-color: #d0ebff; background-color: #f8fbff; }
+    .item-entry { border-color: #b2f2bb; background-color: #f4fbf6; }
+
+    .reward-qty { font-size: 13px; color: #697a6d; font-weight: 600; margin-bottom: 12px; }
+
+    /* 상품명 & 금액 컨테이너 */
+    .reward-content { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+    
+    /* 상품명 폰트 및 컬러 */
+    .gift-name { font-size: 13px; font-weight: 700; letter-spacing: -0.4px; }
+    .name-grand { color: #1e7e34; }
+    .name-second { color: #d6336c; }
+    .name-third { color: #1c7ed6; }
+    .name-entry { color: #099268; }
+
+    /* 숫자 대폭 강조 및 컬러링 */
+    .reward-price { display: flex; align-items: baseline; justify-content: center; line-height: 1; }
+    .price-val { font-size: 28px; font-weight: 900; letter-spacing: -1px; }
+    .price-unit { font-size: 15px; font-weight: 800; margin-left: 2px; }
+
+    .price-grand { color: #00993e; }
+    .price-second { color: #e03131; }
+    .price-third { color: #1864ab; }
+    .price-entry { color: #03c75a; }
 
     /* 2-3. 서식 다운로드 */
     .download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -122,20 +157,22 @@
       .box-header { padding-bottom: 10px; margin-bottom: 16px; }
       .box-title { font-size: 17px; }
       
-      /* 2-1 모바일 개요: 좁은 화면에서 뱃지와 텍스트를 위아래로 깔끔하게 배치 */
+      /* 2-1 모바일 개요 */
       .overview-list { gap: 16px; }
       .overview-row { flex-direction: column; align-items: flex-start; gap: 5px; }
       .pill-tag { width: auto; padding: 4px 10px; font-size: 12px; border-radius: 6px; }
       .overview-text { font-size: 14px; padding-left: 2px; }
 
-      /* 2-2 모바일 혜택: 2열 그리드 및 폰트 축소로 넘침 방지 */
-      .reward-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-      .reward-item { padding: 14px 6px; border-radius: 10px; }
+      /* 2-2 모바일 혜택 */
+      .reward-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .reward-item { padding: 16px 8px 14px; border-radius: 10px; }
       .reward-badge { font-size: 11px; padding: 3px 8px; margin-bottom: 6px; }
-      .reward-qty { font-size: 12px; margin-bottom: 3px; }
-      .reward-price { font-size: 14px; letter-spacing: -0.5px; font-weight: 800; }
+      .reward-qty { font-size: 12px; margin-bottom: 8px; }
+      .gift-name { font-size: 12px; }
+      .price-val { font-size: 24px; }
+      .price-unit { font-size: 14px; }
 
-      /* 2-3 모바일 서식 다운로드: 1열 배치 및 버튼 압축 */
+      /* 2-3 모바일 서식 다운로드 */
       .download-grid { grid-template-columns: 1fr; gap: 10px; }
       .download-card { padding: 14px 12px; border-radius: 10px; }
       .download-header { margin-bottom: 10px; }
@@ -216,31 +253,58 @@
       </div>
     </section>
 
-    <!-- 2-2. 참여 혜택 (시상 내역) -->
+    <!-- 2-2. 참여 혜택 (각 상격의 개성과 금액 임팩트 극대화) -->
     <section class="content-box">
       <div class="box-header">
         <h2 class="box-title">🎁 참여 혜택</h2>
       </div>
       <div class="reward-grid">
-        <div class="reward-item grand">
+        <!-- 최우수상 (50만 원) -->
+        <div class="reward-item item-grand">
           <span class="reward-badge badge-1">최우수상</span>
           <div class="reward-qty">1명 선정</div>
-          <div class="reward-price">신세계 상품권 50만원</div>
+          <div class="reward-content">
+            <span class="gift-name name-grand">신세계 상품권</span>
+            <div class="reward-price price-grand">
+              <strong class="price-val">50</strong><span class="price-unit">만원</span>
+            </div>
+          </div>
         </div>
-        <div class="reward-item">
+
+        <!-- 우수상 (30만 원) -->
+        <div class="reward-item item-second">
           <span class="reward-badge badge-2">우수상</span>
           <div class="reward-qty">3명 선정</div>
-          <div class="reward-price">신세계 상품권 30만원</div>
+          <div class="reward-content">
+            <span class="gift-name name-second">신세계 상품권</span>
+            <div class="reward-price price-second">
+              <strong class="price-val">30</strong><span class="price-unit">만원</span>
+            </div>
+          </div>
         </div>
-        <div class="reward-item">
+
+        <!-- 장려상 (10만 원) -->
+        <div class="reward-item item-third">
           <span class="reward-badge badge-3">장려상</span>
           <div class="reward-qty">5명 선정</div>
-          <div class="reward-price">신세계 상품권 10만원</div>
+          <div class="reward-content">
+            <span class="gift-name name-third">신세계 상품권</span>
+            <div class="reward-price price-third">
+              <strong class="price-val">10</strong><span class="price-unit">만원</span>
+            </div>
+          </div>
         </div>
-        <div class="reward-item">
+
+        <!-- 참여상 (5만 원) -->
+        <div class="reward-item item-entry">
           <span class="reward-badge badge-4">참여상</span>
           <div class="reward-qty">참여자 누구나</div>
-          <div class="reward-price">N pay 5만원</div>
+          <div class="reward-content">
+            <span class="gift-name name-entry">네이버페이 포인트</span>
+            <div class="reward-price price-entry">
+              <strong class="price-val">5</strong><span class="price-unit">만원</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
